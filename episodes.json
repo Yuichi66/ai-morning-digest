@@ -1,0 +1,75 @@
+[
+ {
+  "date": "2026-10-28",
+  "title": "Genie 4の世界シミュレーション、Codex 0.165、手元で動くLFM3",
+  "try_today": "Ollamaをv0.40.12以降に更新して `ollama run lfm3` を実行し、手元のPCでツール呼び出しやJSON出力を試す（4bitで約1GB）。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "d17d13a0006a",
+    "headline": "DeepMind、映像・音声・対話を一緒にリアルタイム生成する世界モデル「Genie 4」",
+    "summary": "Google DeepMindがGenie 4を発表した。キーボード操作やテキスト指示で天候を変えたり人や物を足したりしながら、映像・音声・会話をリアルタイムに生成する。いまは信頼できるテスター向けの研究プレビューで、今後Google AI Ultra（Project Genie）と、Gemini API・AI Studioのアーリーアクセスに広げる予定。",
+    "why_it_matters": "映像制作の事前検討、ゲームの試作、ロボットやエージェントの訓練環境まで、「操作できる世界」を短時間で用意できる可能性がある。一方で、長い時間使うと細部がずれていくといった限界も明記されている。",
+    "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+    "title": "Genie 4: A new generation of world simulation"
+   },
+   {
+    "slot": "main",
+    "item_id": "8357008dccbc",
+    "headline": "Codex 0.165.0：Vertex AIプロバイダ内蔵、GPT-6.1 Terra追加、会話の途中で推論量を変更可能に",
+    "summary": "Codex CLIの0.165.0で、Google Cloud Vertex AIのプロバイダが組み込みになり、モデル一覧にGPT-6.1 Terraが入った。リポジトリでの絞り込みやworktree単位のまとまり表示、会話の途中で推論の強さを変える機能が標準で有効になり、新規プロファイルではMemory v2が既定になった。",
+    "why_it_matters": "GCPを使っている組織でも既存の基盤のままCodexを試しやすくなる。マーケットプレイスURLの検証漏れを塞ぐセキュリティ修正も入っているため、早めに更新したい。",
+    "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0",
+    "title": "Codex 0.165.0"
+   },
+   {
+    "slot": "main",
+    "item_id": "db98bf59a6c7",
+    "headline": "Liquid AI「LFM3」公開、2Bクラスのテキスト・画像・音声モデルがOllamaでもすぐ使える",
+    "summary": "Liquid AIが、畳み込みとスライディングウィンドウ注意、全体注意を組み合わせた2B前後の小型モデル群LFM3を公開した。テキスト用の1.7Bは4bitで約1GBに収まり、256Kトークンの文脈を扱える。Ollama v0.40.12にもlfm3、lfm3-vl、lfm3-audioが入った。",
+    "why_it_matters": "エージェント、ツール呼び出し、構造化出力向けの小型モデルを、手元のPCやGPU1枚で動かしたり微調整したりできる。ライセンスは独自のLFM Open License v1.0なので、業務で使う前に条件を確認しておきたい。",
+    "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+    "title": "Build specialized multimodal models with LFM3"
+   },
+   {
+    "slot": "main",
+    "item_id": "34370e88c88d",
+    "headline": "Ai2の調査：研究アイデアの新しさをLLMに判定させると、プロンプトの言い回しで結果が大きく揺れる",
+    "summary": "Ai2が、ICLR 2026の査読コメントをもとに、研究アイデアの新規性をLLMに判定させるベンチマークを公開した。GPT-5.4ではプロンプトの一文を消しただけで正解率が93.5%から40.9%に落ちた。探索や推論を増やしても精度は安定して上がらなかった。",
+    "why_it_matters": "LLMに評価させる仕組みを提案や社内の審査に入れるなら、プロンプトを少し変えた複数パターンで結果がどれだけ動くかを確かめる必要がある。",
+    "url": "https://huggingface.co/blog/allenai/novelty-bench",
+    "title": "Can we trust LLMs to judge whether a research idea is novel?"
+   },
+   {
+    "slot": "main",
+    "item_id": "a3a879144b29",
+    "headline": "OpenAIとOracleが提携を広げ、Oracleの業務アプリとエージェントをChatGPTの中へ",
+    "summary": "OpenAIとOracleが提携を広げ、Oracleの業務アプリケーションとAIエージェントをChatGPTの中から使えるようにすると発表した。OpenAIの技術でOracleの新しい製品も支えていくとしている。",
+    "why_it_matters": "基幹業務のアプリとチャットAIがつながる流れがさらに進み、ChatGPTが業務の入口になる場面が増えそうだ。",
+    "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+    "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "f9fc9bf8c857",
+    "headline": "ThinkWorld：世界の動きを予想させてロボットの行動推論を鍛える",
+    "summary": "ロボットの行動ラベル付きデータの少なさを、人間が映った動画で補うVLAの学習枠組み。世界がどう動くかの予想に行動の推論を結びつけて、汎化を高めることを狙っている。",
+    "why_it_matters": "ヒューマノイドや作業ロボットのデータ不足をどう乗り越えるかの一例で、Genie 4のような世界モデルの流れともつながる。",
+    "url": "https://arxiv.org/abs/2610.37666v1",
+    "title": "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "86f425d0c907",
+    "headline": "StepSecurity、Claude CodeやCodexのプラグインを開発者PCとGitHubで棚卸しする機能",
+    "summary": "開発者のPCやGitHubリポジトリに入っているコーディングエージェント用プラグインについて、入手元、中に含むもの、有効かどうか、どのリポジトリが配っているかを一覧で見られるようにした。",
+    "why_it_matters": "エージェントのプラグインは新しいサプライチェーン攻撃の入口になりうる。まず何が入っているかを把握することが対策の出発点になる。",
+    "url": "https://www.stepsecurity.io/blog/stepsecurity-now-inventories-ai-agent-plugins-in-your-github-repositories-and-on-developer-machines",
+    "title": "StepSecurity Now Inventories AI Agent Plugins in Your GitHub Repositories and on Developer Machines"
+   }
+  ],
+  "mp3_name": "episodes/2026-10-28.mp3",
+  "mp3_bytes": 4498989,
+  "duration_s": 562
+ }
+]
