@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-10-30",
+  "title": "ミストラルが大型AIを公開、コードを書くAIに「鍵」、IBMは部品の差し替えでAIを更新",
+  "try_today": "ブラウザの拡張機能の一覧（Chromeならアドレス欄に chrome://extensions と入力）を開き、覚えのないものや使っていないものを外してください。あわせて、既定の検索エンジンがいつも使っているものになっているかも確かめましょう。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "a1765f446c5b",
+    "headline": "Mistral Large 4の重みが公開。約1兆パラメーターの多言語・画像対応モデル",
+    "summary": "Mistral AIが、Mistral Large 4の重みをHugging Faceの公式リポジトリで公開した。全体は約1兆パラメーターで、トークンごとに動くのは約490億パラメーターだけの専門家混合（MoE）型。テキストと画像を入力でき、コンテキストは100万トークン。ライセンスはMITを手直ししたMistral Ecosystem Open-Weight Licenseで、商用利用は認められるが、モデルをそのままサービスとして提供する事業には別途ライセンスが必要。2ビットに量子化した版は512GBの統合メモリを積んだApple Silicon Ultra機1台で動き、それ以外の量子化版は複数台での分散推論が必要。",
+    "why_it_matters": "上位クラスのモデルを自社の環境で動かす選択肢が増える。社外に出せないデータを扱う組織にとっては、検討する価値がある。",
+    "url": "https://huggingface.co/blog/mistral-large4",
+    "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face"
+   },
+   {
+    "slot": "main",
+    "item_id": "d820d0beaa38",
+    "headline": "コーディングエージェントに安全策。Claude Codeは作業フォルダの外への書き込みを禁止できるように",
+    "summary": "Claude Codeの新版に、どの許可モードでも作業ディレクトリの外へのWrite・Edit・NotebookEditを拒否する設定 permissions.blockWritesOutsideWorkingDirectories が加わった。あわせて、claude -p の起動に失敗したときは黙って終了せず、エラーを表示して終了コード1を返すよう修正された。Codexの新版では、安全上の理由でブロックしたときの説明が分かりやすくなり、より安全な続きのプロンプトを選べるようになった。",
+    "why_it_matters": "AIに任せる作業が増えるほど、AIが触れられる範囲を区切っておくことが導入時の大事な確認ポイントになる。",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
+    "title": "Claude Code v2.1.314"
+   },
+   {
+    "slot": "main",
+    "item_id": "f3538b6fb36f",
+    "headline": "IBM Granite Switch 4.1.1、ベースモデルはそのままでアダプターだけを更新",
+    "summary": "IBMはGranite Switch 4.1.1を公開した。4.1と完全な後方互換性があり、移行作業は要らない。更新されたのは、10言語に対応し句読点や大文字も付ける音声認識モデルと、granitelib-core の判断用アダプターの2つだけ。ベースモデルには手を加えていない。今後は、開発者や外部の事業者が自前のアダプターを作り、バージョン管理できるAdapter SDKも予定されている。",
+    "why_it_matters": "モデルの更新が小さな部品単位で済めば、導入した後の検証や運用の負担を減らせる。",
+    "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+    "title": "Granite Switch 4.1.1 — Update models like you update software"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "d3fe4a172910",
+    "headline": "検索を横取りするブラウザ拡張、319個・利用者1340万人",
+    "summary": "Socketの調査で、ブラウザの既定の検索エンジンを書き換え、運営者のプロキシ経由で検索を中継する拡張機能が319個見つかった。利用者は合計で約1340万人。検索語を記録したうえで、YahooやBingの検索シンジケーションから収益の分配を受け取っていた。多くはChrome Web Storeで非公開（unlisted）扱いで、要求する権限もほとんどなかった。",
+    "why_it_matters": "転送先は運営者がサーバー側でいつでも変えられ、記事は将来フィッシングなどに悪用されるおそれがあると指摘している。業務で使うブラウザの拡張機能も確認しておきたい。",
+    "url": "https://socket.dev/blog/searchjacked?utm_medium=feed",
+    "title": "Searchjacked: Hidden Browser Extensions Hijack Searches for 13 Million Users"
+   }
+  ],
+  "mp3_name": "episodes/2026-10-30.mp3",
+  "mp3_bytes": 5539053,
+  "duration_s": 692
+ },
+ {
   "date": "2026-10-29",
   "title": "AI Morning Digest 10月29日：Gemini 4 Carbonは守る側から、エージェントは業務の中へ",
   "try_today": "自分のリポジトリの GitHub Actions のジョブが、外部のどのドメインに通信しているか（パッケージレジストリや API など）を一覧にして、許可リストの下書きを作る。",

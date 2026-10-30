@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ミストラルが大型AIを公開、コードを書くAIに「鍵」、IBMは部品の差し替えでAIを更新</title><style>
+:root{--bg:#f7f8f6;--fg:#1d2421;--muted:#5c6862;--accent:#1f6f5c;--line:#d9dfdb}
+@media (prefers-color-scheme:dark){:root{--bg:#131816;--fg:#e4ebe7;--muted:#9aa8a1;--accent:#6cc4aa;--line:#2f3a36}}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.75;margin:0}
+main{width:min(720px,100%);box-sizing:border-box;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
+</style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-10-30</p>
+<h1>ミストラルが大型AIを公開、コードを書くAIに「鍵」、IBMは部品の差し替えでAIを更新</h1>
+<audio controls preload="none" src="https://yuichi66.github.io/ai-morning-digest/episodes/2026-10-30.mp3"></audio>
+<h2>主要ニュース</h2>
+<h3>Mistral Large 4の重みが公開。約1兆パラメーターの多言語・画像対応モデル</h3><p>Mistral AIが、Mistral Large 4の重みをHugging Faceの公式リポジトリで公開した。全体は約1兆パラメーターで、トークンごとに動くのは約490億パラメーターだけの専門家混合（MoE）型。テキストと画像を入力でき、コンテキストは100万トークン。ライセンスはMITを手直ししたMistral Ecosystem Open-Weight Licenseで、商用利用は認められるが、モデルをそのままサービスとして提供する事業には別途ライセンスが必要。2ビットに量子化した版は512GBの統合メモリを積んだApple Silicon Ultra機1台で動き、それ以外の量子化版は複数台での分散推論が必要。</p><p><b>何が変わるか：</b>上位クラスのモデルを自社の環境で動かす選択肢が増える。社外に出せないデータを扱う組織にとっては、検討する価値がある。</p><p class="muted">出典：<a href="https://huggingface.co/blog/mistral-large4" rel="noopener">Welcome Le Chonk: Mistral Large 4 on Hugging Face</a></p>
+<h3>コーディングエージェントに安全策。Claude Codeは作業フォルダの外への書き込みを禁止できるように</h3><p>Claude Codeの新版に、どの許可モードでも作業ディレクトリの外へのWrite・Edit・NotebookEditを拒否する設定 permissions.blockWritesOutsideWorkingDirectories が加わった。あわせて、claude -p の起動に失敗したときは黙って終了せず、エラーを表示して終了コード1を返すよう修正された。Codexの新版では、安全上の理由でブロックしたときの説明が分かりやすくなり、より安全な続きのプロンプトを選べるようになった。</p><p><b>何が変わるか：</b>AIに任せる作業が増えるほど、AIが触れられる範囲を区切っておくことが導入時の大事な確認ポイントになる。</p><p class="muted">出典：<a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.314" rel="noopener">Claude Code v2.1.314</a></p>
+<h3>IBM Granite Switch 4.1.1、ベースモデルはそのままでアダプターだけを更新</h3><p>IBMはGranite Switch 4.1.1を公開した。4.1と完全な後方互換性があり、移行作業は要らない。更新されたのは、10言語に対応し句読点や大文字も付ける音声認識モデルと、granitelib-core の判断用アダプターの2つだけ。ベースモデルには手を加えていない。今後は、開発者や外部の事業者が自前のアダプターを作り、バージョン管理できるAdapter SDKも予定されている。</p><p><b>何が変わるか：</b>モデルの更新が小さな部品単位で済めば、導入した後の検証や運用の負担を減らせる。</p><p class="muted">出典：<a href="https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1" rel="noopener">Granite Switch 4.1.1 — Update models like you update software</a></p>
+<h2>偶然の出会い</h2>
+<h3>検索を横取りするブラウザ拡張、319個・利用者1340万人</h3><p>Socketの調査で、ブラウザの既定の検索エンジンを書き換え、運営者のプロキシ経由で検索を中継する拡張機能が319個見つかった。利用者は合計で約1340万人。検索語を記録したうえで、YahooやBingの検索シンジケーションから収益の分配を受け取っていた。多くはChrome Web Storeで非公開（unlisted）扱いで、要求する権限もほとんどなかった。</p><p><b>何が変わるか：</b>転送先は運営者がサーバー側でいつでも変えられ、記事は将来フィッシングなどに悪用されるおそれがあると指摘している。業務で使うブラウザの拡張機能も確認しておきたい。</p><p class="muted">出典：<a href="https://socket.dev/blog/searchjacked?utm_medium=feed" rel="noopener">Searchjacked: Hidden Browser Extensions Hijack Searches for 13 Million Users</a></p>
+<h2>今日ひとつ試すなら</h2><p>ブラウザの拡張機能の一覧（Chromeならアドレス欄に chrome://extensions と入力）を開き、覚えのないものや使っていないものを外してください。あわせて、既定の検索エンジンがいつも使っているものになっているかも確かめましょう。</p></main></body></html>
