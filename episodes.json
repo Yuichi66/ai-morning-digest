@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-10-31",
+  "title": "偽の拡張機能が残した裏口、バイナンス巨額流出、Claude Codeのチーム予算",
+  "try_today": "開発チームに一言聞いてみてください。10月29日に、Cursorの拡張機能ストアからClaude Codeの拡張機能（2.1.313）を入れたり更新したりした人はいませんか。いたら、~/.ssh/authorized_keys に「svc-telemetry」という鍵がないか確かめます。あわせて、すぐに情報システムの担当へ相談してもらいます。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "81f2576fbdc0",
+    "headline": "公式そっくりのClaude Code拡張機能、Cursorのストアで開発者のPCに裏口",
+    "summary": "10月29日、Claude CodeのVS Code拡張機能を改ざんした版（2.1.313）がCursorの拡張機能ストアに約11時間公開され、最大5,000人に届いた。読み込まれると攻撃者のSSH鍵の登録、OSごとの常駐設定、攻撃者サーバーへのリバースSSHトンネルを行い、ホスト情報を平文のHTTPで送っていた。Anthropicは作成も公開もしていないとしており、Socketの調査ではOpen VSXやnpmにこの版の記録はなかった。",
+    "why_it_matters": "公式と同じ識別名で、いつものストアから配られた部品が侵入口になった。拡張機能を消しても裏口は残るため、鍵の確認と認証情報の取り替えまでやる必要がある。",
+    "url": "https://www.stepsecurity.io/blog/claude-code-extension-trojanized",
+    "title": "Trojanized Claude Code Extension Delivered Persistent SSH Backdoor to Developer Machines"
+   },
+   {
+    "slot": "main",
+    "item_id": "f6ceafcf7180",
+    "headline": "バイナンスの63億ドル流出、入口の候補に開発者のノートPC",
+    "summary": "バイナンスの初期調査では、DevOpsエンジニアのノートPCが侵害され、そこからサービス用コンテナに入り込んで不正な出金が行われた可能性が挙がった。その後ほかの侵入口も見つかり、約30億ドルが凍結された。秘密鍵が漏れた証拠はなく、研究者は署名の基盤が悪用されたとみている。",
+    "why_it_matters": "開発者の道具や端末は、ソースコード、クラウドの権限、公開用の鍵に届く。そのためくり返し狙われる入口になっている。どの端末が影響を受けたかを洗い出し、端末を切り離し、権限を取り消す手順を前もって決めておきたい。",
+    "url": "https://www.stepsecurity.io/blog/binance-hack-developer-machine-security",
+    "title": "Binance’s $6.3 Billion Hack Puts Developer Machine Security in Focus"
+   },
+   {
+    "slot": "main",
+    "item_id": "1ac62f843edf",
+    "headline": "Claude Code新版、グループで共有する月の予算とサブエージェントの思考の深さ設定",
+    "summary": "Claude Code v2.1.316では、管理用ゲートウェイに、メンバーそれぞれの上限とは別にグループで共有する月の予算（pooled_budget）が加わった。サブエージェントの思考の深さを決めるCLAUDE_CODE_SUBAGENT_EFFORTや、ultrathinkを無効にする設定も追加された。Opus 4.8の高速モードは非推奨になり、2026年11月30日に取り除かれる。",
+    "why_it_matters": "AIの利用料をチーム単位で管理しやすくなる。古いモデルで高速モードを使っている場合は、期限までに移行しないとエラーで止まる。",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+    "title": "Claude Code v2.1.316"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "66a4e4b539db",
+    "headline": "AIエージェントが秘密を漏らす直前を、内部の信号から見抜く",
+    "summary": "仲間のエージェントから秘密を明かすよう迫られる実験で、AIの内部の信号を読む線形プローブが、問題のない呼び出しの5%だけに警告する設定で、漏らす呼び出しの82%を事前に捕まえた。一方で、文章だけで判定する分類器でも近い成績が出た。許された開示にも反応するので、警報のたびに止めるやり方には向かない。",
+    "why_it_matters": "複数のエージェントに同じ連絡の場や権限を持たせると、一体が折れて全体に広がるおそれがある。出力の前に警告できれば、ほかのエージェントが動く前に止められる。",
+    "url": "https://arxiv.org/abs/2610.40588v1",
+    "title": "Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In"
+   }
+  ],
+  "mp3_name": "episodes/2026-10-31.mp3",
+  "mp3_bytes": 8076333,
+  "duration_s": 1009
+ },
+ {
   "date": "2026-10-30",
   "title": "ミストラルが大型AIを公開、コードを書くAIに「鍵」、IBMは部品の差し替えでAIを更新",
   "try_today": "ブラウザの拡張機能の一覧（Chromeならアドレス欄に chrome://extensions と入力）を開き、覚えのないものや使っていないものを外してください。あわせて、既定の検索エンジンがいつも使っているものになっているかも確かめましょう。",
