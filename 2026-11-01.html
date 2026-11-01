@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>共有リンクの落とし穴と、AIが見つけたLinuxの深刻な穴</title><style>
+:root{--bg:#f7f8f6;--fg:#1d2421;--muted:#5c6862;--accent:#1f6f5c;--line:#d9dfdb}
+@media (prefers-color-scheme:dark){:root{--bg:#131816;--fg:#e4ebe7;--muted:#9aa8a1;--accent:#6cc4aa;--line:#2f3a36}}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.75;margin:0}
+main{width:min(720px,100%);box-sizing:border-box;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
+</style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-11-01</p>
+<h1>共有リンクの落とし穴と、AIが見つけたLinuxの深刻な穴</h1>
+<audio controls preload="none" src="https://yuichi66.github.io/ai-morning-digest/episodes/2026-11-01.mp3"></audio>
+<h2>主要ニュース</h2>
+<h3>xAI、Grokの言葉づかいを利用者側で調整できる「ガイドライン」機能を追加</h3><p>xAIは開発者向けリリースノートの10月分で、Chat Completions/Responses APIのリクエストにguidelines配列を付け、nsfw・violence・profanityの3分野でGrokの振る舞いを指定できる機能を加えた。音声対話向けにgrok-voice-3.0が2.0と同じ価格で登場し、latestエイリアスは自動で移行。旧文字起こしモデルは提供終了となり、同価格で新モデルに振り替えられる。</p><p><b>何が変わるか：</b>AIを自社サービスに組み込む企業が、用途に合わせて表現の線引きを自分で決められるようになる。</p><p class="muted">出典：<a href="https://docs.x.ai/developers/release-notes" rel="noopener">xAI API の更新</a></p>
+<h3>ChatGPTの共有リンクを開くだけでアカウントを操れる脆弱性、OpenAIが修正</h3><p>研究チームは、HTMLプレビューの隔離枠、送信元を確認しないグラフ表示用ライブラリ（MathLive）、CSPの抜け道を連鎖させ、公開共有された会話を開いた人のログイン状態で任意のJavaScriptを動かせることを示した。実証では他人の非公開会話を読み出した。10月18日に報告され、OpenAIは深刻度をP1に引き上げ、10月26日に修正して5,000ドルの報奨金を支払った。</p><p><b>何が変わるか：</b>個々は小さな不備でも、機能をつなぐと重大な侵入口になりうる。AIチャットに社内情報を入れる企業ほど共有リンクの扱いに注意が要る。</p><p class="muted">出典：<a href="https://www.parameter.ai/labs/we-found-a-gap-at-openai" rel="noopener">Do the math: How we took over ChatGPT accounts</a></p>
+<h3>Linux IPv4 TCPに認証前から突ける解放後使用の脆弱性、AIが攻撃コードを作成</h3><p>CVE-2026-98432はTCPハンドシェイク処理で保存したIPオプションをコピーせず渡し、別CPUが読んでいる間に解放してしまう不具合で、CVSS 9.8。Linux 4.4以降が対象で、上流修正は10月中旬に出たが、10月31日時点でUbuntuとRHELは未修正。報告者はAnthropicの研究者で、同社はClaudeが特定条件でroot権限を得る攻撃コードを書いたとしている（非公開）。</p><p><b>何が変わるか：</b>外部から認証前に到達できる重大な穴で、自社サーバーの対応確認が急務。AIが脆弱性の悪用手順まで作れる段階に来たことも示している。</p><p class="muted">出典：<a href="https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf" rel="noopener">TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</a></p>
+<h2>偶然の出会い</h2>
+<h3>コーディングエージェントにロボット用シミュレーションを作らせる「Gym-Anything for Robotics」</h3><p>米国のGDPデータで経済的価値の高い身体作業を選び、作成役と監査役を対立させるループで、コーディングエージェントにシミュレーションと課題を作らせる枠組み。25のシミュレーションを含むRoboWorldでは、最先端モデルもテスト課題をすべて失敗した（平均報酬0.06）。成績を上げる4つの手法も検証し、コードと環境を公開している。</p><p><b>何が変わるか：</b>ロボットAIの訓練で詰まりやすい「練習場づくり」をAIに任せる方向を示し、作る役と点検する役を分ける考え方は業務でのAI活用にも通じる。</p><p class="muted">出典：<a href="https://arxiv.org/abs/2610.40565v1" rel="noopener">Gym-Anything for Robotics: Scaling physical simulations with digital agents</a></p>
+<h2>今日ひとつ試すなら</h2><p>自社や部署で使っているLinuxサーバーが、CVE-2026-98432（IPv4 TCPの解放後使用の脆弱性）の修正版や一時的な対策をもう入れているか、情報システムの担当者にメッセージを一通送って確認する。</p></main></body></html>

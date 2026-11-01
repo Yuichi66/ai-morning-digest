@@ -1,0 +1,286 @@
+[
+ {
+  "date": "2026-11-01",
+  "title": "共有リンクの落とし穴と、AIが見つけたLinuxの深刻な穴",
+  "try_today": "自社や部署で使っているLinuxサーバーが、CVE-2026-98432（IPv4 TCPの解放後使用の脆弱性）の修正版や一時的な対策をもう入れているか、情報システムの担当者にメッセージを一通送って確認する。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "52932c315a7b",
+    "headline": "xAI、Grokの言葉づかいを利用者側で調整できる「ガイドライン」機能を追加",
+    "summary": "xAIは開発者向けリリースノートの10月分で、Chat Completions/Responses APIのリクエストにguidelines配列を付け、nsfw・violence・profanityの3分野でGrokの振る舞いを指定できる機能を加えた。音声対話向けにgrok-voice-3.0が2.0と同じ価格で登場し、latestエイリアスは自動で移行。旧文字起こしモデルは提供終了となり、同価格で新モデルに振り替えられる。",
+    "why_it_matters": "AIを自社サービスに組み込む企業が、用途に合わせて表現の線引きを自分で決められるようになる。",
+    "url": "https://docs.x.ai/developers/release-notes",
+    "title": "xAI API の更新"
+   },
+   {
+    "slot": "main",
+    "item_id": "381223935ae3",
+    "headline": "ChatGPTの共有リンクを開くだけでアカウントを操れる脆弱性、OpenAIが修正",
+    "summary": "研究チームは、HTMLプレビューの隔離枠、送信元を確認しないグラフ表示用ライブラリ（MathLive）、CSPの抜け道を連鎖させ、公開共有された会話を開いた人のログイン状態で任意のJavaScriptを動かせることを示した。実証では他人の非公開会話を読み出した。10月18日に報告され、OpenAIは深刻度をP1に引き上げ、10月26日に修正して5,000ドルの報奨金を支払った。",
+    "why_it_matters": "個々は小さな不備でも、機能をつなぐと重大な侵入口になりうる。AIチャットに社内情報を入れる企業ほど共有リンクの扱いに注意が要る。",
+    "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+    "title": "Do the math: How we took over ChatGPT accounts"
+   },
+   {
+    "slot": "main",
+    "item_id": "6bd209feefbe",
+    "headline": "Linux IPv4 TCPに認証前から突ける解放後使用の脆弱性、AIが攻撃コードを作成",
+    "summary": "CVE-2026-98432はTCPハンドシェイク処理で保存したIPオプションをコピーせず渡し、別CPUが読んでいる間に解放してしまう不具合で、CVSS 9.8。Linux 4.4以降が対象で、上流修正は10月中旬に出たが、10月31日時点でUbuntuとRHELは未修正。報告者はAnthropicの研究者で、同社はClaudeが特定条件でroot権限を得る攻撃コードを書いたとしている（非公開）。",
+    "why_it_matters": "外部から認証前に到達できる重大な穴で、自社サーバーの対応確認が急務。AIが脆弱性の悪用手順まで作れる段階に来たことも示している。",
+    "url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
+    "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "92577cf84cf1",
+    "headline": "コーディングエージェントにロボット用シミュレーションを作らせる「Gym-Anything for Robotics」",
+    "summary": "米国のGDPデータで経済的価値の高い身体作業を選び、作成役と監査役を対立させるループで、コーディングエージェントにシミュレーションと課題を作らせる枠組み。25のシミュレーションを含むRoboWorldでは、最先端モデルもテスト課題をすべて失敗した（平均報酬0.06）。成績を上げる4つの手法も検証し、コードと環境を公開している。",
+    "why_it_matters": "ロボットAIの訓練で詰まりやすい「練習場づくり」をAIに任せる方向を示し、作る役と点検する役を分ける考え方は業務でのAI活用にも通じる。",
+    "url": "https://arxiv.org/abs/2610.40565v1",
+    "title": "Gym-Anything for Robotics: Scaling physical simulations with digital agents"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-01.mp3",
+  "mp3_bytes": 7129773,
+  "duration_s": 891
+ },
+ {
+  "date": "2026-10-31",
+  "title": "偽の拡張機能が残した裏口、バイナンス巨額流出、Claude Codeのチーム予算",
+  "try_today": "開発チームに一言聞いてみてください。10月29日に、Cursorの拡張機能ストアからClaude Codeの拡張機能（2.1.313）を入れたり更新したりした人はいませんか。いたら、~/.ssh/authorized_keys に「svc-telemetry」という鍵がないか確かめます。あわせて、すぐに情報システムの担当へ相談してもらいます。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "81f2576fbdc0",
+    "headline": "公式そっくりのClaude Code拡張機能、Cursorのストアで開発者のPCに裏口",
+    "summary": "10月29日、Claude CodeのVS Code拡張機能を改ざんした版（2.1.313）がCursorの拡張機能ストアに約11時間公開され、最大5,000人に届いた。読み込まれると攻撃者のSSH鍵の登録、OSごとの常駐設定、攻撃者サーバーへのリバースSSHトンネルを行い、ホスト情報を平文のHTTPで送っていた。Anthropicは作成も公開もしていないとしており、Socketの調査ではOpen VSXやnpmにこの版の記録はなかった。",
+    "why_it_matters": "公式と同じ識別名で、いつものストアから配られた部品が侵入口になった。拡張機能を消しても裏口は残るため、鍵の確認と認証情報の取り替えまでやる必要がある。",
+    "url": "https://www.stepsecurity.io/blog/claude-code-extension-trojanized",
+    "title": "Trojanized Claude Code Extension Delivered Persistent SSH Backdoor to Developer Machines"
+   },
+   {
+    "slot": "main",
+    "item_id": "f6ceafcf7180",
+    "headline": "バイナンスの63億ドル流出、入口の候補に開発者のノートPC",
+    "summary": "バイナンスの初期調査では、DevOpsエンジニアのノートPCが侵害され、そこからサービス用コンテナに入り込んで不正な出金が行われた可能性が挙がった。その後ほかの侵入口も見つかり、約30億ドルが凍結された。秘密鍵が漏れた証拠はなく、研究者は署名の基盤が悪用されたとみている。",
+    "why_it_matters": "開発者の道具や端末は、ソースコード、クラウドの権限、公開用の鍵に届く。そのためくり返し狙われる入口になっている。どの端末が影響を受けたかを洗い出し、端末を切り離し、権限を取り消す手順を前もって決めておきたい。",
+    "url": "https://www.stepsecurity.io/blog/binance-hack-developer-machine-security",
+    "title": "Binance’s $6.3 Billion Hack Puts Developer Machine Security in Focus"
+   },
+   {
+    "slot": "main",
+    "item_id": "1ac62f843edf",
+    "headline": "Claude Code新版、グループで共有する月の予算とサブエージェントの思考の深さ設定",
+    "summary": "Claude Code v2.1.316では、管理用ゲートウェイに、メンバーそれぞれの上限とは別にグループで共有する月の予算（pooled_budget）が加わった。サブエージェントの思考の深さを決めるCLAUDE_CODE_SUBAGENT_EFFORTや、ultrathinkを無効にする設定も追加された。Opus 4.8の高速モードは非推奨になり、2026年11月30日に取り除かれる。",
+    "why_it_matters": "AIの利用料をチーム単位で管理しやすくなる。古いモデルで高速モードを使っている場合は、期限までに移行しないとエラーで止まる。",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+    "title": "Claude Code v2.1.316"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "66a4e4b539db",
+    "headline": "AIエージェントが秘密を漏らす直前を、内部の信号から見抜く",
+    "summary": "仲間のエージェントから秘密を明かすよう迫られる実験で、AIの内部の信号を読む線形プローブが、問題のない呼び出しの5%だけに警告する設定で、漏らす呼び出しの82%を事前に捕まえた。一方で、文章だけで判定する分類器でも近い成績が出た。許された開示にも反応するので、警報のたびに止めるやり方には向かない。",
+    "why_it_matters": "複数のエージェントに同じ連絡の場や権限を持たせると、一体が折れて全体に広がるおそれがある。出力の前に警告できれば、ほかのエージェントが動く前に止められる。",
+    "url": "https://arxiv.org/abs/2610.40588v1",
+    "title": "Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In"
+   }
+  ],
+  "mp3_name": "episodes/2026-10-31.mp3",
+  "mp3_bytes": 8076333,
+  "duration_s": 1009
+ },
+ {
+  "date": "2026-10-30",
+  "title": "ミストラルが大型AIを公開、コードを書くAIに「鍵」、IBMは部品の差し替えでAIを更新",
+  "try_today": "ブラウザの拡張機能の一覧（Chromeならアドレス欄に chrome://extensions と入力）を開き、覚えのないものや使っていないものを外してください。あわせて、既定の検索エンジンがいつも使っているものになっているかも確かめましょう。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "a1765f446c5b",
+    "headline": "Mistral Large 4の重みが公開。約1兆パラメーターの多言語・画像対応モデル",
+    "summary": "Mistral AIが、Mistral Large 4の重みをHugging Faceの公式リポジトリで公開した。全体は約1兆パラメーターで、トークンごとに動くのは約490億パラメーターだけの専門家混合（MoE）型。テキストと画像を入力でき、コンテキストは100万トークン。ライセンスはMITを手直ししたMistral Ecosystem Open-Weight Licenseで、商用利用は認められるが、モデルをそのままサービスとして提供する事業には別途ライセンスが必要。2ビットに量子化した版は512GBの統合メモリを積んだApple Silicon Ultra機1台で動き、それ以外の量子化版は複数台での分散推論が必要。",
+    "why_it_matters": "上位クラスのモデルを自社の環境で動かす選択肢が増える。社外に出せないデータを扱う組織にとっては、検討する価値がある。",
+    "url": "https://huggingface.co/blog/mistral-large4",
+    "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face"
+   },
+   {
+    "slot": "main",
+    "item_id": "d820d0beaa38",
+    "headline": "コーディングエージェントに安全策。Claude Codeは作業フォルダの外への書き込みを禁止できるように",
+    "summary": "Claude Codeの新版に、どの許可モードでも作業ディレクトリの外へのWrite・Edit・NotebookEditを拒否する設定 permissions.blockWritesOutsideWorkingDirectories が加わった。あわせて、claude -p の起動に失敗したときは黙って終了せず、エラーを表示して終了コード1を返すよう修正された。Codexの新版では、安全上の理由でブロックしたときの説明が分かりやすくなり、より安全な続きのプロンプトを選べるようになった。",
+    "why_it_matters": "AIに任せる作業が増えるほど、AIが触れられる範囲を区切っておくことが導入時の大事な確認ポイントになる。",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
+    "title": "Claude Code v2.1.314"
+   },
+   {
+    "slot": "main",
+    "item_id": "f3538b6fb36f",
+    "headline": "IBM Granite Switch 4.1.1、ベースモデルはそのままでアダプターだけを更新",
+    "summary": "IBMはGranite Switch 4.1.1を公開した。4.1と完全な後方互換性があり、移行作業は要らない。更新されたのは、10言語に対応し句読点や大文字も付ける音声認識モデルと、granitelib-core の判断用アダプターの2つだけ。ベースモデルには手を加えていない。今後は、開発者や外部の事業者が自前のアダプターを作り、バージョン管理できるAdapter SDKも予定されている。",
+    "why_it_matters": "モデルの更新が小さな部品単位で済めば、導入した後の検証や運用の負担を減らせる。",
+    "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+    "title": "Granite Switch 4.1.1 — Update models like you update software"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "d3fe4a172910",
+    "headline": "検索を横取りするブラウザ拡張、319個・利用者1340万人",
+    "summary": "Socketの調査で、ブラウザの既定の検索エンジンを書き換え、運営者のプロキシ経由で検索を中継する拡張機能が319個見つかった。利用者は合計で約1340万人。検索語を記録したうえで、YahooやBingの検索シンジケーションから収益の分配を受け取っていた。多くはChrome Web Storeで非公開（unlisted）扱いで、要求する権限もほとんどなかった。",
+    "why_it_matters": "転送先は運営者がサーバー側でいつでも変えられ、記事は将来フィッシングなどに悪用されるおそれがあると指摘している。業務で使うブラウザの拡張機能も確認しておきたい。",
+    "url": "https://socket.dev/blog/searchjacked?utm_medium=feed",
+    "title": "Searchjacked: Hidden Browser Extensions Hijack Searches for 13 Million Users"
+   }
+  ],
+  "mp3_name": "episodes/2026-10-30.mp3",
+  "mp3_bytes": 5539053,
+  "duration_s": 692
+ },
+ {
+  "date": "2026-10-29",
+  "title": "AI Morning Digest 10月29日：Gemini 4 Carbonは守る側から、エージェントは業務の中へ",
+  "try_today": "自分のリポジトリの GitHub Actions のジョブが、外部のどのドメインに通信しているか（パッケージレジストリや API など）を一覧にして、許可リストの下書きを作る。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "b0da25ea6c1a",
+    "headline": "Google、新フロンティアモデル「Gemini 4 Carbon」を発表 サイバー防御側から先行提供",
+    "summary": "Googleが、サイバーセキュリティと長時間のエージェント作業を強みにした新モデル Gemini 4 Carbon を発表した。脆弱性の発見や修正のベンチマークで高いスコアを示し、プロンプトインジェクションの攻撃成功率は0.0%だったという。まず一部のサイバー防御担当者に提供し、一般向けの時期はまだ決まっていない。",
+    "why_it_matters": "最上位モデルを防御側から先に配る流れがはっきりしてきた。セキュアコーディングや脆弱性対応の自動化を考えるチームは、導入計画に入れておきたい。",
+    "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+    "title": "Gemini 4 Carbon: Our next frontier model"
+   },
+   {
+    "slot": "main",
+    "item_id": "75e2017ed4c5",
+    "headline": "OpenAIとServiceNowが提携拡大 エージェントを業務ワークフローの両側に",
+    "summary": "OpenAIとServiceNowが提携を広げる。OpenAIのモデルとエージェントをServiceNowに組み込み、逆にServiceNowのワークフローをChatGPTやCodexから使えるようにする。",
+    "why_it_matters": "エージェントがチャット画面を出て、チケットや承認といった既存の業務システムに直接入っていく。社内システムとの連携設計がこれまで以上に大事になる。",
+    "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+    "title": "OpenAI and ServiceNow expand partnership across enterprise workflows"
+   },
+   {
+    "slot": "main",
+    "item_id": "ad10900db6cd",
+    "headline": "AnthropicのAI for Science、20の財団・研究機関・プロジェクトへ拡大",
+    "summary": "Anthropicは、研究者にClaudeのクレジットを無償で提供するAI for Scienceプログラムを、個人の研究者から組織単位に広げた。Sloan財団や米国立科学財団などの助成団体、クリック研究所やEMBLなどの研究機関、gnomADやFlyWireといったプロジェクトが参加する。",
+    "why_it_matters": "助成団体を通してクレジットを配る形なので、届く研究者の数が一気に増える。オープンなデータやソフトといった公共財が生まれることも期待されている。",
+    "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+    "title": "We’re highlighting 20 scientific foundations, institutions, and research groups around the world that we’ve partnered with in an expansion of our AI for Science program."
+   },
+   {
+    "slot": "main",
+    "item_id": "7ae8eb20550e",
+    "headline": "NVIDIA、指示で動かせる文字起こしモデル Nemotron 3.5 Transcribe とデータセット Granary v2 を公開",
+    "summary": "Nemotron 3.5 Transcribeは40言語の文字起こしに対応し、そのうち31言語は英語との翻訳もできる。話者の識別やタイムスタンプ、用語リストの指定を自然な言葉の指示で切り替えられる。同時に公開されたGranary v2は、48言語・約46万時間分のマニフェストを持つ。",
+    "why_it_matters": "会議の録音や専門分野の音声をまとめて処理するとき、モデルを作り直さずに指示や用語リストだけで調整できる。",
+    "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+    "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt"
+   },
+   {
+    "slot": "main",
+    "item_id": "93b9dc1d3128",
+    "headline": "Simon Willison「10月はバイブ・ゲーム開発の転換点」",
+    "summary": "Simon Willisonは、Claude Opus 5.5の登場で、AIに作らせたゲームが「動く」だけでなく「遊んで楽しい」段階に入ったと書いた。RPGやリアルタイムストラテジーなど複数の作品を、多くは4時間以内の作業で作ったという。",
+    "why_it_matters": "作ること自体のハードルが下がり、差がつくのは企画のアイデアとセンス、それに遊んで確かめる工程になってきた。ゲーム以外の開発にも同じことが言える。",
+    "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+    "title": "The October inflection point for vibe game development"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "100b14b2d151",
+    "headline": "GitHub Actionsに標準のエグレスファイアウォール登場 StepSecurityが自社製品との違いを解説",
+    "summary": "GitHubが、ホスト型ランナーから外に出る通信を制限する機能をプレビューで提供している。対象は今のところLinuxのホスト型ランナーだけ。StepSecurityは、普段と違う通信先の検知やビルド中のファイル改ざん検知などを、自社のHarden-Runnerとの違いとして挙げている。",
+    "why_it_matters": "CI経由のサプライチェーン攻撃は、通信を止めるだけでは防ぎきれない。自分たちのランナーで何を監視するのかを見直すきっかけになる。",
+    "url": "https://www.stepsecurity.io/blog/github-actions-native-egress-firewall-vs-harden-runner-five-differences-that-matter",
+    "title": "GitHub Actions Native Egress Firewall vs. Harden-Runner: Five Differences That Matter"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "498eb64bd786",
+    "headline": "ゼンリングループとPFNが業務資本提携 時間軸付きの地理空間情報をAIで",
+    "summary": "ゼンリンとゼンリンデータコムがPreferred Networksの第三者割当増資を引き受け、地理空間情報を扱うAIモデルやサービスを一緒に開発する。最初は公共、不動産、小売・流通の分野で、需要の予測や出店先選びの実証を進める。",
+    "why_it_matters": "土地や建物が「どう変わってきたか」という履歴データをAIで使える形に整える取り組みは、防災や物流など現実世界の予測に広く応用できる。",
+    "url": "https://www.preferred.jp/ja/news/pr20261029",
+    "title": "ゼンリングループとPreferred Networksが業務資本提携 「現実世界の変化」を捉える地理空間情報とAIを融合"
+   }
+  ],
+  "mp3_name": "episodes/2026-10-29.mp3",
+  "mp3_bytes": 4182957,
+  "duration_s": 522
+ },
+ {
+  "date": "2026-10-28",
+  "title": "Genie 4の世界シミュレーション、Codex 0.165、手元で動くLFM3",
+  "try_today": "Ollamaをv0.40.12以降に更新して `ollama run lfm3` を実行し、手元のPCでツール呼び出しやJSON出力を試す（4bitで約1GB）。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "d17d13a0006a",
+    "headline": "DeepMind、映像・音声・対話を一緒にリアルタイム生成する世界モデル「Genie 4」",
+    "summary": "Google DeepMindがGenie 4を発表した。キーボード操作やテキスト指示で天候を変えたり人や物を足したりしながら、映像・音声・会話をリアルタイムに生成する。いまは信頼できるテスター向けの研究プレビューで、今後Google AI Ultra（Project Genie）と、Gemini API・AI Studioのアーリーアクセスに広げる予定。",
+    "why_it_matters": "映像制作の事前検討、ゲームの試作、ロボットやエージェントの訓練環境まで、「操作できる世界」を短時間で用意できる可能性がある。一方で、長い時間使うと細部がずれていくといった限界も明記されている。",
+    "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+    "title": "Genie 4: A new generation of world simulation"
+   },
+   {
+    "slot": "main",
+    "item_id": "8357008dccbc",
+    "headline": "Codex 0.165.0：Vertex AIプロバイダ内蔵、GPT-6.1 Terra追加、会話の途中で推論量を変更可能に",
+    "summary": "Codex CLIの0.165.0で、Google Cloud Vertex AIのプロバイダが組み込みになり、モデル一覧にGPT-6.1 Terraが入った。リポジトリでの絞り込みやworktree単位のまとまり表示、会話の途中で推論の強さを変える機能が標準で有効になり、新規プロファイルではMemory v2が既定になった。",
+    "why_it_matters": "GCPを使っている組織でも既存の基盤のままCodexを試しやすくなる。マーケットプレイスURLの検証漏れを塞ぐセキュリティ修正も入っているため、早めに更新したい。",
+    "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0",
+    "title": "Codex 0.165.0"
+   },
+   {
+    "slot": "main",
+    "item_id": "db98bf59a6c7",
+    "headline": "Liquid AI「LFM3」公開、2Bクラスのテキスト・画像・音声モデルがOllamaでもすぐ使える",
+    "summary": "Liquid AIが、畳み込みとスライディングウィンドウ注意、全体注意を組み合わせた2B前後の小型モデル群LFM3を公開した。テキスト用の1.7Bは4bitで約1GBに収まり、256Kトークンの文脈を扱える。Ollama v0.40.12にもlfm3、lfm3-vl、lfm3-audioが入った。",
+    "why_it_matters": "エージェント、ツール呼び出し、構造化出力向けの小型モデルを、手元のPCやGPU1枚で動かしたり微調整したりできる。ライセンスは独自のLFM Open License v1.0なので、業務で使う前に条件を確認しておきたい。",
+    "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+    "title": "Build specialized multimodal models with LFM3"
+   },
+   {
+    "slot": "main",
+    "item_id": "34370e88c88d",
+    "headline": "Ai2の調査：研究アイデアの新しさをLLMに判定させると、プロンプトの言い回しで結果が大きく揺れる",
+    "summary": "Ai2が、ICLR 2026の査読コメントをもとに、研究アイデアの新規性をLLMに判定させるベンチマークを公開した。GPT-5.4ではプロンプトの一文を消しただけで正解率が93.5%から40.9%に落ちた。探索や推論を増やしても精度は安定して上がらなかった。",
+    "why_it_matters": "LLMに評価させる仕組みを提案や社内の審査に入れるなら、プロンプトを少し変えた複数パターンで結果がどれだけ動くかを確かめる必要がある。",
+    "url": "https://huggingface.co/blog/allenai/novelty-bench",
+    "title": "Can we trust LLMs to judge whether a research idea is novel?"
+   },
+   {
+    "slot": "main",
+    "item_id": "a3a879144b29",
+    "headline": "OpenAIとOracleが提携を広げ、Oracleの業務アプリとエージェントをChatGPTの中へ",
+    "summary": "OpenAIとOracleが提携を広げ、Oracleの業務アプリケーションとAIエージェントをChatGPTの中から使えるようにすると発表した。OpenAIの技術でOracleの新しい製品も支えていくとしている。",
+    "why_it_matters": "基幹業務のアプリとチャットAIがつながる流れがさらに進み、ChatGPTが業務の入口になる場面が増えそうだ。",
+    "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+    "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "f9fc9bf8c857",
+    "headline": "ThinkWorld：世界の動きを予想させてロボットの行動推論を鍛える",
+    "summary": "ロボットの行動ラベル付きデータの少なさを、人間が映った動画で補うVLAの学習枠組み。世界がどう動くかの予想に行動の推論を結びつけて、汎化を高めることを狙っている。",
+    "why_it_matters": "ヒューマノイドや作業ロボットのデータ不足をどう乗り越えるかの一例で、Genie 4のような世界モデルの流れともつながる。",
+    "url": "https://arxiv.org/abs/2610.37666v1",
+    "title": "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "86f425d0c907",
+    "headline": "StepSecurity、Claude CodeやCodexのプラグインを開発者PCとGitHubで棚卸しする機能",
+    "summary": "開発者のPCやGitHubリポジトリに入っているコーディングエージェント用プラグインについて、入手元、中に含むもの、有効かどうか、どのリポジトリが配っているかを一覧で見られるようにした。",
+    "why_it_matters": "エージェントのプラグインは新しいサプライチェーン攻撃の入口になりうる。まず何が入っているかを把握することが対策の出発点になる。",
+    "url": "https://www.stepsecurity.io/blog/stepsecurity-now-inventories-ai-agent-plugins-in-your-github-repositories-and-on-developer-machines",
+    "title": "StepSecurity Now Inventories AI Agent Plugins in Your GitHub Repositories and on Developer Machines"
+   }
+  ],
+  "mp3_name": "episodes/2026-10-28.mp3",
+  "mp3_bytes": 4498989,
+  "duration_s": 562
+ }
+]
