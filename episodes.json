@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-02",
+  "title": "AIで数学が変わる日、AIの儲けはどこに？ 道具選びで変わるAI開発の費用",
+  "try_today": "最近AIで時間が短くなった作業を1つ選び、浮いた時間で何が増えたか（売上・件数・品質など）を一行でメモする。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "7bb043058a2d",
+    "headline": "「数学は変わった、それらしく振る舞おう」――AI時代の数学界に改革を呼びかける寄稿",
+    "summary": "テレンス・タオ氏のブログに11月1日、数学者フランク・カレガリ氏の寄稿が掲載された。10月6日にOpenAIが700本超の研究論文を公開したことを分岐点と位置づけ、AIによって証明そのものの価値が変わると指摘。論文評価・採用・学術誌・大学院教育の見直しと、AIの成果を人類の数学の遺産として引き受けることを提案している。",
+    "why_it_matters": "AIが「作業」を安くするとき、価値は問題の選び方と説明の力に移るという主張は、数学に限らず知的労働全般の評価の仕方に通じる。",
+    "url": "https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/",
+    "title": "Mathematics has changed. Let's act like it"
+   },
+   {
+    "slot": "main",
+    "item_id": "71334093a413",
+    "headline": "アポロのエコノミスト「テック以外の大企業でAIの財務的な見返りはゼロ」",
+    "summary": "Apollo Global Managementのチーフエコノミスト、トーステン・スロック氏は、S&P500から大手テック7社を除いた企業群で、利益率と従業員一人あたり売上が横ばいで、AIによる生産性向上の証拠は見られないとした。成功は判断・責任・信頼・文化・倫理に左右され、AIはそれを置き換えられないと説明。TechCrunchが10月25日に報じたが、分析期間や手法は示されていない。",
+    "why_it_matters": "AI導入の効果を「時間短縮」ではなく利益や売上で示せるかという問いを、企業に突きつけている。",
+    "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+    "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says"
+   },
+   {
+    "slot": "main",
+    "item_id": "fe548f549737",
+    "headline": "AIにWebアプリを作らせると、フレームワーク次第で費用が約2倍変わる――ノーラン・ローソン氏の実験",
+    "summary": "ノーラン・ローソン氏は、同じ小規模なポケモン図鑑アプリを12のフレームワークでAIエージェントに複数回作らせ、費用・時間・トークン・コード量・Lighthouseスコアを比較した。最安(Hono+htmx)と最高(Angular)で費用は約2倍差があり、MPA型が表示速度で有利、素のViteより何らかのフレームワークを使う方が有利な面もあった。結果のばらつきが大きい点や、題材とAIが1種類に限られる点を注意として挙げている。",
+    "why_it_matters": "AIがコードを書く時代でも技術選定の結果は費用と保守性に返ってくるため、「なんとなく」ではなく計測に基づいて選ぶべきだと示した。",
+    "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
+    "title": "The AI cost of JavaScript frameworks"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "ee64b630519e",
+    "headline": "Pika、動画と音声を同時生成する「Pika H3 Flex」の重みをHugging Faceで公開",
+    "summary": "Pika LabsはMiniMax-H3を土台に追加学習したLoRAアダプターをHugging Faceで公開した。テキストや最初・最後のフレーム、参照ファイルから最長15秒の動画とステレオ音声を生成でき、1リクエストを1GPU(H100 80GBで動作確認)で実行可能。土台部品を含めて約210GBで、アダプターはMiniMax H3 Community Licenseに従う。",
+    "why_it_matters": "動画生成を自社のサーバーで試す選択肢が増えた一方、ハードウェア要件とライセンス条件の確認が欠かせない。",
+    "url": "https://huggingface.co/Pika-Labs/Pika-H3-Flex",
+    "title": "Pika-Labs/Pika-H3-Flex"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-02.mp3",
+  "mp3_bytes": 7416813,
+  "duration_s": 927
+ },
+ {
   "date": "2026-11-01",
   "title": "共有リンクの落とし穴と、AIが見つけたLinuxの深刻な穴",
   "try_today": "自社や部署で使っているLinuxサーバーが、CVE-2026-98432（IPv4 TCPの解放後使用の脆弱性）の修正版や一時的な対策をもう入れているか、情報システムの担当者にメッセージを一通送って確認する。",
