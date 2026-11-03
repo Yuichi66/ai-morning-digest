@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-03",
+  "title": "AIに任せる作業の「確認」と「止める」、そして数字の読み方",
+  "try_today": "資料で使っているAI利用率などの調査グラフを1つ選び、元の調査の質問文と、途中で聞き方が変わっていないかを確かめる。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "8491ebd6e665",
+    "headline": "Claude Code更新、AIに任せる作業へ確認・停止・通知の仕組みを追加",
+    "summary": "Claude Code v2.1.317では、クラウドの定期タスクに頼んでいないコネクタが付いたときの警告、ウェブやシェルのツールがアカウントのメールアドレスを外部に送る前の確認、Agent SDKのフックが失敗したら操作を止めるonFailure: \"block\"が加わった。組織の管理設定が読み込まれていないときのデスクトップでの通知や、開発者別・日別・IdPグループ別に過去の利用額を読める費用レポートAPIも追加された。",
+    "why_it_matters": "AIエージェントに任せる範囲が広がる中、人への確認、止める、知らせるという仕組みが増えた。導入する組織にとっては、運用で確かめられる点が増える。",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+    "title": "Claude Code v2.1.317"
+   },
+   {
+    "slot": "main",
+    "item_id": "6bf0704cb5e2",
+    "headline": "「大企業のAI導入が鈍化」は質問文の変更が原因だった、次は「スーパーインテリジェンス」へ改名",
+    "summary": "Simon Willisonが米国勢調査局のBTOS調査を見直したところ、2025年11月に質問が「商品・サービスの生産での利用」から「あらゆる業務での利用」に広がっており、新旧の数字は比べられないと分かった。従業員250人以上の企業は旧質問で約12%、新質問では2026年10月に約40%。2026年10月の調査からは、大統領令を理由に「AI」が「Super Intelligence（SI）」と呼び替えられた。",
+    "why_it_matters": "外部の調査グラフをAI導入の判断材料に使うときは、質問文がいつ変わったかを確かめないと読み違える。",
+    "url": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+    "title": "The U.S. Census Bureau and “Super Intelligence”"
+   },
+   {
+    "slot": "main",
+    "item_id": "bbd4c3a03fa0",
+    "headline": "Trail of Bits、Codexで古い安定版Linuxへのセキュリティ修正のバックポートを数日から数時間に",
+    "summary": "Trail of BitsはCodexを使い、足りない修正を探す、パッチを古い版に合わせる、検証材料を集める、テストする、提出資料を作るまでをエージェントに任せ、人のエンジニアがレビューして提出している。2026年10月29日までに149件のCVE修正を安定版Linuxカーネルに届け、FedoraやUbuntuのパッケージにも修正を送った。",
+    "why_it_matters": "安定性と安全性のどちらかを選ばされる状況を変える試みで、手間がかかり評価されにくい作業をAIの下準備で片付ける例にもなる。",
+    "url": "https://blog.trailofbits.com/2026/11/02/backporting-security-fixes-at-scale-with-codex/",
+    "title": "Backporting security fixes at scale with Codex"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "3c51f6aa7437",
+    "headline": "AIが別のモデルの重みを直接読み書きする「Weight-Space Programming」の初期実験",
+    "summary": "MIT CSAILの研究者がブログで、LLMにネットワークの重みを読ませて性質を当てさせたり、重みを書き換えさせたりする実験を報告した。Qwen3.5-0.8Bの推論ループの原因を特定の方向に突き止め、重みの約0.016%を勾配学習なしで書き換えて、数学や指示追従のスコアを上げた。編集済みモデルはHugging Faceで公開されているが、ライセンスはページに書かれていない。",
+    "why_it_matters": "自社で動かす公開モデルの弱点を、学習し直さずに直せる可能性を示している。ただし査読前の初期結果で、Gemmaでは改善しなかった。",
+    "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+    "title": "Astra can read and write weights to improve Qwen"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-03.mp3",
+  "mp3_bytes": 7901229,
+  "duration_s": 987
+ },
+ {
   "date": "2026-11-02",
   "title": "AIで数学が変わる日、AIの儲けはどこに？ 道具選びで変わるAI開発の費用",
   "try_today": "最近AIで時間が短くなった作業を1つ選び、浮いた時間で何が増えたか（売上・件数・品質など）を一行でメモする。",
