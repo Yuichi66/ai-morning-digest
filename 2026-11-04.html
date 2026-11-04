@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AIは化学の下調べ係に／「重みを読むAI」の本当のところ／長い文書は苦手？</title><style>
+:root{--bg:#f7f8f6;--fg:#1d2421;--muted:#5c6862;--accent:#1f6f5c;--line:#d9dfdb}
+@media (prefers-color-scheme:dark){:root{--bg:#131816;--fg:#e4ebe7;--muted:#9aa8a1;--accent:#6cc4aa;--line:#2f3a36}}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.75;margin:0}
+main{width:min(720px,100%);box-sizing:border-box;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
+</style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-11-04</p>
+<h1>AIは化学の下調べ係に／「重みを読むAI」の本当のところ／長い文書は苦手？</h1>
+<audio controls preload="none" src="https://yuichi66.github.io/ai-morning-digest/episodes/2026-11-04.mp3"></audio>
+<h2>主要ニュース</h2>
+<h3>Google DeepMind、Antigravityに化学向けスキル　創薬の下調べをAIエージェントが担う</h3><p>Google DeepMindは、エージェント開発環境Antigravityで使える「Cheminformatics Skills」を発表した。論文や特許からの分子収集、ChEMBL・PubChemとの連携、RDKitベースの計算、効き目の予測モデル作り、新しい分子と合成ルートの提案までを行う。肺がん薬を題材にしたデモでは、数千の化合物から568個を選んで分析し、新しい環状分子を提案するまでを約1時間でこなした。</p><p><b>何が変わるか：</b>言語モデルは段取りと推論を、正確さが要る計算は決まった答えを返すツールを担当する分担がはっきり示された。出てくるのは実験で確かめるべき仮説だと明記されており、業務にAIを入れるときの考え方の参考になる。</p><p class="muted">出典：<a href="https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/" rel="noopener">Agentic cheminformatics with Google Antigravity</a></p>
+<h3>ノートPCのQwenでも「重みを読む」実験に成功、ただし話題の論文には誇張の指摘も</h3><p>Simon Willison氏は、話題の「Sparks of Weight-Space Programming」にならい、ノートPCで動くQwen 3.8 27Bに小さなゲーム用ネットワークの生の重みを見せ、何のゲームかを当てさせた。道具を使わない条件で、4つのうち3つでそれらしい答えを出し、1問に約1時間かかった。一方でMatthew Honnibal氏は、Qwenの成績を上げた例はPythonで試しながら行ったもので、重みを読むだけでできたわけではないと指摘した。</p><p><b>何が変わるか：</b>手元で動くオープンウェイトモデルでも長く考えれば手ごわい課題に取り組める。ただ、派手な成果は、どんな手法でどの規模の話なのかを確かめてから受け止める必要がある。</p><p class="muted">出典：<a href="https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/" rel="noopener">Qwen 3.8 27B on my laptop can interpret model weights, too</a></p>
+<h3>Ai2のStateBench：長い文書で変わり続ける情報を、最先端モデルも追い切れない</h3><p>Ai2は、長い入力の中で値が書き換わっていく様子をモデルが追えるかを4段階で測るベンチマーク「StateBench」を公開した。最先端モデルはやさしい2段階ではよくできたが、難しい2段階では入力が長くなるほど精度が落ち、最も難しい長い問題では13%以下だった。課題で直接訓練した小さなモデルでは、Gated DeltaNet系の設計が訓練時をはるかに超える長さでも正確に追えた。データとコードは公開されている。</p><p><b>何が変わるか：</b>何度も修正が入った長い資料でAIに最新の値を聞くと、途中の見落としが起きうる。根拠の場所を示させて人が確かめる運用が大切になる。</p><p class="muted">出典：<a href="https://huggingface.co/blog/allenai/statebench" rel="noopener">StateBench: Testing how language models track state changes over long documents</a></p>
+<h2>偶然の出会い</h2>
+<h3>Pixel：低価格の車輪つき人型ロボットを、体・データ収集・学習までまとめて設計</h3><p>Pixelは、人に近い動き方をする低価格の車輪つき人型ロボット、遠隔操作とロボットなしのデータ収集手段、全身の制御、人とロボットの実演を共通で扱う学習の流れを、まとめて設計したシステムだ。同じチームのPixel-UMIは、センサーを付けた人の実演を周りの形を考えた姿勢に置き換え、5つの作業で平均87%の進み具合を達成した。</p><p><b>何が変わるか：</b>人がふだん作業する様子からロボットのお手本を大量に集める道が具体的になってきた。</p><p class="muted">出典：<a href="https://arxiv.org/abs/2611.03648v1" rel="noopener">Pixel: A Co-Designed Full-Stack Robot System for Learning General-Purpose Mobile Manipulation</a></p>
+<h2>今日ひとつ試すなら</h2><p>何度も修正が入った長い資料（議事録や改訂を重ねた企画書など）をAIに読ませて、「最新の値」と「それが書いてある場所」を一緒に聞き、その場所を自分で開いて答えが合っているか確かめる。</p></main></body></html>

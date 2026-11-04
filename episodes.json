@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-04",
+  "title": "AIは化学の下調べ係に／「重みを読むAI」の本当のところ／長い文書は苦手？",
+  "try_today": "何度も修正が入った長い資料（議事録や改訂を重ねた企画書など）をAIに読ませて、「最新の値」と「それが書いてある場所」を一緒に聞き、その場所を自分で開いて答えが合っているか確かめる。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "7b04a568c5ad",
+    "headline": "Google DeepMind、Antigravityに化学向けスキル　創薬の下調べをAIエージェントが担う",
+    "summary": "Google DeepMindは、エージェント開発環境Antigravityで使える「Cheminformatics Skills」を発表した。論文や特許からの分子収集、ChEMBL・PubChemとの連携、RDKitベースの計算、効き目の予測モデル作り、新しい分子と合成ルートの提案までを行う。肺がん薬を題材にしたデモでは、数千の化合物から568個を選んで分析し、新しい環状分子を提案するまでを約1時間でこなした。",
+    "why_it_matters": "言語モデルは段取りと推論を、正確さが要る計算は決まった答えを返すツールを担当する分担がはっきり示された。出てくるのは実験で確かめるべき仮説だと明記されており、業務にAIを入れるときの考え方の参考になる。",
+    "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+    "title": "Agentic cheminformatics with Google Antigravity"
+   },
+   {
+    "slot": "main",
+    "item_id": "6857dc224a41",
+    "headline": "ノートPCのQwenでも「重みを読む」実験に成功、ただし話題の論文には誇張の指摘も",
+    "summary": "Simon Willison氏は、話題の「Sparks of Weight-Space Programming」にならい、ノートPCで動くQwen 3.8 27Bに小さなゲーム用ネットワークの生の重みを見せ、何のゲームかを当てさせた。道具を使わない条件で、4つのうち3つでそれらしい答えを出し、1問に約1時間かかった。一方でMatthew Honnibal氏は、Qwenの成績を上げた例はPythonで試しながら行ったもので、重みを読むだけでできたわけではないと指摘した。",
+    "why_it_matters": "手元で動くオープンウェイトモデルでも長く考えれば手ごわい課題に取り組める。ただ、派手な成果は、どんな手法でどの規模の話なのかを確かめてから受け止める必要がある。",
+    "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+    "title": "Qwen 3.8 27B on my laptop can interpret model weights, too"
+   },
+   {
+    "slot": "main",
+    "item_id": "a55665cf4895",
+    "headline": "Ai2のStateBench：長い文書で変わり続ける情報を、最先端モデルも追い切れない",
+    "summary": "Ai2は、長い入力の中で値が書き換わっていく様子をモデルが追えるかを4段階で測るベンチマーク「StateBench」を公開した。最先端モデルはやさしい2段階ではよくできたが、難しい2段階では入力が長くなるほど精度が落ち、最も難しい長い問題では13%以下だった。課題で直接訓練した小さなモデルでは、Gated DeltaNet系の設計が訓練時をはるかに超える長さでも正確に追えた。データとコードは公開されている。",
+    "why_it_matters": "何度も修正が入った長い資料でAIに最新の値を聞くと、途中の見落としが起きうる。根拠の場所を示させて人が確かめる運用が大切になる。",
+    "url": "https://huggingface.co/blog/allenai/statebench",
+    "title": "StateBench: Testing how language models track state changes over long documents"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "b82a6ac52f6c",
+    "headline": "Pixel：低価格の車輪つき人型ロボットを、体・データ収集・学習までまとめて設計",
+    "summary": "Pixelは、人に近い動き方をする低価格の車輪つき人型ロボット、遠隔操作とロボットなしのデータ収集手段、全身の制御、人とロボットの実演を共通で扱う学習の流れを、まとめて設計したシステムだ。同じチームのPixel-UMIは、センサーを付けた人の実演を周りの形を考えた姿勢に置き換え、5つの作業で平均87%の進み具合を達成した。",
+    "why_it_matters": "人がふだん作業する様子からロボットのお手本を大量に集める道が具体的になってきた。",
+    "url": "https://arxiv.org/abs/2611.03648v1",
+    "title": "Pixel: A Co-Designed Full-Stack Robot System for Learning General-Purpose Mobile Manipulation"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-04.mp3",
+  "mp3_bytes": 7110573,
+  "duration_s": 888
+ },
+ {
   "date": "2026-11-03",
   "title": "AIに任せる作業の「確認」と「止める」、そして数字の読み方",
   "try_today": "資料で使っているAI利用率などの調査グラフを1つ選び、元の調査の質問文と、途中で聞き方が変わっていないかを確かめる。",
