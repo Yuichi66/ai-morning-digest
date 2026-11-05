@@ -1,5 +1,55 @@
 [
  {
+  "date": "2026-11-05T12",
+  "title": "特別編：オープンウェイトモデルの最新トレンドと社内向けの選び方",
+  "try_today": "社内でよくある仕事を3つ選び、Qwen3.8-27B と Gemma 4 31B に同じ指示を出して比べてみる。",
+  "stories": [
+   {
+    "slot": "main",
+    "headline": "中国勢が性能で先行、ただし社内運用は中規模モデルが現実解",
+    "summary": "Kimi K3、Qwen3.8、DeepSeek V4-Pro などは1兆パラメータ超。Artificial Analysis の総合指数は MiMo-V2.6-Pro 46、GLM-5.3 45、Kimi K3 44、Mistral Large 4 38。",
+    "why_it_matters": "100人規模なら Qwen3.8-27B や Gemma 4 31B を GPU2枚で動かす構成が現実的。",
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "title": "Qwen3.8-27B model card"
+   },
+   {
+    "slot": "main",
+    "headline": "フランス政府は Mistral を採用、DeepSeek 採用は裏付けなし",
+    "summary": "2025年6月、政府が Mistral と契約し公務員向け Albert を強化。2026年1月には国防省も枠組み契約。DeepSeek については CNIL の照会方針のみ確認。",
+    "why_it_matters": "欧州では出どころの説明しやすさが選定理由になっている。",
+    "url": "https://acteurspublics.fr/articles/letat-signe-un-contrat-avec-mistral-pour-booster-son-chatbot/",
+    "title": "Acteurs Publics"
+   },
+   {
+    "slot": "main",
+    "headline": "みずほの金融特化モデル、Qwen3-32B ベースとの報道（一次未確認）",
+    "summary": "2026年3月発表。公開基盤モデルをオンプレで運用し、実務テストの正答率89.0%、応答平均1秒未満と報道。Qwen3-32B の名前は二次情報のみ。",
+    "why_it_matters": "中国系の重みでも、データを外に出さない自社運用なら使われている例。",
+    "url": "https://www.sbbit.jp/article/fj/182069",
+    "title": "ビジネス+IT"
+   },
+   {
+    "slot": "main",
+    "headline": "日本語評価は海外勢が上、国産は出どころで選ぶ軸",
+    "summary": "Nejumi 4（10/22時点）で Qwen3.8-27B 0.809、Gemma 4 31B 0.808、LLM-jp-4.1-33B 0.721。源内の国産7モデルは多くが重み非公開。",
+    "why_it_matters": "国産は官公庁案件や出自説明が要る場面で併用するのが合理的。",
+    "url": "https://www.digital.go.jp/news/10d55c63-b3e1-42b9-9cc5-93a06943ae0e",
+    "title": "デジタル庁"
+   },
+   {
+    "slot": "main",
+    "headline": "候補5モデルと検証の進め方",
+    "summary": "Qwen3.8-27B、Gemma 4 31B、gpt-oss-120b（Swallow 版も比較）、GLM-5.3-Flash、LLM-jp-4.1-33B。RTX PRO 6000 か H100 を2枚、vLLM で配信。",
+    "why_it_matters": "公開ベンチは自己申告が多いため、4〜6週間で自社の業務とツールで測って決める。",
+    "url": "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro",
+    "title": "NIST CAISI"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-05T12.mp3",
+  "mp3_bytes": 7242476,
+  "duration_s": 905
+ },
+ {
   "date": "2026-11-05",
   "title": "AI Morning Digest 11月5日：Images 2.6、ネットなしで動く翻訳AI PLaMo 3 Translate、AIがLinuxの弱点948件を修正",
   "try_today": "Hugging FaceのPFN公式ページから、PLaMo 3 Translateの0.8Bモデル（pfnet/plamo-3-translate-0.8b）を手元のパソコンに入れてください。社内の用語をまとめた用語集を渡して、いつも使っている翻訳と訳し方を比べてみましょう。",

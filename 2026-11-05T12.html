@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>特別編：オープンウェイトモデルの最新トレンドと社内向けの選び方</title><style>
+:root{--bg:#f7f8f6;--fg:#1d2421;--muted:#5c6862;--accent:#1f6f5c;--line:#d9dfdb}
+@media (prefers-color-scheme:dark){:root{--bg:#131816;--fg:#e4ebe7;--muted:#9aa8a1;--accent:#6cc4aa;--line:#2f3a36}}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.75;margin:0}
+main{width:min(720px,100%);box-sizing:border-box;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
+</style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-11-05T12</p>
+<h1>特別編：オープンウェイトモデルの最新トレンドと社内向けの選び方</h1>
+<audio controls preload="none" src="https://yuichi66.github.io/ai-morning-digest/episodes/2026-11-05T12.mp3"></audio>
+<h2>主要ニュース</h2>
+<h3>中国勢が性能で先行、ただし社内運用は中規模モデルが現実解</h3><p>Kimi K3、Qwen3.8、DeepSeek V4-Pro などは1兆パラメータ超。Artificial Analysis の総合指数は MiMo-V2.6-Pro 46、GLM-5.3 45、Kimi K3 44、Mistral Large 4 38。</p><p><b>何が変わるか：</b>100人規模なら Qwen3.8-27B や Gemma 4 31B を GPU2枚で動かす構成が現実的。</p><p class="muted">出典：<a href="https://huggingface.co/Qwen/Qwen3.8-27B" rel="noopener">Qwen3.8-27B model card</a></p>
+<h3>フランス政府は Mistral を採用、DeepSeek 採用は裏付けなし</h3><p>2025年6月、政府が Mistral と契約し公務員向け Albert を強化。2026年1月には国防省も枠組み契約。DeepSeek については CNIL の照会方針のみ確認。</p><p><b>何が変わるか：</b>欧州では出どころの説明しやすさが選定理由になっている。</p><p class="muted">出典：<a href="https://acteurspublics.fr/articles/letat-signe-un-contrat-avec-mistral-pour-booster-son-chatbot/" rel="noopener">Acteurs Publics</a></p>
+<h3>みずほの金融特化モデル、Qwen3-32B ベースとの報道（一次未確認）</h3><p>2026年3月発表。公開基盤モデルをオンプレで運用し、実務テストの正答率89.0%、応答平均1秒未満と報道。Qwen3-32B の名前は二次情報のみ。</p><p><b>何が変わるか：</b>中国系の重みでも、データを外に出さない自社運用なら使われている例。</p><p class="muted">出典：<a href="https://www.sbbit.jp/article/fj/182069" rel="noopener">ビジネス+IT</a></p>
+<h3>日本語評価は海外勢が上、国産は出どころで選ぶ軸</h3><p>Nejumi 4（10/22時点）で Qwen3.8-27B 0.809、Gemma 4 31B 0.808、LLM-jp-4.1-33B 0.721。源内の国産7モデルは多くが重み非公開。</p><p><b>何が変わるか：</b>国産は官公庁案件や出自説明が要る場面で併用するのが合理的。</p><p class="muted">出典：<a href="https://www.digital.go.jp/news/10d55c63-b3e1-42b9-9cc5-93a06943ae0e" rel="noopener">デジタル庁</a></p>
+<h3>候補5モデルと検証の進め方</h3><p>Qwen3.8-27B、Gemma 4 31B、gpt-oss-120b（Swallow 版も比較）、GLM-5.3-Flash、LLM-jp-4.1-33B。RTX PRO 6000 か H100 を2枚、vLLM で配信。</p><p><b>何が変わるか：</b>公開ベンチは自己申告が多いため、4〜6週間で自社の業務とツールで測って決める。</p><p class="muted">出典：<a href="https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro" rel="noopener">NIST CAISI</a></p>
+<h2>今日ひとつ試すなら</h2><p>社内でよくある仕事を3つ選び、Qwen3.8-27B と Gemma 4 31B に同じ指示を出して比べてみる。</p></main></body></html>
