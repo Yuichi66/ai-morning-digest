@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Morning Digest 11月5日：Images 2.6、ネットなしで動く翻訳AI PLaMo 3 Translate、AIがLinuxの弱点948件を修正</title><style>
+:root{--bg:#f7f8f6;--fg:#1d2421;--muted:#5c6862;--accent:#1f6f5c;--line:#d9dfdb}
+@media (prefers-color-scheme:dark){:root{--bg:#131816;--fg:#e4ebe7;--muted:#9aa8a1;--accent:#6cc4aa;--line:#2f3a36}}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.75;margin:0}
+main{width:min(720px,100%);box-sizing:border-box;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
+</style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-11-05</p>
+<h1>AI Morning Digest 11月5日：Images 2.6、ネットなしで動く翻訳AI PLaMo 3 Translate、AIがLinuxの弱点948件を修正</h1>
+<audio controls preload="none" src="https://yuichi66.github.io/ai-morning-digest/episodes/2026-11-05.mp3"></audio>
+<h2>主要ニュース</h2>
+<h3>OpenAI、画像生成の新バージョン「Images 2.6」を公開</h3><p>OpenAIはImages 2.6を発表した。画像生成が速くなり、GIFも作れるようになった。編集の精度も上がり、APIには新しい調整項目が加わった。ChatGPT、Codex、APIで使える。同じ日に、Codexでコードを作る・理解する・レビューする道具を広げるため、Pierre Computer Companyを買収することも発表した。</p><p><b>何が変わるか：</b>画像を仕事で使うときは、速さと直しやすさが使い勝手を大きく左右する。OpenAIが画像とコードの機能をCodexに集めていることも見えてきた。</p><p class="muted">出典：<a href="https://openai.com/index/introducing-images-2-6" rel="noopener">Introducing Images 2.6</a></p>
+<h3>PFN、エッジで動く翻訳LLM「PLaMo 3 Translate」をオープンウェイトで公開</h3><p>Preferred Networksは、翻訳に特化したPLaMo 3 Translateを0.8B・2B・8B・31Bの4サイズでHugging Faceに公開した。日本語と英語を含む53言語に対応し、スマートフォンなどでクラウドを通さずに動く。用語集や前後の文脈を渡すこと、です・ます調とだ・である調の切り替えもできる。PFNの比較では、0.8BでもTranslateGemmaやHy-MT2を上回ったとしている（PFN独自の評価を含む）。</p><p><b>何が変わるか：</b>原文を外部に送らずに、社内の端末だけで翻訳を済ませられる。PLaMoコミュニティライセンスでは、売上10億円未満の企業や個人なら商用でも無償で使える。</p><p class="muted">出典：<a href="https://www.preferred.jp/ja/news/pr20261105" rel="noopener">PFN、世界最高水準のAI翻訳がエッジで可能な大規模言語モデル PLaMo 3 Translate をオープンウェイトで公開</a></p>
+<h3>OpenAI、Linuxカーネルの権限昇格の弱点948件を自動で発見・修正</h3><p>OpenAIは、Linuxカーネルにあるローカル権限昇格の弱点948件について、発見から確認、パッチ作成までを自動で行うパイプラインを作ったと発表した。あわせて、サイバーセキュリティ向けのGPT-5.6 Cyberを提供するDaybreak Redが、Amazon Bedrockを通じてAWS GovCloud（US-East）でも、承認された顧客向けに使えるようになった。</p><p><b>何が変わるか：</b>AIが弱点を見つけるだけでなく修正案まで出せるようになり、直す側の負担が軽くなる。その一方で、取り込むべきパッチは増えていく。</p><p class="muted">出典：<a href="https://openai.com/index/a-thousand-fewer-paths-to-root" rel="noopener">A thousand fewer paths to root</a></p>
+<h2>偶然の出会い</h2>
+<h3>投機的デコーディングが長時間のエージェント推論を狂わせる？ 敵対的な下書き訓練で改善</h3><p>投機的デコーディングは、これまで出力を変えない高速化の技術と考えられてきた。この論文は、長い作業ではおよそ30ステップを過ぎると、数値のずれでモデルの出力の傾向が変わり得ると主張する。大事な推論の場面でわざと下書きを却下させる訓練をすると、複雑なコーディングの課題で成功率が上がったと報告している。</p><p><b>何が変わるか：</b>コーディングエージェントのように長い作業をこなすAIでは、推論を速くする仕組みの細部が、最後までやり遂げられるかに影響する。</p><p class="muted">出典：<a href="https://arxiv.org/abs/2611.05345v1" rel="noopener">Adversarial Speculative Reasoning Improves Long Horizon Agents</a></p>
+<h2>今日ひとつ試すなら</h2><p>Hugging FaceのPFN公式ページから、PLaMo 3 Translateの0.8Bモデル（pfnet/plamo-3-translate-0.8b）を手元のパソコンに入れてください。社内の用語をまとめた用語集を渡して、いつも使っている翻訳と訳し方を比べてみましょう。</p></main></body></html>
