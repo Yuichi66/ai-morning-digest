@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>15秒動画AI、ロボットの練習場、GitHubが扉を閉める日</title><style>
+:root{--bg:#f7f8f6;--fg:#1d2421;--muted:#5c6862;--accent:#1f6f5c;--line:#d9dfdb}
+@media (prefers-color-scheme:dark){:root{--bg:#131816;--fg:#e4ebe7;--muted:#9aa8a1;--accent:#6cc4aa;--line:#2f3a36}}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.75;margin:0}
+main{width:min(720px,100%);box-sizing:border-box;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
+</style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-11-06</p>
+<h1>15秒動画AI、ロボットの練習場、GitHubが扉を閉める日</h1>
+<audio controls preload="none" src="https://yuichi66.github.io/ai-morning-digest/episodes/2026-11-06.mp3"></audio>
+<h2>主要ニュース</h2>
+<h3>Google、動画AI「Gemini Omni 1.2 Flash」を一般公開　最大15秒・約30%値下げ</h3><p>GoogleとGoogle DeepMindは、動画を作って編集するモデルGemini Omni 1.2 Flashを公開した。作れる長さは前のOmni 1.1の10秒から最大15秒に伸び、720pでは1秒あたり約0.07ドルと約30%安くなった。顔や商品の文字が崩れにくくなり、会話しながら一部だけ直す編集もできる。Gemini API、Google Cloud、Google Vids、Gemini アプリなどで使える。</p><p><b>何が変わるか：</b>15秒あれば短い広告動画が丸ごと作れる。直しを指示だけで済ませられるので、外注する前に社内でたくさんの案を試せる。</p><p class="muted">出典：<a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/" rel="noopener">Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips</a></p>
+<h3>NVIDIA、ロボット・自動運転向け世界モデル「Cosmos 3」に4つのオープンウェイトモデルを追加</h3><p>NVIDIAは、Cosmos 3 Nanoを土台にした4つのモデルをHugging Faceで公開した。最大11台のカメラとLiDARの走行データを作るもの、シミュレーターの画面を本物らしい映像にするもの、両腕ロボットの動きから次の映像を予想するものなどがそろう。ライセンスはOpenMDW-1.1で、商用でも使えるとされる。</p><p><b>何が変わるか：</b>実機を使わずに、めったに起きない場面をAIの中で何度でも試せる。ロボットや自動運転の開発にかかるお金と危険を減らせる。</p><p class="muted">出典：<a href="https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation" rel="noopener">New NVIDIA Cosmos 3 Open Models for Interactive World Simulation</a></p>
+<h3>GitHub、pull_request_targetで動くワークフローを12月2日から標準でブロック</h3><p>GitHubは公開リポジトリで、pull_request_targetをきっかけに動くGitHub Actionsのワークフローを、12月2日から標準で止める。外から来たコードを権限の強い環境で動かしてしまう手口が、サプライチェーンを狙う事件に使われてきたためだ。安全な使い方でも、許可するルールを作らない限り止まる。11月9日と16日には、試しに止める時間帯がある。</p><p><b>何が変わるか：</b>開発チームを持つ会社は期限までに、当てはまるワークフローを洗い出す必要がある。見つかったら、許可ルールを作るか別のきっかけに移す。</p><p class="muted">出典：<a href="https://socket.dev/blog/github-to-block-pull-request-target?utm_medium=feed" rel="noopener">GitHub to Block pull_request_target Workflows by Default Starting December 2</a></p>
+<h2>偶然の出会い</h2>
+<h3>シミュレーションだけで学んだヒューマノイド「HALO」、現実の環境で91%成功</h3><p>arXivに出た論文で、Vladlen Koltun氏らがヒューマノイド制御システムHALOを示した。HALOは自動で作った1000軒の仮想の家だけで学び、座る、机の下をくぐる、ドアを横向きに抜けるといった動きを組み合わせる。初めて入る現実の6つの環境で、360回の試行のうち91%に成功した。</p><p><b>何が変わるか：</b>人手に頼らず、計算機の量でロボットの学習データを増やす道が見えてきた。</p><p class="muted">出典：<a href="https://arxiv.org/abs/2611.06908v1" rel="noopener">Perceptive Humanoid Motion from Simulation</a></p>
+<h2>今日ひとつ試すなら</h2><p>自社の開発担当者に「GitHub Actionsでpull_request_targetを使っているワークフローはあるか」と確認する。あれば、12月2日までに許可ルールを作るか、別のきっかけに移す予定を立てる。</p></main></body></html>

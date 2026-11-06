@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-06",
+  "title": "15秒動画AI、ロボットの練習場、GitHubが扉を閉める日",
+  "try_today": "自社の開発担当者に「GitHub Actionsでpull_request_targetを使っているワークフローはあるか」と確認する。あれば、12月2日までに許可ルールを作るか、別のきっかけに移す予定を立てる。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "63c3d56bc72b",
+    "headline": "Google、動画AI「Gemini Omni 1.2 Flash」を一般公開　最大15秒・約30%値下げ",
+    "summary": "GoogleとGoogle DeepMindは、動画を作って編集するモデルGemini Omni 1.2 Flashを公開した。作れる長さは前のOmni 1.1の10秒から最大15秒に伸び、720pでは1秒あたり約0.07ドルと約30%安くなった。顔や商品の文字が崩れにくくなり、会話しながら一部だけ直す編集もできる。Gemini API、Google Cloud、Google Vids、Gemini アプリなどで使える。",
+    "why_it_matters": "15秒あれば短い広告動画が丸ごと作れる。直しを指示だけで済ませられるので、外注する前に社内でたくさんの案を試せる。",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+    "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips"
+   },
+   {
+    "slot": "main",
+    "item_id": "e8690f74b67f",
+    "headline": "NVIDIA、ロボット・自動運転向け世界モデル「Cosmos 3」に4つのオープンウェイトモデルを追加",
+    "summary": "NVIDIAは、Cosmos 3 Nanoを土台にした4つのモデルをHugging Faceで公開した。最大11台のカメラとLiDARの走行データを作るもの、シミュレーターの画面を本物らしい映像にするもの、両腕ロボットの動きから次の映像を予想するものなどがそろう。ライセンスはOpenMDW-1.1で、商用でも使えるとされる。",
+    "why_it_matters": "実機を使わずに、めったに起きない場面をAIの中で何度でも試せる。ロボットや自動運転の開発にかかるお金と危険を減らせる。",
+    "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+    "title": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation"
+   },
+   {
+    "slot": "main",
+    "item_id": "cf8cad49bce5",
+    "headline": "GitHub、pull_request_targetで動くワークフローを12月2日から標準でブロック",
+    "summary": "GitHubは公開リポジトリで、pull_request_targetをきっかけに動くGitHub Actionsのワークフローを、12月2日から標準で止める。外から来たコードを権限の強い環境で動かしてしまう手口が、サプライチェーンを狙う事件に使われてきたためだ。安全な使い方でも、許可するルールを作らない限り止まる。11月9日と16日には、試しに止める時間帯がある。",
+    "why_it_matters": "開発チームを持つ会社は期限までに、当てはまるワークフローを洗い出す必要がある。見つかったら、許可ルールを作るか別のきっかけに移す。",
+    "url": "https://socket.dev/blog/github-to-block-pull-request-target?utm_medium=feed",
+    "title": "GitHub to Block pull_request_target Workflows by Default Starting December 2"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "98fe774a304e",
+    "headline": "シミュレーションだけで学んだヒューマノイド「HALO」、現実の環境で91%成功",
+    "summary": "arXivに出た論文で、Vladlen Koltun氏らがヒューマノイド制御システムHALOを示した。HALOは自動で作った1000軒の仮想の家だけで学び、座る、机の下をくぐる、ドアを横向きに抜けるといった動きを組み合わせる。初めて入る現実の6つの環境で、360回の試行のうち91%に成功した。",
+    "why_it_matters": "人手に頼らず、計算機の量でロボットの学習データを増やす道が見えてきた。",
+    "url": "https://arxiv.org/abs/2611.06908v1",
+    "title": "Perceptive Humanoid Motion from Simulation"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-06.mp3",
+  "mp3_bytes": 7421997,
+  "duration_s": 927
+ },
+ {
   "date": "2026-11-05T12",
   "title": "特別編：オープンウェイトモデルの最新トレンドと社内向けの選び方",
   "try_today": "社内でよくある仕事を3つ選び、Qwen3.8-27B と Gemma 4 31B に同じ指示を出して比べてみる。",
