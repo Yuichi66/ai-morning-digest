@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-07",
+  "title": "AI Morning Digest 11月7日：止まる自動化、意味で書くモデル、AI向け指示書を狙うマルウェア",
+  "try_today": "開発チームに、主なリポジトリで `git log -- AGENTS.md CLAUDE.md .claude .cursor .vscode` を実行してもらい、AI向けの指示書や設定ファイルに身に覚えのない変更がないか、5分で確認する。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "df1346203ff0",
+    "headline": "Claude Code v2.1.319、auto modeを「確かめられないなら止まる」方式に変更",
+    "summary": "Claude Codeのv2.1.319では、テレメトリや機能フラグを切っている環境やLLMゲートウェイ経由の環境での動きが変わった。サーバー側で安全を確かめられない操作は、手元のclassifierに頼らず、人に確認するか拒否する。許可待ちになる操作をその場で拒否して作業を続けるpermissions.denyInsteadOfPrompting設定も加わった。Bashの許可チェックをすり抜けられた穴の修正や、ワークツリー作成時のサンドボックス脱出の修正も入っている。",
+    "why_it_matters": "AIエージェントに任せる範囲が広がるほど、安全チェックが働かない状態が一番危ない。黙って通すより、止まって知らせる設計に変わったことになる。",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+    "title": "Claude Code v2.1.319"
+   },
+   {
+    "slot": "main",
+    "item_id": "a13fad4d5573",
+    "headline": "ByteDance Seed、意味のかたまりで文章を作る9BのベースモデルCola2の重みを公開",
+    "summary": "ByteDance SeedがHugging Faceで、90億パラメータのベースモデルCola2を公開した。文章を意味のまとまり（span）に分けて連続値のlatentに圧縮し、拡散型のデコーダで文字に戻す階層型のモデル。論文によると、学習途中のチェックポイントでも、Llama-3-8Bより43分の1以下の事前学習トークンで、HellaSwagとStoryClozeの点数を上回ったという。コードはApache 2.0だが、重みの利用条件はページに書かれていない。",
+    "why_it_matters": "トークンを一つずつ予測する以外の作り方を、重みごと試せる形で出したのは大きい。少ないデータで学べる方法が育てば、自社向けモデルを作る費用が下がる可能性がある。",
+    "url": "https://huggingface.co/ByteDance-Seed/Cola2",
+    "title": "ByteDance-Seed/Cola2"
+   },
+   {
+    "slot": "main",
+    "item_id": "61db9f43b084",
+    "headline": "Shai-Hulud系の悪性Ruby gem「strutil-core」、AIコーディングツールの設定と指示書を汚染",
+    "summary": "Socketの分析によると、RubyGemsで公開されたstrutil-core 1.0.1は、インストールした時点で認証情報を盗むワームを動かす。さらにClaude Code、Cursor、Geminiなどの設定や、AGENTS.md・CLAUDE.mdに、自分を起動する仕掛けを書き込む。盗んだGitHubトークンが無効にされるとホームフォルダを消すワイパーも仕込まれていた。公開から70秒で検知され、約5時間後に削除された。",
+    "why_it_matters": "AIエージェントが読む指示書や設定ファイルが、マルウェアの広がる通り道になった。これらのファイルもコードと同じように守り、レビューする必要がある。事故が起きたときは、鍵を無効にする前に仕掛けを止める順番が大事になる。",
+    "url": "https://socket.dev/blog/shai-hulud-descendant-malicious-ruby-gem?utm_medium=feed",
+    "title": "Shai-Hulud Descendant Surfaces in Malicious Ruby Gem That Steals Credentials and Poisons AI Tools"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "be1ba71e55b7",
+    "headline": "Ai2、ロボット学習を何度でも試せる積み木のシミュレーション世界「ToyBlocks」を公開",
+    "summary": "Ai2が、ロボットアームと積み木だけの、範囲を絞ったシミュレーション環境ToyBlocksを公開した。約8万5千件のお手本データ、コード、学習済みモデルも出ている。Claudeを使ったエージェントの実験では、技の説明をエージェント自身が書くと、人が書いた場合より成功率が上がった。単一の技の成功率は、シミュレーションと実機でほぼ同じだった。",
+    "why_it_matters": "仮想空間で鍛えたロボットが現実でも通用するかは、ロボット導入の費用を大きく左右する。その検証を、条件をそろえて繰り返せる土台になる。",
+    "url": "https://huggingface.co/blog/allenai/toyblocks",
+    "title": "ToyBlocks: A controlled world for robot learning and evaluation"
+   }
+  ],
+  "mp3_name": null,
+  "mp3_bytes": 0,
+  "duration_s": 0
+ },
+ {
   "date": "2026-11-06",
   "title": "15秒動画AI、ロボットの練習場、GitHubが扉を閉める日",
   "try_today": "自社の開発担当者に「GitHub Actionsでpull_request_targetを使っているワークフローはあるか」と確認する。あれば、12月2日までに許可ルールを作るか、別のきっかけに移す予定を立てる。",
