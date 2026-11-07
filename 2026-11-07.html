@@ -7,6 +7,7 @@ h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:
 a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
 </style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-11-07</p>
 <h1>AI Morning Digest 11月7日：止まる自動化、意味で書くモデル、AI向け指示書を狙うマルウェア</h1>
+<audio controls preload="none" src="https://yuichi66.github.io/ai-morning-digest/episodes/2026-11-07.mp3"></audio>
 <h2>主要ニュース</h2>
 <h3>Claude Code v2.1.319、auto modeを「確かめられないなら止まる」方式に変更</h3><p>Claude Codeのv2.1.319では、テレメトリや機能フラグを切っている環境やLLMゲートウェイ経由の環境での動きが変わった。サーバー側で安全を確かめられない操作は、手元のclassifierに頼らず、人に確認するか拒否する。許可待ちになる操作をその場で拒否して作業を続けるpermissions.denyInsteadOfPrompting設定も加わった。Bashの許可チェックをすり抜けられた穴の修正や、ワークツリー作成時のサンドボックス脱出の修正も入っている。</p><p><b>何が変わるか：</b>AIエージェントに任せる範囲が広がるほど、安全チェックが働かない状態が一番危ない。黙って通すより、止まって知らせる設計に変わったことになる。</p><p class="muted">出典：<a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.319" rel="noopener">Claude Code v2.1.319</a></p>
 <h3>ByteDance Seed、意味のかたまりで文章を作る9BのベースモデルCola2の重みを公開</h3><p>ByteDance SeedがHugging Faceで、90億パラメータのベースモデルCola2を公開した。文章を意味のまとまり（span）に分けて連続値のlatentに圧縮し、拡散型のデコーダで文字に戻す階層型のモデル。論文によると、学習途中のチェックポイントでも、Llama-3-8Bより43分の1以下の事前学習トークンで、HellaSwagとStoryClozeの点数を上回ったという。コードはApache 2.0だが、重みの利用条件はページに書かれていない。</p><p><b>何が変わるか：</b>トークンを一つずつ予測する以外の作り方を、重みごと試せる形で出したのは大きい。少ないデータで学べる方法が育てば、自社向けモデルを作る費用が下がる可能性がある。</p><p class="muted">出典：<a href="https://huggingface.co/ByteDance-Seed/Cola2" rel="noopener">ByteDance-Seed/Cola2</a></p>
