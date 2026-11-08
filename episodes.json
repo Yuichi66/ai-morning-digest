@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-08",
+  "title": "AIを速くする「下書き役」と、改造されるオープンウェイト",
+  "try_today": "社内で使っている（または検討中の）オープンウェイトモデルのHugging Faceページを開き、公開元が公式の組織か、モデルツリー（家系図）の元モデル、ライセンスの3点を5分で確かめる。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "233409616a1b",
+    "headline": "テンセント、Qwen3.8-27Bを速くする下書き役モデル「DSpine」を公開",
+    "summary": "テンセントが公式の組織アカウントから、Hugging FaceにQwen3.8-27B-DSpine-b16を公開した。5層・約2BパラメーターのドラフトモデルでQwen3.8-27Bの投機的デコーディングに使うもので、Apache 2.0ライセンス、BF16のSafetensors重み付き。SGLangで動かす前提で、以前のDFlash2より採用される下書きが長く（GSM8Kで7.20対5.69）、エージェント仕事では自己回帰デコーディングの最大3.84倍の速さが出たとしている。",
+    "why_it_matters": "答えの品質は変えずに、待ち時間と推論コストを下げられる。Qwenを社内で動かしている組織には、すぐ効く高速化の選択肢になる。",
+    "url": "https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16",
+    "title": "tencent/Qwen3.8-27B-DSpine-b16"
+   },
+   {
+    "slot": "main",
+    "item_id": "d0b5754fb37f",
+    "headline": "Qwen3.8-27Bの「お断り解除」改造モデルがHugging Faceで人気に",
+    "summary": "個人のDavidAUが、Qwen3.8-27Bに学習の追加とマージを重ね、Hereticで拒否をなくしたGGUFモデルを公開し、2,600以上のいいねを集めている。xtools-atも、DeepSeek-V4-Proの回答約25万件でQwen3.5-9Bを蒸留したJackrongのモデルにHereticをかけたものを公開した。拒否は100問中3問に減ったという。どちらもApache 2.0だが、公式の組織が出したものではない。",
+    "why_it_matters": "オープンウェイトは誰でも作り変えられ、安全のガードレールも外せる。業務で使うなら、公開元とモデルの家系図を確かめることが欠かせない。",
+    "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+    "title": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF"
+   },
+   {
+    "slot": "main",
+    "item_id": "1eeaf5457cb1",
+    "headline": "マイクロソフト・リサーチのAI Frontiersが終了、ジョン・ラングフォード氏が退社",
+    "summary": "ジョン・ラングフォード氏がブログで、AutoGenやFaraを手がけた約50人のAI Frontiersグループが終わったと明かした。グループは9月初めにマイクロソフトAIへ移され、スケーリング重視の新しい上層部とは方針が合わなかったという。同氏は会社を去り、研究の成果はスケーリングだけより大きいと主張している。",
+    "why_it_matters": "大手が研究より規模を選ぶと、業界の技術の進み方も、大手発のオープンソース道具の先行きも変わる。ただし、これは同氏個人の見方である点に注意。",
+    "url": "https://hunch.net/?p=13764006",
+    "title": "The end of Microsoft Research's AI Frontiers group"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "6d7cd387b949",
+    "headline": "ReproBridge：「引き継ぎ資料」を整えるとAIの研究再現が成功しやすくなる",
+    "summary": "再現できたときの手順と判断を、整えたコード・環境の準備・実験の起動手順・再現ガイドの4つの形で残すと、コーディングエージェントがML研究を再現しやすくなるかを調べた論文。36本の論文から作った1,029タスクで、再現の成功率は平均76.4%から92.6%に上がり、API費用は19.7%減った。モデルごとの差も21.6ポイントから3.9ポイントに縮んだ。",
+    "why_it_matters": "AIエージェントに仕事を任せる前に手順と判断を書き残しておくと、成功率もコストも良くなる。人への引き継ぎと同じ考え方がAIにも当てはまる。",
+    "url": "https://arxiv.org/abs/2611.08452v1",
+    "title": "ReproBridge: Building Reproducibility into ML Research Artifacts"
+   }
+  ],
+  "mp3_name": null,
+  "mp3_bytes": 0,
+  "duration_s": 0
+ },
+ {
   "date": "2026-11-07",
   "title": "AI Morning Digest 11月7日：止まる自動化、意味で書くモデル、AI向け指示書を狙うマルウェア",
   "try_today": "開発チームに、主なリポジトリで `git log -- AGENTS.md CLAUDE.md .claude .cursor .vscode` を実行してもらい、AI向けの指示書や設定ファイルに身に覚えのない変更がないか、5分で確認する。",

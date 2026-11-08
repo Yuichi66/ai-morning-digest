@@ -1,0 +1,16 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AIを速くする「下書き役」と、改造されるオープンウェイト</title><style>
+:root{--bg:#f7f8f6;--fg:#1d2421;--muted:#5c6862;--accent:#1f6f5c;--line:#d9dfdb}
+@media (prefers-color-scheme:dark){:root{--bg:#131816;--fg:#e4ebe7;--muted:#9aa8a1;--accent:#6cc4aa;--line:#2f3a36}}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.75;margin:0}
+main{width:min(720px,100%);box-sizing:border-box;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
+</style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-11-08</p>
+<h1>AIを速くする「下書き役」と、改造されるオープンウェイト</h1>
+<h2>主要ニュース</h2>
+<h3>テンセント、Qwen3.8-27Bを速くする下書き役モデル「DSpine」を公開</h3><p>テンセントが公式の組織アカウントから、Hugging FaceにQwen3.8-27B-DSpine-b16を公開した。5層・約2BパラメーターのドラフトモデルでQwen3.8-27Bの投機的デコーディングに使うもので、Apache 2.0ライセンス、BF16のSafetensors重み付き。SGLangで動かす前提で、以前のDFlash2より採用される下書きが長く（GSM8Kで7.20対5.69）、エージェント仕事では自己回帰デコーディングの最大3.84倍の速さが出たとしている。</p><p><b>何が変わるか：</b>答えの品質は変えずに、待ち時間と推論コストを下げられる。Qwenを社内で動かしている組織には、すぐ効く高速化の選択肢になる。</p><p class="muted">出典：<a href="https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16" rel="noopener">tencent/Qwen3.8-27B-DSpine-b16</a></p>
+<h3>Qwen3.8-27Bの「お断り解除」改造モデルがHugging Faceで人気に</h3><p>個人のDavidAUが、Qwen3.8-27Bに学習の追加とマージを重ね、Hereticで拒否をなくしたGGUFモデルを公開し、2,600以上のいいねを集めている。xtools-atも、DeepSeek-V4-Proの回答約25万件でQwen3.5-9Bを蒸留したJackrongのモデルにHereticをかけたものを公開した。拒否は100問中3問に減ったという。どちらもApache 2.0だが、公式の組織が出したものではない。</p><p><b>何が変わるか：</b>オープンウェイトは誰でも作り変えられ、安全のガードレールも外せる。業務で使うなら、公開元とモデルの家系図を確かめることが欠かせない。</p><p class="muted">出典：<a href="https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF" rel="noopener">DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF</a></p>
+<h3>マイクロソフト・リサーチのAI Frontiersが終了、ジョン・ラングフォード氏が退社</h3><p>ジョン・ラングフォード氏がブログで、AutoGenやFaraを手がけた約50人のAI Frontiersグループが終わったと明かした。グループは9月初めにマイクロソフトAIへ移され、スケーリング重視の新しい上層部とは方針が合わなかったという。同氏は会社を去り、研究の成果はスケーリングだけより大きいと主張している。</p><p><b>何が変わるか：</b>大手が研究より規模を選ぶと、業界の技術の進み方も、大手発のオープンソース道具の先行きも変わる。ただし、これは同氏個人の見方である点に注意。</p><p class="muted">出典：<a href="https://hunch.net/?p=13764006" rel="noopener">The end of Microsoft Research&#x27;s AI Frontiers group</a></p>
+<h2>偶然の出会い</h2>
+<h3>ReproBridge：「引き継ぎ資料」を整えるとAIの研究再現が成功しやすくなる</h3><p>再現できたときの手順と判断を、整えたコード・環境の準備・実験の起動手順・再現ガイドの4つの形で残すと、コーディングエージェントがML研究を再現しやすくなるかを調べた論文。36本の論文から作った1,029タスクで、再現の成功率は平均76.4%から92.6%に上がり、API費用は19.7%減った。モデルごとの差も21.6ポイントから3.9ポイントに縮んだ。</p><p><b>何が変わるか：</b>AIエージェントに仕事を任せる前に手順と判断を書き残しておくと、成功率もコストも良くなる。人への引き継ぎと同じ考え方がAIにも当てはまる。</p><p class="muted">出典：<a href="https://arxiv.org/abs/2611.08452v1" rel="noopener">ReproBridge: Building Reproducibility into ML Research Artifacts</a></p>
+<h2>今日ひとつ試すなら</h2><p>社内で使っている（または検討中の）オープンウェイトモデルのHugging Faceページを開き、公開元が公式の組織か、モデルツリー（家系図）の元モデル、ライセンスの3点を5分で確かめる。</p></main></body></html>
