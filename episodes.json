@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-09",
+  "title": "金融特化のPLaMo 3.0 Fin公開、GPUなしで巨大DeepSeek、npm「bee-js」乗っ取り",
+  "try_today": "自社の開発チームに、npmなどの部品を自動で最新バージョンに更新する設定になっていないかを聞き、なっていれば確認済みのバージョンに固定するよう相談する。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "28e3a79b5138",
+    "headline": "PFN、金融特化の小規模言語モデル「PLaMo 3.0 Fin」をオープンウェイトで公開",
+    "summary": "Preferred Networksが、NICTとの共同研究で生まれたPLaMo 3 NICTを土台に、金融データで追加学習した約8BのモデルPLaMo 3.0 Fin（plamo-3-8b-fin-instruct）をHugging Faceで公開した。日本語で推論過程を示すReasoning機能とツール呼び出しに対応し、仕上げの学習は自社チップMN-Core 2で行った。ライセンスはPLaMoコミュニティライセンスで、売上10億円以下の企業・個人は商用でも無償で使える。",
+    "why_it_matters": "GPU1枚から閉じた環境で動かせるため、データを外に出しにくい金融機関でも自社内でAIエージェントの中核に使える。業界特化の小型モデルを手元で動かす流れの代表例になる。",
+    "url": "https://www.preferred.jp/ja/news/pr20261109",
+    "title": "国産の金融特化型小規模言語モデルPLaMo 3.0 Finをオープンウェイトで公開"
+   },
+   {
+    "slot": "main",
+    "item_id": "5e9d3fd0e59c",
+    "headline": "llama-modchip、2840億パラメータのDeepSeek-V4-FlashをGPUなし・メモリ64GBで動かす",
+    "summary": "llama.cppを改造したオープンソースのツール群llama-modchip（Apache-2.0）が、MoE構造のDeepSeek-V4-Flashを部分ごとに異なる量子化で約57GiBまで圧縮し、CPUだけで動かしたと報告した。生成速度は毎秒およそ10トークン前後で、推測デコードを使うとさらに速くなるとしている。性能の数値は主に作者自身の1台での測定で、専用に改造したソフトでしか読み込めない。",
+    "why_it_matters": "巨大なオープンウェイトモデルには高価なGPUが必要という常識に別の道を示し、データを社外に出さずに手元で試す選択肢を広げる。",
+    "url": "https://github.com/synchopate/llama-modchip",
+    "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU"
+   },
+   {
+    "slot": "main",
+    "item_id": "4f459340ede8",
+    "headline": "npmパッケージ「@ethersphere/bee-js」13.3.0が乗っ取られ、ウォレット情報を狙うコードを配布",
+    "summary": "StepSecurityによると、bee-js 13.3.0にはインストール時に自動で動くコードが仕込まれ、Swarm Desktopのウォレットの鍵や設定ファイルを盗み、OSごとに居座る仕掛けを作ろうとした。自動化用アカウントの悪用で確認手順を飛ばして変更が入り、正規の自動公開の仕組みから正しい来歴証明付きで配布された。13.3.0を避けて13.2.0などに固定し、インストールしてしまった環境は乗っ取られた前提で作り直すよう勧めている。",
+    "why_it_matters": "正規の手順で作られた証明があっても中身が安全とは限らないことを示した。コーディングエージェントが部品を自動で入れる時代には、バージョンの固定や確認の仕組みがより重要になる。",
+    "url": "https://www.stepsecurity.io/blog/ethersphere-bee-js-13-3-0-compromise",
+    "title": "@ethersphere/bee-js 13.3.0 Compromised"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "c16f1fc2a5e4",
+    "headline": "汎用AIがロボットアームを直接操作、専用のVLAより失敗が少ない――論文「On Agentic Manipulation Policies」",
+    "summary": "Chen Chen、Vladlen Koltunらが、汎用AIモデルにロボットを直接指示させる仕組みAMP1を提案した。決まった動作の技を持たずに片腕・両腕・移動型のロボットで同じ仕組みを使い、実機では事前の練習なしで108回中104回成功し、強いVLAより失敗率が20分の1だったと報告している。経験を記憶する機能を足すと、失敗はさらに減った。",
+    "why_it_matters": "作業ごとにお手本を集めて専用モデルを作る従来のやり方に代わり、汎用AIがロボットの頭になる可能性を示す。",
+    "url": "https://arxiv.org/abs/2611.09892v1",
+    "title": "On Agentic Manipulation Policies"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-09.mp3",
+  "mp3_bytes": 8207277,
+  "duration_s": 1025
+ },
+ {
   "date": "2026-11-08",
   "title": "AIを速くする「下書き役」と、改造されるオープンウェイト",
   "try_today": "社内で使っている（または検討中の）オープンウェイトモデルのHugging Faceページを開き、公開元が公式の組織か、モデルツリー（家系図）の元モデル、ライセンスの3点を5分で確かめる。",

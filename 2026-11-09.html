@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>金融特化のPLaMo 3.0 Fin公開、GPUなしで巨大DeepSeek、npm「bee-js」乗っ取り</title><style>
+:root{--bg:#f7f8f6;--fg:#1d2421;--muted:#5c6862;--accent:#1f6f5c;--line:#d9dfdb}
+@media (prefers-color-scheme:dark){:root{--bg:#131816;--fg:#e4ebe7;--muted:#9aa8a1;--accent:#6cc4aa;--line:#2f3a36}}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.75;margin:0}
+main{width:min(720px,100%);box-sizing:border-box;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
+</style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-11-09</p>
+<h1>金融特化のPLaMo 3.0 Fin公開、GPUなしで巨大DeepSeek、npm「bee-js」乗っ取り</h1>
+<audio controls preload="none" src="https://yuichi66.github.io/ai-morning-digest/episodes/2026-11-09.mp3"></audio>
+<h2>主要ニュース</h2>
+<h3>PFN、金融特化の小規模言語モデル「PLaMo 3.0 Fin」をオープンウェイトで公開</h3><p>Preferred Networksが、NICTとの共同研究で生まれたPLaMo 3 NICTを土台に、金融データで追加学習した約8BのモデルPLaMo 3.0 Fin（plamo-3-8b-fin-instruct）をHugging Faceで公開した。日本語で推論過程を示すReasoning機能とツール呼び出しに対応し、仕上げの学習は自社チップMN-Core 2で行った。ライセンスはPLaMoコミュニティライセンスで、売上10億円以下の企業・個人は商用でも無償で使える。</p><p><b>何が変わるか：</b>GPU1枚から閉じた環境で動かせるため、データを外に出しにくい金融機関でも自社内でAIエージェントの中核に使える。業界特化の小型モデルを手元で動かす流れの代表例になる。</p><p class="muted">出典：<a href="https://www.preferred.jp/ja/news/pr20261109" rel="noopener">国産の金融特化型小規模言語モデルPLaMo 3.0 Finをオープンウェイトで公開</a></p>
+<h3>llama-modchip、2840億パラメータのDeepSeek-V4-FlashをGPUなし・メモリ64GBで動かす</h3><p>llama.cppを改造したオープンソースのツール群llama-modchip（Apache-2.0）が、MoE構造のDeepSeek-V4-Flashを部分ごとに異なる量子化で約57GiBまで圧縮し、CPUだけで動かしたと報告した。生成速度は毎秒およそ10トークン前後で、推測デコードを使うとさらに速くなるとしている。性能の数値は主に作者自身の1台での測定で、専用に改造したソフトでしか読み込めない。</p><p><b>何が変わるか：</b>巨大なオープンウェイトモデルには高価なGPUが必要という常識に別の道を示し、データを社外に出さずに手元で試す選択肢を広げる。</p><p class="muted">出典：<a href="https://github.com/synchopate/llama-modchip" rel="noopener">Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU</a></p>
+<h3>npmパッケージ「@ethersphere/bee-js」13.3.0が乗っ取られ、ウォレット情報を狙うコードを配布</h3><p>StepSecurityによると、bee-js 13.3.0にはインストール時に自動で動くコードが仕込まれ、Swarm Desktopのウォレットの鍵や設定ファイルを盗み、OSごとに居座る仕掛けを作ろうとした。自動化用アカウントの悪用で確認手順を飛ばして変更が入り、正規の自動公開の仕組みから正しい来歴証明付きで配布された。13.3.0を避けて13.2.0などに固定し、インストールしてしまった環境は乗っ取られた前提で作り直すよう勧めている。</p><p><b>何が変わるか：</b>正規の手順で作られた証明があっても中身が安全とは限らないことを示した。コーディングエージェントが部品を自動で入れる時代には、バージョンの固定や確認の仕組みがより重要になる。</p><p class="muted">出典：<a href="https://www.stepsecurity.io/blog/ethersphere-bee-js-13-3-0-compromise" rel="noopener">@ethersphere/bee-js 13.3.0 Compromised</a></p>
+<h2>偶然の出会い</h2>
+<h3>汎用AIがロボットアームを直接操作、専用のVLAより失敗が少ない――論文「On Agentic Manipulation Policies」</h3><p>Chen Chen、Vladlen Koltunらが、汎用AIモデルにロボットを直接指示させる仕組みAMP1を提案した。決まった動作の技を持たずに片腕・両腕・移動型のロボットで同じ仕組みを使い、実機では事前の練習なしで108回中104回成功し、強いVLAより失敗率が20分の1だったと報告している。経験を記憶する機能を足すと、失敗はさらに減った。</p><p><b>何が変わるか：</b>作業ごとにお手本を集めて専用モデルを作る従来のやり方に代わり、汎用AIがロボットの頭になる可能性を示す。</p><p class="muted">出典：<a href="https://arxiv.org/abs/2611.09892v1" rel="noopener">On Agentic Manipulation Policies</a></p>
+<h2>今日ひとつ試すなら</h2><p>自社の開発チームに、npmなどの部品を自動で最新バージョンに更新する設定になっていないかを聞き、なっていれば確認済みのバージョンに固定するよう相談する。</p></main></body></html>
