@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Claude Fable 5.2登場、手元で動くコーディングAI「Ripple」、署名付きの偽部品</title><style>
+:root{--bg:#f7f8f6;--fg:#1d2421;--muted:#5c6862;--accent:#1f6f5c;--line:#d9dfdb}
+@media (prefers-color-scheme:dark){:root{--bg:#131816;--fg:#e4ebe7;--muted:#9aa8a1;--accent:#6cc4aa;--line:#2f3a36}}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.75;margin:0}
+main{width:min(720px,100%);box-sizing:border-box;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
+</style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-11-10</p>
+<h1>Claude Fable 5.2登場、手元で動くコーディングAI「Ripple」、署名付きの偽部品</h1>
+<audio controls preload="none" src="https://yuichi66.github.io/ai-morning-digest/episodes/2026-11-10.mp3"></audio>
+<h2>主要ニュース</h2>
+<h3>Anthropic、最上位モデル「Claude Fable 5.2」と「Mythos 5.2」を発表</h3><p>Anthropicは11月9日、同じモデルを基にしたClaude Fable 5.2とClaude Mythos 5.2を発表した。コーディング・推論・画像の読み取りが強化され、同社の比較ではほぼすべての分野でOpus 5.5を上回る。料金は入力100万トークンあたり8ドル、出力40ドルで、Claude Codeでも標準のFableモデルになった。</p><p><b>何が変わるか：</b>AIに任せられる仕事の範囲がまた広がった。一方でAnthropicは普段の仕事にはOpus 5.5を勧めており、仕事の重さに応じた使い分けが大事になる。</p><p class="muted">出典：<a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" rel="noopener">Claude Fable 5.2 and Mythos 5.2</a></p>
+<h3>Ollamaにオープンウェイトのコーディングモデル「Ripple Preview」が登場</h3><p>Ollamaの新しいバージョン0.40.16で、Ricursive Intelligenceの650億パラメータの密なモデルRipple Previewが使えるようになった。ターミナルでの何段階もの作業向けに鍛えられたモデルで、Hugging Faceでも公式の組織からApache 2.0ライセンスで重みが公開されている。成績はまだ開発元が自分で発表した数字だけだ。</p><p><b>何が変わるか：</b>ソースコードを社外に出さずにコーディングAIを使う選択肢が増え、社内ルールでクラウドのAIを使えない会社にとって壁が一つ低くなる。</p><p class="muted">出典：<a href="https://github.com/ollama/ollama/releases/tag/v0.40.16" rel="noopener">Ollama v0.40.16</a></p>
+<h3>npmの部品「bee-js」とSwarm Desktopに裏口、正規の署名付きで配られる</h3><p>EthersphereのGitHubアカウント2つが乗っ取られ、悪意あるbee-js 13.3.0とSwarm Desktop 0.56.2が正規の公開手順と署名付きで配られた。裏口は財布の鍵を盗み、パソコンを遠隔操作できるようにする。命令を出すサーバーの住所はEthereumのスマートコントラクトから読み出す仕組みだった。npmは約1時間15分後に問題のバージョンを削除した。</p><p><b>何が変わるか：</b>署名や出どころの証明があっても安全とは限らないことを示した。新しいバージョンをすぐ入れない設定や、公開前の承認ステップが重要になる。</p><p class="muted">出典：<a href="https://socket.dev/blog/bee-js-compromise?utm_medium=feed" rel="noopener">Malicious bee-js npm Release and Swarm Desktop Releases Deliver SleepyDuck Ethereum C2 Backdoor</a></p>
+<h2>偶然の出会い</h2>
+<h3>論文「Sampling Is Not Curiosity」、AIエージェントは好奇心ではなくランダムに探している</h3><p>シュミットフーバーらによる意見表明の論文で、今のLLMエージェントは出力をばらつかせて試すだけで、試した結果から世界の見方を更新していないと主張する。好奇心と呼ぶための条件として、環境の予測モデルを持つこと、それをやりとりしながら直すこと、学んだことを持ち続けることなどを挙げる。</p><p><b>何が変わるか：</b>AIに調査を任せるとき、試行の数が多くても視点が広がるとは限らない。次の問いを人が足す工夫が必要になる。</p><p class="muted">出典：<a href="https://arxiv.org/abs/2611.10501v1" rel="noopener">Sampling Is Not Curiosity: Why LLM Agents Should Investigate</a></p>
+<h2>今日ひとつ試すなら</h2><p>開発チームに「npmなどの部品の新しいバージョンを、公開直後に自動で取り込んでいないか」を聞き、取り込みを数日遅らせる設定やバージョンの固定ができているか確認する。</p></main></body></html>

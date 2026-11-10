@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-10",
+  "title": "Claude Fable 5.2登場、手元で動くコーディングAI「Ripple」、署名付きの偽部品",
+  "try_today": "開発チームに「npmなどの部品の新しいバージョンを、公開直後に自動で取り込んでいないか」を聞き、取り込みを数日遅らせる設定やバージョンの固定ができているか確認する。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "796a7f7ee338",
+    "headline": "Anthropic、最上位モデル「Claude Fable 5.2」と「Mythos 5.2」を発表",
+    "summary": "Anthropicは11月9日、同じモデルを基にしたClaude Fable 5.2とClaude Mythos 5.2を発表した。コーディング・推論・画像の読み取りが強化され、同社の比較ではほぼすべての分野でOpus 5.5を上回る。料金は入力100万トークンあたり8ドル、出力40ドルで、Claude Codeでも標準のFableモデルになった。",
+    "why_it_matters": "AIに任せられる仕事の範囲がまた広がった。一方でAnthropicは普段の仕事にはOpus 5.5を勧めており、仕事の重さに応じた使い分けが大事になる。",
+    "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+    "title": "Claude Fable 5.2 and Mythos 5.2"
+   },
+   {
+    "slot": "main",
+    "item_id": "e01056c942e1",
+    "headline": "Ollamaにオープンウェイトのコーディングモデル「Ripple Preview」が登場",
+    "summary": "Ollamaの新しいバージョン0.40.16で、Ricursive Intelligenceの650億パラメータの密なモデルRipple Previewが使えるようになった。ターミナルでの何段階もの作業向けに鍛えられたモデルで、Hugging Faceでも公式の組織からApache 2.0ライセンスで重みが公開されている。成績はまだ開発元が自分で発表した数字だけだ。",
+    "why_it_matters": "ソースコードを社外に出さずにコーディングAIを使う選択肢が増え、社内ルールでクラウドのAIを使えない会社にとって壁が一つ低くなる。",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.16",
+    "title": "Ollama v0.40.16"
+   },
+   {
+    "slot": "main",
+    "item_id": "43e001200d16",
+    "headline": "npmの部品「bee-js」とSwarm Desktopに裏口、正規の署名付きで配られる",
+    "summary": "EthersphereのGitHubアカウント2つが乗っ取られ、悪意あるbee-js 13.3.0とSwarm Desktop 0.56.2が正規の公開手順と署名付きで配られた。裏口は財布の鍵を盗み、パソコンを遠隔操作できるようにする。命令を出すサーバーの住所はEthereumのスマートコントラクトから読み出す仕組みだった。npmは約1時間15分後に問題のバージョンを削除した。",
+    "why_it_matters": "署名や出どころの証明があっても安全とは限らないことを示した。新しいバージョンをすぐ入れない設定や、公開前の承認ステップが重要になる。",
+    "url": "https://socket.dev/blog/bee-js-compromise?utm_medium=feed",
+    "title": "Malicious bee-js npm Release and Swarm Desktop Releases Deliver SleepyDuck Ethereum C2 Backdoor"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "dd47df8bd746",
+    "headline": "論文「Sampling Is Not Curiosity」、AIエージェントは好奇心ではなくランダムに探している",
+    "summary": "シュミットフーバーらによる意見表明の論文で、今のLLMエージェントは出力をばらつかせて試すだけで、試した結果から世界の見方を更新していないと主張する。好奇心と呼ぶための条件として、環境の予測モデルを持つこと、それをやりとりしながら直すこと、学んだことを持ち続けることなどを挙げる。",
+    "why_it_matters": "AIに調査を任せるとき、試行の数が多くても視点が広がるとは限らない。次の問いを人が足す工夫が必要になる。",
+    "url": "https://arxiv.org/abs/2611.10501v1",
+    "title": "Sampling Is Not Curiosity: Why LLM Agents Should Investigate"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-10.mp3",
+  "mp3_bytes": 6219117,
+  "duration_s": 777
+ },
+ {
   "date": "2026-11-09",
   "title": "金融特化のPLaMo 3.0 Fin公開、GPUなしで巨大DeepSeek、npm「bee-js」乗っ取り",
   "try_today": "自社の開発チームに、npmなどの部品を自動で最新バージョンに更新する設定になっていないかを聞き、なっていれば確認済みのバージョンに固定するよう相談する。",
