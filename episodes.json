@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-11",
+  "title": "Gemini 4 Carbon登場、MiniMaxの画像AI、AIが暗号の安全を証明",
+  "try_today": "Google AI StudioでGemini 4 Carbonを開き、自分の仕事の長い資料を1つ渡して要約させてみる。11月30日に値上がりする前の入門価格のうちに試すのがおすすめ。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "0b2e1c02de47",
+    "headline": "Google、最上位モデル「Gemini 4 Carbon」を公開",
+    "summary": "Googleは11月10日、長時間のエージェント作業やサイバーセキュリティ向けの最上位モデルGemini 4 Carbonを公開した。GeminiアプリのUltraプラン、Google AI StudioのAPI、Antigravityなどで使える。入門価格は入力100万トークンあたり2ドル、出力10ドルで、11月30日から倍になる。",
+    "why_it_matters": "作業1件あたりの費用が他社の最良モデルの半分以下だとGoogleは主張している。性能だけでなくコストでも競う段階に入った。",
+    "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+    "title": "Gemini 4 Carbon is now available"
+   },
+   {
+    "slot": "main",
+    "item_id": "1f1dbabb56c4",
+    "headline": "MiniMaxのオープンウェイト画像モデル「MiniMax-H3-Image」が注目",
+    "summary": "中国MiniMaxが公開したMiniMax-H3-Imageは、生成と編集を一つにまとめた約331億パラメータの画像モデル。約1600万画素の出力に対応し、6ステップで生成できる。指示を膨らませる補助モデルMiniMax-H3-Image-PEも別リポジトリで公開されている。",
+    "why_it_matters": "高品質な画像AIを社外にデータを出さずに自社で動かせる。ただし独自ライセンスで、用途によっては書面での許可が必要になる。",
+    "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
+    "title": "MiniMaxAI/MiniMax-H3-Image"
+   },
+   {
+    "slot": "main",
+    "item_id": "428ac4b42c0b",
+    "headline": "Google DeepMindのAlphaProof Code、Signalの暗号コードの安全性をAIが証明",
+    "summary": "AlphaProof Codeは複数のAIエージェントが形式検証を行う仕組み。Gemini Carbonを使うエージェントがLeanで600万行を超える証明を書き、Signalの暗号プロトコルの実コードを4週間で検証した。検証の成果物はオープンソースで公開される。",
+    "why_it_matters": "テストでは見つけきれない欠陥をなくし、安全をすべての場合について保証できる。これまで何年もかかった作業をAIが大きく短縮した。",
+    "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+    "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "59a2ea2f752b",
+    "headline": "PFNのマウス自動注射ロボットAUTivがロボット大賞を受賞",
+    "summary": "Preferred Networksのマウス尾静脈自動注射ロボットAUTivが、第12回ロボット大賞の日本機械工業連合会会長賞を受けた。4Kステレオカメラと深層学習で約0.3mmの血管を見つけ、力を制御しながら投与する。これまでに約20台が納入されている。",
+    "why_it_matters": "熟練者の技術がなくても正確な実験ができ、動物福祉と研究者の安全につながる。AIが物理的な手仕事に入り込んでいる例でもある。",
+    "url": "https://www.preferred.jp/ja/news/pr20261111",
+    "title": "PFNのマウス尾静脈自動注射ロボットAUTivが第12回ロボット大賞「日本機械工業連合会 会長賞」を受賞"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-11.mp3",
+  "mp3_bytes": 6112748,
+  "duration_s": 764
+ },
+ {
   "date": "2026-11-10",
   "title": "Claude Fable 5.2登場、手元で動くコーディングAI「Ripple」、署名付きの偽部品",
   "try_today": "開発チームに「npmなどの部品の新しいバージョンを、公開直後に自動で取り込んでいないか」を聞き、取り込みを数日遅らせる設定やバージョンの固定ができているか確認する。",
