@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-12",
+  "title": "AIに「選ばせる」時代へ — Gemini Decisions API、端末で動くBotPsy、AlphaGenome 2",
+  "try_today": "自分の仕事の中から「選ぶだけ」の作業（メールの振り分け、申請の可否チェックなど）を1つ書き出し、選択肢の数も添えて、AIに任せる候補リストの1行目にする。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "8e4104a923ec",
+    "headline": "Google、「選ぶだけ」のAI窓口 Gemini Decisions APIを公開",
+    "summary": "Googleは新モデルGemini Decision 1を使うGemini Decisions APIを公開した。文章を生成せず、はい・いいえ、選択肢、段階評価の3形式で答えと0〜1の自信度を返す。1リクエストで最大1,000問、入力は100万トークンあたり0.10ドル、出力は無料。Gemini APIとGoogle AI Studioで利用でき、Google Cloud対応は近日予定。",
+    "why_it_matters": "振り分けや審査など、AI活用で多い「判断」の部分を安く速く回せる。自信の低いものだけ人に回す設計がしやすくなる。",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+    "title": "Gemini Decisions API: Fast, calibrated multimodal decisions"
+   },
+   {
+    "slot": "main",
+    "item_id": "b22522d14a17",
+    "headline": "端末で動く8億パラメータの秘書AI「BotPsy」、Apache 2.0で公開",
+    "summary": "Tether AI ResearchがQwen3.5-0.8Bを土台に、道具を使う作業に特化したBotPsyを公開した。道具利用のベンチマークで土台モデルからおよそ倍の点数となり、1.2B以下のモデルで首位としている。safetensorsとGGUFで配布され、llama.cppで動かせる。",
+    "why_it_matters": "個人データを端末の外に出さずにAIアシスタントを動かせる選択肢が広がる。中国発Qwenを土台にした改造の流れを示す例でもある。",
+    "url": "https://huggingface.co/blog/qvac/botpsy",
+    "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model"
+   },
+   {
+    "slot": "main",
+    "item_id": "5b916f1bea87",
+    "headline": "Google DeepMind、DNAの違いの影響を細胞ごとに予測するAlphaGenome 2",
+    "summary": "AlphaGenome 2は、組織ごとの平均ではなく細胞の種類や状態ごとに、DNAの違いが遺伝子の働きに与える影響を予測する。1億を超える細胞データで学習し、遺伝子の働きを変える違いを前のモデルのおよそ2倍見つけた。非営利研究向けにAPIで提供し、商用研究向けは限定公開。",
+    "why_it_matters": "病気の原因を「どの細胞で何が起きているか」まで絞り込めるようになり、創薬研究の候補探しが効率化しうる。臨床用途の承認は受けていない。",
+    "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+    "title": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "7aee793501c7",
+    "headline": "ReTrace：AIエージェントの作業記録を、AI不要のワークフローに変換",
+    "summary": "業務手順書（SOP）とエージェントの実行記録から判断ルールを取り出し、コードが次の手順を選ぶワークフローを自動生成する研究。τ²-Benchでは1件170秒が1.3秒に、実業務の79手順ではコストが24%下がった。成功率はわずかに下がるが、失敗例からの修正でエージェントを上回る場面もある。",
+    "why_it_matters": "定型業務をAIエージェントに任せ続けるコストを、ルール化によって大きく下げる道筋を示している。",
+    "url": "https://arxiv.org/abs/2611.14492v1",
+    "title": "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-12.mp3",
+  "mp3_bytes": 7633196,
+  "duration_s": 954
+ },
+ {
   "date": "2026-11-11",
   "title": "Gemini 4 Carbon登場、MiniMaxの画像AI、AIが暗号の安全を証明",
   "try_today": "Google AI StudioでGemini 4 Carbonを開き、自分の仕事の長い資料を1つ渡して要約させてみる。11月30日に値上がりする前の入門価格のうちに試すのがおすすめ。",
