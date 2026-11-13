@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-13",
+  "title": "Gemini 4 HydrogenがGoogle検索に、IBMのだまされにくいGranite、Claude CodeのCode Mode",
+  "try_today": "Google検索に「行き先・予算・日程」のように条件を3つ以上並べた長い質問を一文で入れ、Gemini 4 Hydrogenが条件ごとに分けて答えるか、いつもの検索結果と比べてみる。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "4bad5afe01a1",
+    "headline": "Google、速くて安い主力モデル「Gemini 4 Hydrogen」を公開。Google検索にも全ユーザー向けに搭載",
+    "summary": "Google DeepMindのKoray Kavukcuoglu氏が11月12日、日々のコーディングとエージェント作業向けの高速モデルGemini 4 Hydrogenを発表した。入力100万トークンまで扱え、料金は入力100万トークンあたり1.5ドル、出力7.5ドルで、長い文脈でも単価は変わらない。Gemini API、AI Studio、Geminiアプリ、Google Antigravity（Orchestratorで上位モデルGemini 4 Carbonと連携）に加え、Google検索でも世界中の全ユーザーに提供される。",
+    "why_it_matters": "普段使いのAIの土台がまとめて新しくなり、検索・資料作成・開発のすべてで速さとコストの基準が変わる。上位モデルと役割を分けるOrchestratorは、AIを安く賢く使う設計の手本になる。",
+    "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+    "title": "Introducing Gemini 4 Hydrogen"
+   },
+   {
+    "slot": "main",
+    "item_id": "a88bddb17214",
+    "headline": "IBM、LLM向けマークアップ「LLMON」に対応したGranite 4.1の3B・8Bプレビューを公開",
+    "summary": "IBMはHugging Faceのブログで、LLMに渡す指示・文書・ツール結果の構造を専用トークンの札とIDで明示する書き方LLMONを発表し、対応モデルgranite-4.1-3b/8b-llmon-previewをApache 2.0ライセンスで公開した。IBMによると間接プロンプトインジェクションをほぼ防ぎ、試した最強のフロンティアモデルより47%多くの攻撃を回避、通常性能はGranite 4.1 Instructと同等。ただし実験的プレビューで本番向けではない。",
+    "why_it_matters": "エージェントの安全を、外付けの対策ではなくモデルの学習と入力の構造で高める試み。自社環境で動かせる小型のオープンウェイトモデルで検証できる点も大きい。",
+    "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+    "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B"
+   },
+   {
+    "slot": "main",
+    "item_id": "1e1f91e95e92",
+    "headline": "Claude Code v2.1.323：ClaudeがJavaScriptで道具を呼ぶ実験機能「Code Mode」と、多数の権限修正",
+    "summary": "AnthropicのClaude Code v2.1.323で、ClaudeがJavaScriptを書いて自分のツールを呼び出す実験的なオプトイン機能Code Modeが追加された（組織単位で無効化も可能）。plugin.jsonに対応バージョン範囲を書くengines[\"claude-code\"]も加わった。sudoなどのラッパー経由で拒否ルールが効かない問題や、Read拒否のパスに書き込めた問題など、権限まわりの修正も多い。",
+    "why_it_matters": "AIに任せる範囲が広がるほど、ツールの使い方と権限の仕組みが要になる。更新するだけで守りが固くなり、管理者はCode Modeを許可するかを判断する必要がある。",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+    "title": "Claude Code v2.1.323"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "128f161620ef",
+    "headline": "家事100種類を1つのVLAモデルで：2026 BEHAVIOR Challengeの解法、一部はGPT-6 Astraに任せる",
+    "summary": "Ilia Larchenko氏らのチームが、OmniGibsonシミュレーター上の家事100種類に1つのチェックポイントで挑んだ解法を公開した。π0.5ベースのVLAモデルを長く学習させることに注力し、9位で上位唯一の独立系チームに。14種類のタスクではコーディングエージェントGPT-6 Astraがロボットを操作し、学習済みポリシー（平均Q 0.108）を大きく上回る0.639を記録した。",
+    "why_it_matters": "ロボット操作にコーディングエージェントを組み合わせる発想は、得意分野で役割を分けるAI活用の具体例になる。",
+    "url": "https://arxiv.org/abs/2611.14432v1",
+    "title": "One Policy for 100 Household Tasks: Our Solution for the 2026 BEHAVIOR Challenge"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-13.mp3",
+  "mp3_bytes": 7495148,
+  "duration_s": 936
+ },
+ {
   "date": "2026-11-12",
   "title": "AIに「選ばせる」時代へ — Gemini Decisions API、端末で動くBotPsy、AlphaGenome 2",
   "try_today": "自分の仕事の中から「選ぶだけ」の作業（メールの振り分け、申請の可否チェックなど）を1つ書き出し、選択肢の数も添えて、AIに任せる候補リストの1行目にする。",
