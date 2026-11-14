@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AIが財布を持つ日：ChatGPT Wallet、llama.cpp 1.0、AI攻撃ツールARTEX</title><style>
+:root{--bg:#f7f8f6;--fg:#1d2421;--muted:#5c6862;--accent:#1f6f5c;--line:#d9dfdb}
+@media (prefers-color-scheme:dark){:root{--bg:#131816;--fg:#e4ebe7;--muted:#9aa8a1;--accent:#6cc4aa;--line:#2f3a36}}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.75;margin:0}
+main{width:min(720px,100%);box-sizing:border-box;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
+</style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-11-14</p>
+<h1>AIが財布を持つ日：ChatGPT Wallet、llama.cpp 1.0、AI攻撃ツールARTEX</h1>
+<audio controls preload="none" src="https://yuichi66.github.io/ai-morning-digest/episodes/2026-11-14.mp3"></audio>
+<h2>主要ニュース</h2>
+<h3>OpenAI、エージェントが買い物を済ませる「ChatGPT Wallet」を発表</h3><p>OpenAIは、ChatGPT Work、Codex、dotsで動くエージェントが購入手続きを最後まで進められる仕組み「ChatGPT Wallet」を発表した。支払いの前には必ず利用者の承認をはさみ、既存のカードの保護の仕組みをそのまま使う。</p><p><b>何が変わるか：</b>エージェントの役割が「調べて比べる」から「手続きを済ませる」へ広がる。企業は承認の権限や金額の上限など、AIによる代理購入を想定した社内ルールを整える必要が出てくる。</p><p class="muted">出典：<a href="https://openai.com/index/introducing-chatgpt-wallet" rel="noopener">Introducing ChatGPT Wallet</a></p>
+<h3>llama.cppがバージョン1.0.0に、手元でAIを動かす土台が安定へ</h3><p>ggml-orgはllama.cppとggmlの初のメジャーバージョン1.0.0を発表した。互換性が崩れる変更をメジャー番号で知らせるセマンティックバージョニングを採用し、150を超えるモデル構造に対応する。Linux、macOS、Windows、Android、iOS向けに配布し、NVIDIA、AMD、Intel、Qualcomm、Armなどの協力でCIも強化した。</p><p><b>何が変わるか：</b>多くのローカルAIアプリが土台にしているソフトが互換性を約束したことで、オープンウェイトモデルを社内で動かす製品が作りやすく、導入しやすくなる。</p><p class="muted">出典：<a href="https://huggingface.co/blog/ggml-org/llama-cpp-v1" rel="noopener">llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem</a></p>
+<h3>AI自動侵入テストツール「ARTEX」が攻撃に悪用、入口は漏れたシークレット</h3><p>StepSecurityによると、AIエージェントが侵入テストを自動で進めるオープンソースツールARTEXが、国家に近いグループや犯罪グループに使われている。マイクロソフトが報告した例では、GitHubで漏れた鍵を見つけてからクラウドのデータを盗むまで約5分だった。作者はリポジトリを削除したが、コピーや裏口入りの偽コピーが出回っている。</p><p><b>何が変わるか：</b>AIが漏れた鍵を自分で探しに行くので、攻撃の速さと数が一気に上がる。変更履歴まで含めた鍵の洗い出しと取り替え、期限の短い鍵への切り替えが急ぎの対策になる。</p><p class="muted">出典：<a href="https://www.stepsecurity.io/blog/artex-ai-pentesting-tool-attackers-leaked-secrets" rel="noopener">ARTEX: Attackers Adopted This AI Pentesting Tool in Three Months. Leaked Secrets Are Its Fastest Way In.</a></p>
+<h2>偶然の出会い</h2>
+<h3>NVIDIA、SimReady部品とAIエージェントでロボットの缶つかみをシミュレーション</h3><p>NVIDIAはHugging Faceで、物理設定が済んだSimReadyの3D部品とIsaac Sim 6.2を使い、ロボットアームが缶をつかんで運ぶシミュレーションの手引きを公開した。ロボットの組み立てや動きの作成はAIエージェントに任せている。缶の位置は固定でカメラは使わないなど、手引き自身が限界も明記している。</p><p><b>何が変わるか：</b>実機を買う前にコンピューターの中で試せる範囲が広がり、その準備をコーディングエージェントが手伝えるようになってきた。</p><p class="muted">出典：<a href="https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place" rel="noopener">Build a Robot Pick-and-Place Simulation with SimReady Assets</a></p>
+<h2>今日ひとつ試すなら</h2><p>チームの開発担当者に「GitHubのリポジトリに、パスワードやAPIキーが過去の変更履歴まで含めて残っていないか調べていますか」と聞く。見つかった鍵は削除で済ませず、新しいものに取り替えてもらう。</p></main></body></html>

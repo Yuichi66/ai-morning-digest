@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-14",
+  "title": "AIが財布を持つ日：ChatGPT Wallet、llama.cpp 1.0、AI攻撃ツールARTEX",
+  "try_today": "チームの開発担当者に「GitHubのリポジトリに、パスワードやAPIキーが過去の変更履歴まで含めて残っていないか調べていますか」と聞く。見つかった鍵は削除で済ませず、新しいものに取り替えてもらう。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "5bf4951adbe9",
+    "headline": "OpenAI、エージェントが買い物を済ませる「ChatGPT Wallet」を発表",
+    "summary": "OpenAIは、ChatGPT Work、Codex、dotsで動くエージェントが購入手続きを最後まで進められる仕組み「ChatGPT Wallet」を発表した。支払いの前には必ず利用者の承認をはさみ、既存のカードの保護の仕組みをそのまま使う。",
+    "why_it_matters": "エージェントの役割が「調べて比べる」から「手続きを済ませる」へ広がる。企業は承認の権限や金額の上限など、AIによる代理購入を想定した社内ルールを整える必要が出てくる。",
+    "url": "https://openai.com/index/introducing-chatgpt-wallet",
+    "title": "Introducing ChatGPT Wallet"
+   },
+   {
+    "slot": "main",
+    "item_id": "40e78db6601d",
+    "headline": "llama.cppがバージョン1.0.0に、手元でAIを動かす土台が安定へ",
+    "summary": "ggml-orgはllama.cppとggmlの初のメジャーバージョン1.0.0を発表した。互換性が崩れる変更をメジャー番号で知らせるセマンティックバージョニングを採用し、150を超えるモデル構造に対応する。Linux、macOS、Windows、Android、iOS向けに配布し、NVIDIA、AMD、Intel、Qualcomm、Armなどの協力でCIも強化した。",
+    "why_it_matters": "多くのローカルAIアプリが土台にしているソフトが互換性を約束したことで、オープンウェイトモデルを社内で動かす製品が作りやすく、導入しやすくなる。",
+    "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+    "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem"
+   },
+   {
+    "slot": "main",
+    "item_id": "7d960c10e539",
+    "headline": "AI自動侵入テストツール「ARTEX」が攻撃に悪用、入口は漏れたシークレット",
+    "summary": "StepSecurityによると、AIエージェントが侵入テストを自動で進めるオープンソースツールARTEXが、国家に近いグループや犯罪グループに使われている。マイクロソフトが報告した例では、GitHubで漏れた鍵を見つけてからクラウドのデータを盗むまで約5分だった。作者はリポジトリを削除したが、コピーや裏口入りの偽コピーが出回っている。",
+    "why_it_matters": "AIが漏れた鍵を自分で探しに行くので、攻撃の速さと数が一気に上がる。変更履歴まで含めた鍵の洗い出しと取り替え、期限の短い鍵への切り替えが急ぎの対策になる。",
+    "url": "https://www.stepsecurity.io/blog/artex-ai-pentesting-tool-attackers-leaked-secrets",
+    "title": "ARTEX: Attackers Adopted This AI Pentesting Tool in Three Months. Leaked Secrets Are Its Fastest Way In."
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "2427bacb74a9",
+    "headline": "NVIDIA、SimReady部品とAIエージェントでロボットの缶つかみをシミュレーション",
+    "summary": "NVIDIAはHugging Faceで、物理設定が済んだSimReadyの3D部品とIsaac Sim 6.2を使い、ロボットアームが缶をつかんで運ぶシミュレーションの手引きを公開した。ロボットの組み立てや動きの作成はAIエージェントに任せている。缶の位置は固定でカメラは使わないなど、手引き自身が限界も明記している。",
+    "why_it_matters": "実機を買う前にコンピューターの中で試せる範囲が広がり、その準備をコーディングエージェントが手伝えるようになってきた。",
+    "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+    "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-14.mp3",
+  "mp3_bytes": 7988588,
+  "duration_s": 998
+ },
+ {
   "date": "2026-11-13",
   "title": "Gemini 4 HydrogenがGoogle検索に、IBMのだまされにくいGranite、Claude CodeのCode Mode",
   "try_today": "Google検索に「行き先・予算・日程」のように条件を3つ以上並べた長い質問を一文で入れ、Gemini 4 Hydrogenが条件ごとに分けて答えるか、いつもの検索結果と比べてみる。",
