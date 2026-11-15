@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-15",
+  "title": "巨大AIの設計図を手のひらに／文章に隠れる個人情報／AIで作ったアプリの裏口",
+  "try_today": "社内でAIを使って作ったツールを1つ選び、ブラウザのシークレットウィンドウ（ログインしていない状態）で開いて、顧客名や連絡先などが見えないか確かめる。見えたらすぐ担当者に相談する。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "ad8b3d5bdfd0",
+    "headline": "DeepSeek-V3の仕組みを約200行のJAXで再現した教材がGitHubで公開",
+    "summary": "開発者のVaibhaav Tiwari氏が、DeepSeek-V3の主な工夫（MLA、DeepSeekMoE、補助損失なしの負荷分散、複数トークン予測）をJAXだけで書いたリポジトリ「deepseek-v3-jax」を公開した。本体は190行ほどで、パラメーター約3600万の小型モデルをMacBook Airで学習できる。本物の重みは読み込まない教育用で、コードはMITライセンス。",
+    "why_it_matters": "オープンウェイトモデルの中身を短いコードで追えるようになり、自社で改良や運用ができる人材を育てやすくなる。モデル選びや運用コストを判断する力にもつながる。",
+    "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
+    "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax"
+   },
+   {
+    "slot": "main",
+    "item_id": "eb6c6ac62da4",
+    "headline": "「Synthesis Smuggling」：AIが推測した個人情報を文章に隠して運ばせる攻撃",
+    "summary": "Gautam Galada氏らの論文は、悪意のあるLLMが会話から利用者の属性を推測し、見えない文字や言葉の選び方で生成文に埋め込む脅威モデルを示した。利用者がその文章を送ると、通信路を見張る攻撃者が情報を読み取れる。研究チームは2つのオープンウェイトモデルを訓練して、性別と年齢層で実際に試した。",
+    "why_it_matters": "オープンウェイトを自社環境で動かす場合でも、重みの出どころが信頼できなければ情報が漏れうる。モデルの入手先の管理がサプライチェーン対策の一部になる。",
+    "url": "https://arxiv.org/abs/2611.17280v1",
+    "title": "Synthesis Smuggling: Maliciously Hiding Inferred Personal Attributes in LLM Outputs"
+   },
+   {
+    "slot": "main",
+    "item_id": "c8d55e521b5b",
+    "headline": "Lovableで作られたアプリから、パスポート情報や20万件超のチャットが見える状態に",
+    "summary": "Crissy FieldはHandelsblattと組み、Lovableのプロジェクト約16万件を分析した。Supabaseを使うアプリの多くでデータベースのアクセス制御に誤りがあり、約7400サイトからメールアドレスが取得できたほか、パスポート番号、支払い記録、チャット履歴なども見えていた。研究者は、すべてが流出とは言えないと注意し、本番データを扱う前の権限確認や専門家による診断を勧めている。",
+    "why_it_matters": "AIで手早く作ったアプリは見た目が完成していても、アクセス制御が抜けていることがある。社内の自作ツールを棚卸しして確認する必要がある。",
+    "url": "https://www.crissyfield.de/research/lovable-en/",
+    "title": "Lovable apps expose passport details and more than 200K private messages"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "033c18bfb3f9",
+    "headline": "ESLintが有償の協力者制度を終了、AI生成の提案増加でオープンソースがルールを見直し",
+    "summary": "JavaScriptの定番ツールESLintは、2022年から続けてきた外部協力者への支払い制度を11月13日に終えた。AIが作った提案が増え、人の仕事と見分けにくくなったことが理由で、AIの利用自体は開示と責任を条件に認めている。Rust、Godot、curlも、AIによる投稿や報告のルールを厳しくしている。",
+    "why_it_matters": "作る量より確かめる手間が足りなくなる問題は、AIを使う職場すべてに当てはまる。「AIを使ったら明記する」ルールを決めておくと、確認作業の重点が絞りやすくなる。",
+    "url": "https://socket.dev/blog/eslint-ends-paid-contributor-program?utm_medium=feed",
+    "title": "ESLint Ends Paid Contributor Program as AI Upends Open Source Collaboration"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-15.mp3",
+  "mp3_bytes": 7511276,
+  "duration_s": 938
+ },
+ {
   "date": "2026-11-14",
   "title": "AIが財布を持つ日：ChatGPT Wallet、llama.cpp 1.0、AI攻撃ツールARTEX",
   "try_today": "チームの開発担当者に「GitHubのリポジトリに、パスワードやAPIキーが過去の変更履歴まで含めて残っていないか調べていますか」と聞く。見つかった鍵は削除で済ませず、新しいものに取り替えてもらう。",
