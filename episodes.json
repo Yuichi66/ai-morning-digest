@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-16",
+  "title": "AIが物理の証明を手伝う時代／Inkling 2 Smallと「持てるAI」／OVHcloud CLI乗っ取り事件",
+  "try_today": "自分が使っているAIツール（チャット、コーディング支援、エージェントなど）が、メール・クラウド・社内システムのどこにつながっていて、どんな権限や鍵を持っているかを書き出す。使っていない連携は今日のうちに外す。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "87d7014c15ee",
+    "headline": "OpenAI、GPT-6 Astraの助けで標準模型を格子上で定義する候補を提示。科学専用ブログも開始",
+    "summary": "OpenAIは、素粒子物理学の標準模型を格子（マス目）の上で非摂動的に定義する候補を示す研究記事を公開した。研究者のアイデアを詳しい証明に仕上げる作業をGPT-6 Astraが手伝ったという。同じ日に、AIを使った科学研究の成果や方法、研究者の体験談を発信する科学ブログも始めた。",
+    "why_it_matters": "AIの役割が要約や下書きから、厳密な証明づくりの支援へ広がっていることを示す例。研究開発を持つ企業にとって、AIの活用事例が増えるきっかけになる。",
+    "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+    "title": "A step toward defining the Standard Model on a lattice"
+   },
+   {
+    "slot": "main",
+    "item_id": "6ae972136210",
+    "headline": "Thinking Machines LabのInkling 2 Small、Apache 2.0のオープンウェイトとしてHugging Faceで注目",
+    "summary": "Thinking Machines LabのInkling 2 Smallは、総パラメーター約5940億、1トークンあたり約170億が動くMixture of Expertsのマルチモーダルモデル。テキストと画像を入力でき、最大100万トークンの文脈を扱える。safetensorsの重みがApache 2.0で公開されており、Hugging Faceの人気ランキングで上位に入っている。推奨のNVFP4形式でも合計500GB以上のVRAMが必要。",
+    "why_it_matters": "エージェントやコーディング支援に使える強いモデルを、商用利用しやすいライセンスで自社環境に置ける選択肢が広がった。その一方で、動かすにはかなり大きな計算資源が必要になる。",
+    "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small",
+    "title": "thinkingmachines/Inkling-2-Small"
+   },
+   {
+    "slot": "main",
+    "item_id": "7de1c925c922",
+    "headline": "OVHcloud CLIのGitHubリリースが差し替えられ、AIエージェントやクラウドの認証情報を盗むマルウェアが配布された",
+    "summary": "OVHcloud CLIの5つのリリース（v0.11.0〜v0.15.0）のバイナリとchecksums.txtが、約94分間にわたって認証情報を盗むプログラムに差し替えられた。ダウンロードは約250回。原因は、悪意あるVS Code拡張機能から流出した協力者の鍵と、リリースのイミュータビリティ（後から書き換えられない設定）が無効だったこと。Claude、CursorなどのAIツールの設定や、クラウドの鍵、SSH鍵が盗まれる対象だった。",
+    "why_it_matters": "公式の配布元でも安全とは限らない。強い権限を持つAIエージェントの認証情報が、攻撃の主な標的になりつつある。ハッシュの固定と最小権限の運用が重要になる。",
+    "url": "https://www.stepsecurity.io/blog/ovhcloud-cli-github-release-swap-glassworm",
+    "title": "OVHcloud CLI Compromised via GitHub Release Swap: Detonating the Real GlassWorm Loader and What We Found"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "feb7cbdee400",
+    "headline": "Cloudflare、AIエージェント専用の軽量ヘッドレスブラウザ「Kitesurf」をオープンソース化",
+    "summary": "CloudflareはAIエージェント向けのヘッドレスブラウザKitesurfをApache 2.0で公開した。タブや拡張機能などの人向けの機能を省き、Rustで書いてWebAssemblyで動かす。Chrome DevTools Protocolに対応し、CPUとメモリーの使用量はChromiumの3分の1から7分の1だという。",
+    "why_it_matters": "AIエージェントは多数のブラウザを同時に動かすため、ブラウザの軽さがそのままコストに響く。AI専用の部品がそろうほど、ウェブ作業を自動化しやすくなる。",
+    "url": "https://www.publickey1.jp/blog/26/cloudflareaikitesurf.html",
+    "title": "Cloudflare、AI専用でタブやテーマや拡張などない軽量ヘッドレスブラウザ「Kitesurf」、オープンソースで公開"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-16.mp3",
+  "mp3_bytes": 6917036,
+  "duration_s": 864
+ },
+ {
   "date": "2026-11-15",
   "title": "巨大AIの設計図を手のひらに／文章に隠れる個人情報／AIで作ったアプリの裏口",
   "try_today": "社内でAIを使って作ったツールを1つ選び、ブラウザのシークレットウィンドウ（ログインしていない状態）で開いて、顧客名や連絡先などが見えないか確かめる。見えたらすぐ担当者に相談する。",
