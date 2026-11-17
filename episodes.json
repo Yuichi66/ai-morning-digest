@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-17",
+  "title": "AIが画面を操作する医療現場、オープンウェイトの窓口一本化、研究者20万人に無料開放",
+  "try_today": "自分の仕事で「画面から画面へ書き写している作業」を一つ書き出し、手順を3〜4段階に分けて、どこをAIに任せられるか印をつけてみる。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "cfcc7acb02e9",
+    "headline": "ChatGPT for Healthcareに、画面を操作するcomputer-use agentが加わる",
+    "summary": "OpenAIは医療機関向けのChatGPT for Healthcareに、人の代わりに画面を操作するcomputer-use agentを追加した。臨床の質問への答えの質も上げ、さまざまな医療用ソフトをまたいで動く新しいプラグインも出した。",
+    "why_it_matters": "APIのない古いシステムにもAIが入り込めるようになり、医療に限らず社内システムへの手入力の自動化が現実的になってきた。",
+    "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+    "title": "More ways to move care forward with ChatGPT for Healthcare"
+   },
+   {
+    "slot": "main",
+    "item_id": "853b24ff0d6e",
+    "headline": "Hugging FaceとOpenRouterが提携、オープンウェイトモデルを一つの窓口で",
+    "summary": "Hugging Faceの推論サービスは、文章モデルへの依頼をOpenRouter経由で流すようになった。OpenRouterが呼び出しごとに値段・速さ・安定性を見て提供元を選び、障害時は自動で切り替える。上乗せ手数料はない。OpenRouterで使われる量に占めるオープンウェイトの割合は、2025年10月の26.8%から2026年9月には71.7%に伸びた。自分で用意した提供元のキーは、文章モデルでは使えなくなった。",
+    "why_it_matters": "DeepSeekやKimi、GLMといったオープンウェイトモデルが普段使いの選択肢になり、コストを抑えながら複数のモデルを比べやすくなる。",
+    "url": "https://huggingface.co/blog/openrouter",
+    "title": "Hugging Face and OpenRouter join forces to make open-weight models easy to run"
+   },
+   {
+    "slot": "main",
+    "item_id": "f26f2a4dfd6b",
+    "headline": "OpenAI、世界の研究者20万人に最先端モデルを無料で提供",
+    "summary": "OpenAIはChatGPT for Academic Researchersを広げ、世界の20万人の研究者にフロンティアモデルを無料で提供する。あわせて、1,800人を超える科学者のChatGPT活用を調べた調査「Science at the Frontier」を公開した。",
+    "why_it_matters": "研究室ごとの予算の差によるAI格差が縮まり、科学者の使い方がビジネスでのAI活用のお手本にもなる。",
+    "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+    "title": "Broadening access to AI for scientists"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "6050ffb5a4db",
+    "headline": "WPPConnectが乗っ取られ、正規の公開手順で毒入りのバージョンが配られる",
+    "summary": "WhatsApp向けの部品WPPConnectのnpmバージョン2.4.1や2.10.82などに、秘密情報とWhatsAppのログイン情報を盗んでTelegramに送るコードが入っていた。審査を通らない変更がプロジェクト自身の公開の仕組みで配られたため、出どころの証明は正しく付いていた。コードは部品を読み込んだ瞬間に動く。",
+    "why_it_matters": "出どころの証明があっても中身が安全とは限らない。部品を自動で入れるコーディングエージェントの時代には、公開から時間を置いて取り込む対策が大事になる。",
+    "url": "https://www.stepsecurity.io/blog/wppconnect-compromised-malicious-releases-steal-secrets-and-whatsapp-sessions",
+    "title": "WPPConnect Compromised: Malicious Releases Steal Secrets and WhatsApp Sessions Through the Project's Own Pipeline"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-17.mp3",
+  "mp3_bytes": 6872876,
+  "duration_s": 859
+ },
+ {
   "date": "2026-11-16",
   "title": "AIが物理の証明を手伝う時代／Inkling 2 Smallと「持てるAI」／OVHcloud CLI乗っ取り事件",
   "try_today": "自分が使っているAIツール（チャット、コーディング支援、エージェントなど）が、メール・クラウド・社内システムのどこにつながっていて、どんな権限や鍵を持っているかを書き出す。使っていない連携は今日のうちに外す。",
