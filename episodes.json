@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-18",
+  "title": "GPT-6.2 AstraとSol登場、層をくり返すSenseNova-Loop-9B、agent-frameworkが乗っ取られた件",
+  "try_today": "社内の開発用PCやCIでPythonを使う環境で「pip show agent-framework」を実行し、バージョンを確認する。1.26.1か1.26.2が入っていたら削除し、Azure、GitHub、CI/CDの認証情報を作り直す（ローテーション）。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "549a77347d5e",
+    "headline": "OpenAI、GPT-6.2 AstraとSolを発表。性能を上げて、コストを下げる",
+    "summary": "OpenAIはGPT-6.2 AstraとGPT-6.2 Solを発表しました。仕事の成果物、コーディング、コンピューター操作、効率が良くなり、コストも下がったと説明しています。ChatGPT Work、Codex、APIで使えます。同じ日にOpenAIは、法律向けのAstra for Law（24の法律分野の評価で1位）と、営業向けのChatGPT for Salesも発表しました。",
+    "why_it_matters": "性能とコストが同時に良くなると、AIを使った業務やサービスの見積もりが変わります。職種向けの道具も増えたので、法務や営業の部署は導入を検討する価値があります。",
+    "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+    "title": "Introducing GPT-6.2 Astra and Sol"
+   },
+   {
+    "slot": "main",
+    "item_id": "4b443d68faa9",
+    "headline": "SenseNova、層をくり返し使う約90億パラメーターのオープンウェイトモデル「SenseNova-Loop-9B」を正式公開",
+    "summary": "Hugging FaceのSenseNova組織が、画像と文章を読めるSenseNova-Loop-9BをApache 2.0ライセンスで公開しました。真ん中の層を2回通して計算する作りで、比較対象のQwen3.8-27Bといくつかの試験で互角だとしています。量子化すると、GPUメモリ約15GiBで長い文章も扱えるとのことです。",
+    "why_it_matters": "小さなオープンウェイトモデルでも工夫しだいで大きなモデルに迫れるので、社内で動かす選択肢が広がります。ただし、コーディングや複雑な指示ではムラがあると、SenseNova自身が書いています。",
+    "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B",
+    "title": "sensenova/SenseNova-Loop-9B"
+   },
+   {
+    "slot": "main",
+    "item_id": "17a66c1f01ce",
+    "headline": "Microsoftのagent-framework、PyPIの1.26.1と1.26.2に認証情報を盗む仕掛け",
+    "summary": "Socketの調査によると、PyPIで配られているMicrosoftのagent-frameworkのバージョン1.26.1と1.26.2に、.pthファイルを使った仕掛けが入っていました。Pythonが起動するたびに動き、Azure、GitHub Actions、CI/CDなどの認証情報を集めて外部に送ります。",
+    "why_it_matters": "AIエージェントを作る道具そのものが狙われ、クラウドの鍵が漏れるおそれがあります。該当するバージョンを入れていたら、削除して認証情報を作り直す必要があります。",
+    "url": "https://socket.dev/blog/agent-framework-pypi-package-compromised-with-credential-stealer?utm_medium=feed",
+    "title": "Microsoft’s agent-framework PyPI package Compromised with Credential Stealer"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "24817791f262",
+    "headline": "MCPの道具の名前は身元の証明にならない。道具と提供元の取り違えを測った論文",
+    "summary": "Zeynab Anbiaeeさんたちの論文は、MCPで道具の名前や説明が本物の提供元と結びついていないため、依頼が攻撃者の道具に流れてしまう問題を調べました。5つのAIクライアントで実験し、名前が同じ、説明文が作業にぴったり、入力の形が合っている、の3つが重なると一番危ないと報告しています。",
+    "why_it_matters": "AIエージェントに外部の道具をつなぐ会社にとって、見落としやすい落とし穴です。道具を提供するサーバーを確かめる運用が大切になります。",
+    "url": "https://arxiv.org/abs/2611.21577v1",
+    "title": "When Tool Names Are Not Identities: Measuring Provider Misbinding in MCP-Based AI Agents"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-18.mp3",
+  "mp3_bytes": 8074412,
+  "duration_s": 1009
+ },
+ {
   "date": "2026-11-17",
   "title": "AIが画面を操作する医療現場、オープンウェイトの窓口一本化、研究者20万人に無料開放",
   "try_today": "自分の仕事で「画面から画面へ書き写している作業」を一つ書き出し、手順を3〜4段階に分けて、どこをAIに任せられるか印をつけてみる。",
