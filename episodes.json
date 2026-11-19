@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-19",
+  "title": "Gemini 4 Neonの「ちょうどいい賢さ」、Windowsの中で動くMicrosoftのAion、Genie 4で作る歩ける世界",
+  "try_today": "今いちばんよく使っているAIの仕事を一つ選び、同じ依頼をひとつ下のクラスのモデル（例: 最上位モデルの代わりに Gemini 4 Neon のような中位モデル）でも出して、結果と費用を比べる。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "0c3c8b23c6ca",
+    "headline": "Google、性能と費用のバランスを狙った「Gemini 4 Neon」を発表",
+    "summary": "Google DeepMindは11月18日、Gemini 4シリーズで上位のCarbonと軽量のHydrogenの間に入る中位モデル、Gemini 4 Neonを発表した。100万トークンの文脈、4段階の思考レベル、コーディングエージェント向けの性能を持つ。料金は入力100万トークンあたり3ドル、出力は15ドル。標準設定ではCarbonより1タスクあたり32%安いという。Gemini API、Gemini for business、Google AI Pro/Ultraで使える。",
+    "why_it_matters": "最上位モデルを一律に使うのをやめ、仕事に応じてモデルを使い分ける流れがはっきりしてきた。同じ予算でAIに任せられる仕事を増やせる可能性がある。",
+    "url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+    "title": "Introducing Gemini 4 Neon"
+   },
+   {
+    "slot": "main",
+    "item_id": "9556d208d773",
+    "headline": "Microsoft、Windowsの端末内で動く小型オープンウェイトモデル「Aion-1.0-Instruct-2.3B」を公開",
+    "summary": "MicrosoftのWindows Applied Sciences Groupが、約23億パラメータの小型言語モデルをMITライセンスでHugging Faceに公開した。重みファイルも置かれている。Phi Silicaの学習データを広げて作られ、文書の理解や長い文書の処理が得意。日本語を含む8言語に対応し、文脈長は32Kトークン。",
+    "why_it_matters": "データを社外に出さずにパソコンの中でAIを動かす選択肢が、OSを作る会社から自由なライセンスで出てきた。社内文書を扱う企業がAIを入れるときの壁を下げる。",
+    "url": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
+    "title": "microsoft/Aion-1.0-Instruct-2.3B"
+   },
+   {
+    "slot": "main",
+    "item_id": "652211f5c064",
+    "headline": "Google DeepMindの世界モデル「Genie 4」、Project Genieで利用開始",
+    "summary": "言葉や写真から歩き回れる仮想世界を作るGenie 4が、Google AI Ultra契約者向けにProject Genieで使えるようになった。途中での書き換え、場面に合った音声、Geminiによる案内に対応する。Genie 3も、1回に作れる長さが3分に延びた。",
+    "why_it_matters": "AIが見るだけの映像から操作できる世界の生成へ進んでいる。企画や研修での活用、ロボットの訓練環境への応用につながる。",
+    "url": "https://deepmind.google/blog/genie-4-is-now-available/",
+    "title": "Genie 4 is now available"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "7f728080b0ba",
+    "headline": "Microsoftの「agent-framework」、PyPIで悪意あるバージョンが配布",
+    "summary": "11月17日、PyPI上のagent-frameworkに1.26.1と1.26.2が公開された。どちらもPython起動時に動く仕掛けで、クラウドやCI/CDの認証情報を集めて外部へ送る作りだった。PyPIは両方を隔離したが、2つ目は1つ目の隔離から約2分後に上げられていた。",
+    "why_it_matters": "AIエージェント開発の部品は強い権限を持つ環境で使われやすく、サプライチェーン攻撃の標的になっている。利用中なら環境の隔離と認証情報の取り替えが必要になる。",
+    "url": "https://www.stepsecurity.io/blog/microsoft-agent-framework-pypi-package-compromised",
+    "title": "Microsoft agent-framework PyPI Package Compromised"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-19.mp3",
+  "mp3_bytes": 7850156,
+  "duration_s": 981
+ },
+ {
   "date": "2026-11-18",
   "title": "GPT-6.2 AstraとSol登場、層をくり返すSenseNova-Loop-9B、agent-frameworkが乗っ取られた件",
   "try_today": "社内の開発用PCやCIでPythonを使う環境で「pip show agent-framework」を実行し、バージョンを確認する。1.26.1か1.26.2が入っていたら削除し、Azure、GitHub、CI/CDの認証情報を作り直す（ローテーション）。",
