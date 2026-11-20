@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-20",
+  "title": "AIが道具を「必要な分だけ」取り出す時代へ／AIの頭の中を見張る安全装置／nginxの重い脆弱性",
+  "try_today": "自社のウェブサイトやサービスの担当者に「nginxでHTTP/2を使っているか、修正済みのバージョン（1.31.9／1.30.7か、配布元の修正パッケージ）に更新して、reloadではなく再起動まで済ませたか」を一通のメッセージで確認する。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "57728669e048",
+    "headline": "Gemini APIに「Tool Retrieval」が登場、AIエージェントが道具を必要なときだけ読み込む",
+    "summary": "GoogleはGemini APIに、使う可能性のある道具（関数）の詳しい説明を後回しにし、必要になった時点でだけ読み込むTool Retrievalを加えた。tool_searchを追加し、道具にdefer_loadingを指定すると、モデルには名前と説明だけが見え、必要なときに同じリクエストの中で詳しい定義が読み込まれる。検索はサーバー側でもクライアント側でも動かせ、MCPサーバーにも使える。Gemini 3.6以降のモデルを対象に、Interactions APIでプレビュー提供。",
+    "why_it_matters": "エージェントがつなぐ道具が増えるほど、入力トークンの費用と道具の選び間違いが増えるという壁を低くする。ただし固定の追加トークンがかかり、一度読み込んだ定義は会話の間ずっと課金されるため、効果は自社の利用状況で確かめる必要がある。",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+    "title": "Introducing Tool Retrieval in the Gemini API"
+   },
+   {
+    "slot": "main",
+    "item_id": "561bb48ce8f5",
+    "headline": "inclusionAIが「SingProbe」を公開、DeepSeek-V4.1-FlashとLing-3.1-flashの内部を読んで危険を見張る",
+    "summary": "Ant GroupのAI研究組織inclusionAIが、Hugging FaceにDeepSeek-V4.1-Flash-1017向けとLing-3.1-flash-1019向けのSingProbeを公開した。モデル内部の3つの層の隠れ状態を読み、生成中のトークンごとに質問の意図、回答の危険性、ハルシネーションの危険を点数にする約1000万パラメータ（Ling向けは約800万）の小さなプローブで、ライセンスはMIT。モデルカードでは、専用のガードレールモデルと同等以上の成績としているが、ハルシネーション検出はやや下回り、遅延への影響は書かれていない。",
+    "why_it_matters": "重みが公開されているからこそ作れる「内側からの」安全対策で、オープンウェイトの使い道が性能競争から安全な運用の工夫へ広がっていることを示す。自社環境でモデルを動かす企業にとって、ガードレールの新しい選択肢になる。",
+    "url": "https://huggingface.co/inclusionAI/DeepSeek-V4.1-Flash-1017-singprobe",
+    "title": "inclusionAI/DeepSeek-V4.1-Flash-1017-singprobe"
+   },
+   {
+    "slot": "main",
+    "item_id": "dbd35f3b94ff",
+    "headline": "nginxのHTTP/2に乗っ取りにつながる脆弱性（CVE-2026-123007）、攻撃コードは公開済み",
+    "summary": "nginxのHTTP/2のフロー制御の計算に整数アンダーフローがあり、認証なしでワーカー権限のコード実行につながる。1.9.5（2015年）以降が影響を受け、1.31.9と1.30.7で修正された。StepSecurityは、reloadではなく再起動が必要なこと、バージョン表示ではなくパッケージで修正を確かめること、コンテナはイメージから作り直すこと、保守が終わったingress-nginxではHTTP/2を止めることを勧めている。",
+    "why_it_matters": "攻撃コードが出回っており、HTTP/2を有効にしたnginxは非常に多い。「更新したつもり」で古いプログラムが動き続ける落とし穴が多いため、再起動とパッケージでの確認まで終えることが大事。",
+    "url": "https://www.stepsecurity.io/blog/cve-2026-123007-nginx-http2-rce",
+    "title": "nginx2root (CVE-2026-123007): HTTP/2 Flaw Lets Attackers Run Code on Unpatched nginx Servers"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "be63fcbfebee",
+    "headline": "同じモデルでも段取りで差が出る、SnykがAIによる脆弱性探しの「ハーネス」を比較",
+    "summary": "Snykは試験中のEvo Code Scanning Agentを、同じモデル・同じ費用の条件でClaude SecurityやCodex Securityと比べた。弱点の場所がわかっている14のアプリで、Evoはすべてのアプリで多くの弱点を見つけたが、正確さでは相手のほうが上だった。最もよい結果でも約3分の1は見逃され、それぞれの道具が相手の見逃した弱点を見つけていた。",
+    "why_it_matters": "AIの道具はモデルの性能だけでなく、調べさせる段取り（ハーネス）で結果が大きく変わる。一つの道具に頼らず、ほかの対策と重ねて使うべきだと分かる。",
+    "url": "https://snyk.io/blog/why-harness-matters-evo-code-scanning-agent/",
+    "title": "Why the Harness Matters: Early Lessons From the Evo Code Scanning Agent Preview"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-20.mp3",
+  "mp3_bytes": 7915052,
+  "duration_s": 989
+ },
+ {
   "date": "2026-11-19",
   "title": "Gemini 4 Neonの「ちょうどいい賢さ」、Windowsの中で動くMicrosoftのAion、Genie 4で作る歩ける世界",
   "try_today": "今いちばんよく使っているAIの仕事を一つ選び、同じ依頼をひとつ下のクラスのモデル（例: 最上位モデルの代わりに Gemini 4 Neon のような中位モデル）でも出して、結果と費用を比べる。",
