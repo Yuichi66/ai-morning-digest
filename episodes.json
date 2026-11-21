@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-21",
+  "title": "Claude Codeは会社の標準へ、ノートPCで動くInkling 2 Mini、OpenAIの蒸留対策",
+  "try_today": "いま仕事で使っているAIの道具を1つ選び、社内のAI利用ルールを開いて「社外に出せない情報を入力してよいか」を確認する。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "7ce40af71312",
+    "headline": "Claude Code v2.1.330：企業の管理画面と連動、グラフ機能easelも追加",
+    "summary": "AnthropicのコーディングエージェントClaude Codeがv2.1.330を公開。Enterprise Admin Consoleで管理される組織へのサインインに対応し、ログイン後に組織の設定やクラウド、ゲートウェイが自動で適用されるようになった。グラフを描く組み込み機能easelの追加、定期タスクと/loopの実行期限の7日から30日への延長、多数の不具合修正も含む。同時期にAnthropicは新規株式公開（Nasdaq、ティッカーANT）の完了を発表し、自社の手取りは約916億ドル。",
+    "why_it_matters": "AIコーディングツールが個人利用から全社展開へ移るなか、設定を一括で配れる管理機能は導入判断の重要な基準になる。",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+    "title": "Claude Code v2.1.330"
+   },
+   {
+    "slot": "main",
+    "item_id": "b9db119f86f5",
+    "headline": "Thinking Machines Lab、ノートPCで動くオープンウェイト「Inkling 2 Mini」を公開",
+    "summary": "Thinking Machines Labが、総パラメータ264億・アクティブ34億のMoEモデルInkling 2 MiniをApache 2.0で公開した。中間層を繰り返すループ構造と、最初から4bit（NVFP4）での学習が特徴で、1Mトークンのコンテキストに対応する。長い手順のエージェント作業やコーディングに強く、32GB以上のMacやDGX Sparkで動き、GGUFやMLXのバージョンも用意されている。",
+    "why_it_matters": "データを外に出さずに手元でエージェント作業を任せられるオープンウェイトの選択肢が、実用的な水準に近づいた。",
+    "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+    "title": "Inkling 2 Mini"
+   },
+   {
+    "slot": "main",
+    "item_id": "3ea993db7e3c",
+    "headline": "OpenAI、モデルの能力を無断で写す「敵対的蒸留」への多層防御を公開",
+    "summary": "OpenAIは、他社モデルの出力を無断で集めて安全装置のないコピーを作る敵対的蒸留への対策をまとめた。推論過程を漏らさない訓練や分類器、APIでの保護により、過去の推論を引き出す攻撃の成功率はGPT-6 Astraの54.0%からGPT-6.2 Astraでは0.2%に下がったとする。複数アカウントによる組織的な抽出も調査しており、週に数千〜数万のアカウントを処分。抽出活動の一部をMoonshot AIの関係者によるものとした。",
+    "why_it_matters": "AIの能力そのものが守るべき資産となり、モデルの出どころと安全装置の有無がAI選びの論点になりつつある。",
+    "url": "https://openai.com/index/combatting-adversarial-distillation",
+    "title": "Combatting adversarial distillation"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "11267d9d7814",
+    "headline": "PGX：人型ロボットの長い作業は、段取りを古典的な仕組みに任せる",
+    "summary": "PGXは、長い手順の移動と操作を伴う作業を、物理的な条件で段階を切り替える状態機械、手作業の場面だけを担うVLA、世界座標での位置固定の3層に分ける枠組み。状態機械と位置固定は追加学習が不要で、Unitree G1の実機とシミュレーションで、比較手法より作業の達成率が上がったと報告している。",
+    "why_it_matters": "AIに丸投げせず、手順は決まった仕組みに、細かい作業はAIに任せる分け方は、業務の自動化にもそのまま応用できる。",
+    "url": "https://arxiv.org/abs/2611.26596v1",
+    "title": "PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-21.mp3",
+  "mp3_bytes": 8375276,
+  "duration_s": 1046
+ },
+ {
   "date": "2026-11-20",
   "title": "AIが道具を「必要な分だけ」取り出す時代へ／AIの頭の中を見張る安全装置／nginxの重い脆弱性",
   "try_today": "自社のウェブサイトやサービスの担当者に「nginxでHTTP/2を使っているか、修正済みのバージョン（1.31.9／1.30.7か、配布元の修正パッケージ）に更新して、reloadではなく再起動まで済ませたか」を一通のメッセージで確認する。",
