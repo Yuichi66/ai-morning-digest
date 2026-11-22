@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>手元で動く Inkling-2-Mini、機械語を読むAI、GPGMEの重大バグ</title><style>
+:root{--bg:#f7f8f6;--fg:#1d2421;--muted:#5c6862;--accent:#1f6f5c;--line:#d9dfdb}
+@media (prefers-color-scheme:dark){:root{--bg:#131816;--fg:#e4ebe7;--muted:#9aa8a1;--accent:#6cc4aa;--line:#2f3a36}}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.75;margin:0}
+main{width:min(720px,100%);box-sizing:border-box;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
+</style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-11-22</p>
+<h1>手元で動く Inkling-2-Mini、機械語を読むAI、GPGMEの重大バグ</h1>
+<audio controls preload="none" src="https://yuichi66.github.io/ai-morning-digest/episodes/2026-11-22.mp3"></audio>
+<h2>主要ニュース</h2>
+<h3>Thinking Machines Lab の Inkling-2-Mini、量子化で Mac 向け5.4GBに</h3><p>Thinking Machines Lab が Apache 2.0 で公開したマルチモーダルのオープンウェイトモデル Inkling-2-Mini（総パラメータ26.4B、1トークンあたりの稼働は3.4B、中間層をループで繰り返し使う MoE）。開発者 ShinMegamiBoson の量子化ツール lookatmyquant は、部品ごとに圧縮への弱さを測って圧縮のかけ方を変え、Apple Silicon（MLX）向けに最小5.38GBのビルドを作った。一番大きいビルドは、作者のテストで元モデルと同じ成績だったという。</p><p><b>何が変わるか：</b>データを社外に出さずに使えるAIの選択肢が、手元の PC まで広がった。ただし圧縮済みモデルのライセンスは repo に書かれておらず、業務に使う前に確認が要る。</p><p class="muted">出典：<a href="https://github.com/ShinMegamiBoson/lookatmyquant" rel="noopener">Inkling-2-Mini in 5.4 GB Memory</a></p>
+<h3>LLMが hex ダンプから機械語を読み書き、DeepSeek V4.1 Flash も健闘</h3><p>George Xenos と Sotiris Giannopoulos は、GPT-6.1 Sol（Codex CLI 経由）に hex ダンプだけを渡す実験をした。プログラムの正体の特定、バグの発見、バイトを直接書き換えての機能追加、仕様書からの ELF 作成、マルウェア解析ができた。オープンウェイトの DeepSeek V4.1 Flash もマルウェアについて同じ結論に届き、API 名は13個中9個を当てたが、推論トークンは約17倍かかった。</p><p><b>何が変わるか：</b>ソースが失われた古いソフトの調査や、怪しいファイルの最初の見立てに使える可能性がある。ただし試したのは小さなプログラムだけで、マルウェアの比較も1サンプルだけ。</p><p class="muted">出典：<a href="https://sgiannopoulos.github.io/blog/machine-code-programming/" rel="noopener">LLMs can read and write executables byte by byte from a hex dump</a></p>
+<h3>GnuPG の部品 GPGME に致命的なダブルフリー、2.3.1で修正</h3><p>GnuPG プロジェクトは、GPGME の status 行を読む処理にダブルフリーのバグ（CVE-2026-129975）があると発表した。とても長いユーザーIDを持つ細工された鍵で起き、データ漏えいのおそれがあり、RCE も否定できないという。2.3.1 より前のすべてのバージョンが対象で、修正済みの 2.3.1 と、古いバージョン向けのパッチが出ている。</p><p><b>何が変わるか：</b>暗号と署名の土台になる部品の穴は、それを組み込んだアプリすべてに響くソフトウェアサプライチェーンの問題。社内で使っているかの確認と、更新が必要。</p><p class="muted">出典：<a href="https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html" rel="noopener">RCE in Gnupg</a></p>
+<h2>偶然の出会い</h2>
+<h3>GEOHunter：AIの答えに入り込む有料宣伝ネットワークを実測</h3><p>研究チームは、中国の大手投稿サイト3つで生成エンジン最適化（GEO）業者を追跡し、関係するアカウント1,985件と、推定46万件超の宣伝投稿を見つけた。米中9つの生成エンジンでは、引用されたページの4.5〜20%がこのネットワーク由来だった。</p><p><b>何が変わるか：</b>AIに直接命令しなくても、AIが読む材料を汚せば答えを動かせる。おすすめや比較をAIに頼るときは、引用元を確かめる必要がある。</p><p class="muted">出典：<a href="https://arxiv.org/abs/2611.26564v1" rel="noopener">GEOHunter: Mapping a Generative Engine Optimization Network in the Wild</a></p>
+<h2>今日ひとつ試すなら</h2><p>ChatGPT などのAI検索で、自分の業界のおすすめ製品を聞いてみる。答えの引用元を3つ開いて、誰がどのサイトに書いた記事かを確かめる。</p></main></body></html>
