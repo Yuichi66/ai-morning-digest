@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AIの進歩を測るものさし、自宅PCで動くAI、Appleの奥行きAI</title><style>
+:root{--bg:#f7f8f6;--fg:#1d2421;--muted:#5c6862;--accent:#1f6f5c;--line:#d9dfdb}
+@media (prefers-color-scheme:dark){:root{--bg:#131816;--fg:#e4ebe7;--muted:#9aa8a1;--accent:#6cc4aa;--line:#2f3a36}}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.75;margin:0}
+main{width:min(720px,100%);box-sizing:border-box;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
+</style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-11-23</p>
+<h1>AIの進歩を測るものさし、自宅PCで動くAI、Appleの奥行きAI</h1>
+<audio controls preload="none" src="https://yuichi66.github.io/ai-morning-digest/episodes/2026-11-23.mp3"></audio>
+<h2>主要ニュース</h2>
+<h3>OpenAI、AIの進歩を測る共通指標としてperplexityを提案</h3><p>OpenAIのチーフサイエンティスト、ヤクブ・パホツキ氏が論考「Perplexity and Intelligence」を発表し、社内の事前学習perplexityの測定値を初めて公開した。GPT-3.5で約0.99、GPT-4で約0.91と、数値がある水準を下回るたびに新しい能力が現れてきたと説明し、各社共通の評価基準と、監視技術が整うまで越えない「共通の上限」を提案している。</p><p><b>何が変わるか：</b>各社がばらばらのベンチマークで性能を主張する中、業界共通のものさしと上限づくりの議論が始まれば、AIの公開ペースや規制のあり方に影響しうる。</p><p class="muted">出典：<a href="https://openai.com/index/perplexity-and-intelligence" rel="noopener">Perplexity and Intelligence</a></p>
+<h3>Qwen3.8やInkling 2 Miniを自宅PCで動かす入門ガイド</h3><p>GPUPartnerのブログが、無料アプリUnsloth Desktopを使ってオープンウェイトのモデルを手元のPCで動かす手順を公開した。中心はアリババのQwen3.8-27Bで、量子化により約56GBから約18GBまで小さくなり、ゲーム用GPUに収まる。Thinking Machines LabのInkling 2 Mini（Apache 2.0）も紹介され、LAN内での共有機能にも触れている。</p><p><b>何が変わるか：</b>データを外に出さず、利用量に応じた課金も気にせずにAIを使える選択肢が、一般的なPCで現実的になってきた。</p><p class="muted">出典：<a href="https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth" rel="noopener">A Beginner&#x27;s Guide to Local AI with Inkling, Qwen, and Unsloth</a></p>
+<h3>Apple、カメラ映像から距離を測るDepth Pro 2をHugging Faceで公開</h3><p>Appleが、普通のカメラの写真や動画から画素ごとの距離を推定するDepth Pro 2を公開した。輪郭のシャープさと動画でのぶれの少なさが特長で、約97MBから約3.5GBまでの4つのサイズがある。ライセンスはApple独自の研究用で、商用利用はできない。</p><p><b>何が変わるか：</b>安いカメラだけで奥行きを把握できる技術は、ロボットやAR、物流の自動化の土台になる。</p><p class="muted">出典：<a href="https://huggingface.co/apple/DepthPro2" rel="noopener">apple/DepthPro2</a></p>
+<h2>偶然の出会い</h2>
+<h3>EDAGoat：半導体設計ツールのGPUコードを速くするコーディングエージェント</h3><p>半導体設計ソフト（EDA）のGPUコードを自動で高速化するエージェントEDAGoatの論文がarXivに掲載された。最適化の定番パターンと、修正後の必須検証を組み合わせることで、DeepSeekを使った実験では成功が15回中7回から13回に増えた。</p><p><b>何が変わるか：</b>AIエージェントに「終わったら確かめる」手順を組み込むと、仕事の信頼性が大きく上がることを示している。</p><p class="muted">出典：<a href="https://arxiv.org/abs/2611.27196v1" rel="noopener">EDAGoat: An EDA-Aware Agent for Project-Level GPU Optimization</a></p>
+<h2>今日ひとつ試すなら</h2><p>今日AIに仕事を頼むとき、指示の最後に「終わったら、間違いがないか自分で確認して」と一行足して、返ってくる答えの質を比べてみる。</p></main></body></html>

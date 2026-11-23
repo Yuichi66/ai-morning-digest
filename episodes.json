@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-23",
+  "title": "AIの進歩を測るものさし、自宅PCで動くAI、Appleの奥行きAI",
+  "try_today": "今日AIに仕事を頼むとき、指示の最後に「終わったら、間違いがないか自分で確認して」と一行足して、返ってくる答えの質を比べてみる。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "de5cd1a6d51d",
+    "headline": "OpenAI、AIの進歩を測る共通指標としてperplexityを提案",
+    "summary": "OpenAIのチーフサイエンティスト、ヤクブ・パホツキ氏が論考「Perplexity and Intelligence」を発表し、社内の事前学習perplexityの測定値を初めて公開した。GPT-3.5で約0.99、GPT-4で約0.91と、数値がある水準を下回るたびに新しい能力が現れてきたと説明し、各社共通の評価基準と、監視技術が整うまで越えない「共通の上限」を提案している。",
+    "why_it_matters": "各社がばらばらのベンチマークで性能を主張する中、業界共通のものさしと上限づくりの議論が始まれば、AIの公開ペースや規制のあり方に影響しうる。",
+    "url": "https://openai.com/index/perplexity-and-intelligence",
+    "title": "Perplexity and Intelligence"
+   },
+   {
+    "slot": "main",
+    "item_id": "4f0ed76760ef",
+    "headline": "Qwen3.8やInkling 2 Miniを自宅PCで動かす入門ガイド",
+    "summary": "GPUPartnerのブログが、無料アプリUnsloth Desktopを使ってオープンウェイトのモデルを手元のPCで動かす手順を公開した。中心はアリババのQwen3.8-27Bで、量子化により約56GBから約18GBまで小さくなり、ゲーム用GPUに収まる。Thinking Machines LabのInkling 2 Mini（Apache 2.0）も紹介され、LAN内での共有機能にも触れている。",
+    "why_it_matters": "データを外に出さず、利用量に応じた課金も気にせずにAIを使える選択肢が、一般的なPCで現実的になってきた。",
+    "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+    "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth"
+   },
+   {
+    "slot": "main",
+    "item_id": "817dd59c1bdb",
+    "headline": "Apple、カメラ映像から距離を測るDepth Pro 2をHugging Faceで公開",
+    "summary": "Appleが、普通のカメラの写真や動画から画素ごとの距離を推定するDepth Pro 2を公開した。輪郭のシャープさと動画でのぶれの少なさが特長で、約97MBから約3.5GBまでの4つのサイズがある。ライセンスはApple独自の研究用で、商用利用はできない。",
+    "why_it_matters": "安いカメラだけで奥行きを把握できる技術は、ロボットやAR、物流の自動化の土台になる。",
+    "url": "https://huggingface.co/apple/DepthPro2",
+    "title": "apple/DepthPro2"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "2150ef819046",
+    "headline": "EDAGoat：半導体設計ツールのGPUコードを速くするコーディングエージェント",
+    "summary": "半導体設計ソフト（EDA）のGPUコードを自動で高速化するエージェントEDAGoatの論文がarXivに掲載された。最適化の定番パターンと、修正後の必須検証を組み合わせることで、DeepSeekを使った実験では成功が15回中7回から13回に増えた。",
+    "why_it_matters": "AIエージェントに「終わったら確かめる」手順を組み込むと、仕事の信頼性が大きく上がることを示している。",
+    "url": "https://arxiv.org/abs/2611.27196v1",
+    "title": "EDAGoat: An EDA-Aware Agent for Project-Level GPU Optimization"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-23.mp3",
+  "mp3_bytes": 7298732,
+  "duration_s": 912
+ },
+ {
   "date": "2026-11-22",
   "title": "手元で動く Inkling-2-Mini、機械語を読むAI、GPGMEの重大バグ",
   "try_today": "ChatGPT などのAI検索で、自分の業界のおすすめ製品を聞いてみる。答えの引用元を3つ開いて、誰がどのサイトに書いた記事かを確かめる。",
