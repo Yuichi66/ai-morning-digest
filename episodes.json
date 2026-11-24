@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-24",
+  "title": "Google検索があなたの家計を知る日、MITのLing-3.2-air、AIが作る盾Shirudo",
+  "try_today": "Googleアカウントの設定で、検索（Search PersonalizationのConnected Apps）やGeminiにつないでいるアプリを確かめ、必要なものだけ残す。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "c5903c8754bb",
+    "headline": "Google検索のPersonal IntelligenceがWalletとつながる",
+    "summary": "GoogleはPersonal Intelligenceを広げ、まずGoogle WalletをAI Modeにつなぎ始めた。支出の傾向の把握やカード特典の活用を手助けする。数週間以内にGoogle DriveとGeminiアプリとの連携も予定している。",
+    "why_it_matters": "検索が、世の中の情報と自分の情報をあわせて考える道具になる。つなぐかどうかは自分で選べて、Walletの情報は見るだけに限られる。",
+    "url": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
+    "title": "A more tailored Google Search that’s uniquely yours"
+   },
+   {
+    "slot": "main",
+    "item_id": "cd73459784d8",
+    "headline": "inclusionAIがMITライセンスのLing-3.2-airを公開",
+    "summary": "総パラメータ約124B、一度に動くのは約5.5BのハイブリッドリニアMoEモデル。画像・動画の入力とツール呼び出しに対応し、業務の自動化や専門文書の読み解きを狙う。厳しい作り話チェックを入れると、法務テストの全項目合格率が8.3%から0.8%に落ちることも自分で公開している。",
+    "why_it_matters": "商用でも自由に使えるオープンウェイトで、社外にデータを出せない企業の選択肢が広がる。",
+    "url": "https://huggingface.co/inclusionAI/Ling-3.2-air",
+    "title": "inclusionAI/Ling-3.2-air"
+   },
+   {
+    "slot": "main",
+    "item_id": "1d0c151fefed",
+    "headline": "OpenAIとCisco、パッチまでの空白を守るShirudoを公開",
+    "summary": "eBPFを使い、Linuxの弱点のある処理を再起動なしでふさぐオープンソースのランタイム。AIエージェントが盾づくりと検証を手伝い、署名を確かめた盾だけを読み込む。Codexが作った盾がElasticsearchへの攻撃を防いだ実験も示した。",
+    "why_it_matters": "AIで攻撃が速くなるなか、守る側もAIで速く動き、最後の判断は人が持つ作りになっている。",
+    "url": "https://openai.com/index/introducing-shirudo",
+    "title": "OpenAI and Cisco introduce Shirudo"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "ca38829e7312",
+    "headline": "Ai2、ロボット操作向けの点追跡ベンチマークRoboTrackを公開",
+    "summary": "実世界の動画307本からなるRoboTrack-Bench、合成データ1500万トラックのRoboTrack-15M、追跡モデル2種を公開した。ピペット作業の試験では20回中17回成功した。",
+    "why_it_matters": "ロボットの器用さの土台になる「見続ける力」を、測って鍛える材料がそろった。",
+    "url": "https://huggingface.co/blog/allenai/robotrack",
+    "title": "RoboTrack: Point tracking for real-world robotic manipulation"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-24.mp3",
+  "mp3_bytes": 6345068,
+  "duration_s": 793
+ },
+ {
   "date": "2026-11-23",
   "title": "AIの進歩を測るものさし、自宅PCで動くAI、Appleの奥行きAI",
   "try_today": "今日AIに仕事を頼むとき、指示の最後に「終わったら、間違いがないか自分で確認して」と一行足して、返ってくる答えの質を比べてみる。",
