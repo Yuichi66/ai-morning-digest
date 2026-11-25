@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Morning Digest 2026年11月25日 — GPT-6がたんぱく質を設計、6ギガで動くオープンAI、Claude Code更新</title><style>
+:root{--bg:#f7f8f6;--fg:#1d2421;--muted:#5c6862;--accent:#1f6f5c;--line:#d9dfdb}
+@media (prefers-color-scheme:dark){:root{--bg:#131816;--fg:#e4ebe7;--muted:#9aa8a1;--accent:#6cc4aa;--line:#2f3a36}}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.75;margin:0}
+main{width:min(720px,100%);box-sizing:border-box;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:24px;line-height:1.35}h2{font-size:18px;margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}.muted{color:var(--muted);font-size:13px}audio{width:100%;margin:12px 0}
+</style></head><body><main><p class="muted"><a href="index.html">AI Morning Digest</a> ・ 2026-11-25</p>
+<h1>AI Morning Digest 2026年11月25日 — GPT-6がたんぱく質を設計、6ギガで動くオープンAI、Claude Code更新</h1>
+<audio controls preload="none" src="https://yuichi66.github.io/ai-morning-digest/episodes/2026-11-25.mp3"></audio>
+<h2>主要ニュース</h2>
+<h3>OpenAIのGPT-6、汎用AIが「たんぱく質」を設計し実験でも一部が結合</h3><p>OpenAIは11月24日、最新世代のGPT-6が専用の生物AIに頼らず、言葉とコードによる推論だけでたんぱく質の構造と配列を設計できると発表した。パートナーのOnavaとの実験では、5つの標的に対して322個の小型たんぱく質を試し、約1割が結合。既知構造への再設計では88個中75個が結合した例もあった。</p><p><b>何が変わるか：</b>文章生成の汎用AIが、これまで専用モデルの独壇場だった科学的分子設計に踏み込んだ象徴的な一歩。ただし絞り込みには専用AIがなお必要で、全体構造予測は専用モデルに劣るなど「でこぼこした実力」も残る。</p><p class="muted">出典：<a href="https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities" rel="noopener">GPT-6 models demonstrate intrinsic protein-design capabilities</a></p>
+<h3>Ternary Bonsai 2.5 27B公開 — 重みを3値に、約6ギガで動くオープンウェイト</h3><p>PrismMLが11月24日、ターナリー（3値）量子化のオープンウェイトモデルTernary Bonsai 2.5 27Bを公開した。アリババ系Qwen3.8 27Bを土台に、重みをマイナス1・ゼロ・プラス1の3値へ圧縮し、置き場所を約5.9ギガに抑える。SWE-benchでは元モデルの80点台に対し75点台とコーディング力を保つ。ライセンスはApache 2.0で、Hugging FaceにGGUF形式の重みが実在する。</p><p><b>何が変わるか：</b>機密データを外に出さず、安価な一台のパソコンでも実用的に動く軽量な高性能モデルの好例。中国発モデルを土台に、大きさと賢さの妥協点を探るオープンウェイトの進み方を示す。</p><p class="muted">出典：<a href="https://prismml.com/news/bonsai-2-5-27b" rel="noopener">Ternary Bonsai 2.5 27B</a></p>
+<h3>Claude Code v2.1.332 — MCPサーバーからスキルを配布、危険な命令を止める新フックも</h3><p>Anthropicの開発ツールClaude Codeがv2.1.332を公開。MCPサーバー経由で「スキル」（作業手順のまとまり)を配れるようになり、メニューに『サーバー名:スキル名』の形で並ぶ。あわせてPreSkillShellCommandフックが追加され、スキルが読み込み時に裏で実行しようとする命令を事前に拒否できる。ほか多数の固まる不具合や認証まわりの修正を含む。</p><p><b>何が変わるか：</b>AIに自社の手順を覚えさせ、チームで配る土台が整いつつある一方、便利さには『勝手に動かさせない』歯止めが同時に必要だと示す更新。</p><p class="muted">出典：<a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.332" rel="noopener">Claude Code v2.1.332</a></p>
+<h2>偶然の出会い</h2>
+<h3>小型ロボットMicroduck、仮想訓練だけで障害物を自力回避</h3><p>Hugging Faceに11月24日掲載。Pollen Roboticsの小型歩行ロボットMicroduckが、頭部の8×8距離センサーを使い、人のコントローラー指示を自動で手直しして障害物を回避する。NVIDIAが関わるIsaac LabとNewtonを使い、仮想空間で何万もの場面を練習させる『シムtoリアル』で学習。小規模な訓練は約6時間で完了し、実機でコーンを回避できた。コードや資産は公開されている。</p><p><b>何が変わるか：</b>現実で失敗を繰り返すより速く安くロボットを賢くできる仮想訓練の実例。ヒューマノイド・ロボティクスの下地となる手法を具体的に見せる。</p><p class="muted">出典：<a href="https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance" rel="noopener">Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton</a></p>
+<h2>今日ひとつ試すなら</h2><p>今日ひとつ、自分の仕事の中から「専用ソフトが必要だ」と思い込んでいる作業をひとつ選び、手元のAIにそのまま頼めないか試してみる。</p></main></body></html>
