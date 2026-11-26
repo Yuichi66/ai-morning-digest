@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-26",
+  "title": "AIが数学の証明を生み出し始めた朝／GPU一枚で動くオープンウェイト／Workspaceが正式にMCP対応",
+  "try_today": "いつも使っているAIに、一つの質問への答えを三案出させてから、「一番弱い案はどれで、なぜか」と批判させ、答えを作る役とチェックする役を分けたときに結果がどう変わるか比べてみる。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "abef7dcffe0c",
+    "headline": "Google ResearchのCogentic、素因数分解などの証明論文をまとめて公開",
+    "summary": "Google Researchは、複数のAIエージェントで証明を探す仕組み「Cogentic」の成果として、素因数分解、有限体の離散対数、ナッシュ均衡などを扱う論文6本を11月25日付でGitHubに追加した。Cogenticは、まとめ役が証明の方向を割り振り、証明担当と検証担当のAIを繰り返し動かす仕組みで、土台にはGemini 3.1 ProやGemini 4 Argonの初期のものが使われている。Scott Aaronson氏はブログで、OpenAIやAnthropicからも大きな証明の成果が相次いでいると紹介した。",
+    "why_it_matters": "AIが「調べる道具」から「新しい知見を生み、検証する道具」に変わりつつある。暗号の土台になっている問題にも研究が及んでおり、セキュリティの前提を見直すきっかけになる。",
+    "url": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers",
+    "title": "Google releases Cogentic papers on integer factorization, discrete logs and more"
+   },
+   {
+    "slot": "main",
+    "item_id": "d8d6777ecf09",
+    "headline": "Inkling 2 MiniをRTX PRO 6000一枚で約4割高速化、作業はコーディングエージェントが担当",
+    "summary": "Hugging Faceは、Thinking Machinesのオープンウェイトモデル「Inkling 2 Mini」（Apache 2.0）の推論設定を、コーディングエージェントにRTX PRO 6000一枚の上で詰めさせた。単独ユーザーの生成速度は毎秒136トークンから約190トークンに上がり、効いたのはvLLMへの切り替えとDSparkによるスペキュレーティブ・デコーディングだった。同じ時期にPrism MLは、Qwen3.8-27Bをもとにした3値量子化モデル「Ternary Bonsai 2.5 27B」（約6GB、Apache 2.0）も公開している。",
+    "why_it_matters": "高性能なオープンウェイトモデルを、自社の環境で実用的な速さで動かせるようになってきた。最適化の手間もエージェントに任せられるので、データを社外に出さないAI活用が現実的になる。",
+    "url": "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb",
+    "title": "Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000"
+   },
+   {
+    "slot": "main",
+    "item_id": "6762cd1577cb",
+    "headline": "Google Workspace MCP ServerとCLIが正式提供開始、AnthropicはSkills over MCPに対応",
+    "summary": "Googleは、Gmail、ドライブ、カレンダーなど8つのサービスにAIエージェントからつなげる「Google Workspace MCP Server」と「Google Workspace CLI」を正式に提供し始めた。あわせて、管理者がエージェントの利用を制御する機能、人による確認、監査ログも用意した。2027年2月1日からは、エージェントにMCP経由での利用を求める。同じ時期にMCPには、ツールの使い方の手順をサーバーから配る「Skills over MCP」がベータとして加わり、AnthropicがClaudeで対応を始めた。",
+    "why_it_matters": "AIエージェントを会社の仕組みに組み込むための、接続・使い方・監視の標準がそろってきた。Workspaceにエージェントをつないでいる企業は、期限に向けた移行の計画が必要になる。",
+    "url": "https://www.publickey1.jp/blog/26/google_workspace_mcpgoogle_workspace_cli.html",
+    "title": "「Google Workspace MCPサーバ」と「Google Workspace CLI」が正式版としてリリース"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "0bc0d6cc2518",
+    "headline": "PolinRiderマルウェア、オープンソースのプルリクエストに強制プッシュで混入",
+    "summary": "StepSecurityの調査によると、PolinRiderはAsyncAPI、CircuitVerse、Open Food Factsの作業中のプルリクエストに強制プッシュで入り込み、30〜40分ほどで元のコードに戻されていた。CircuitVerseではリリース用のCIで実行され、感染したインストーラー40個が1か月以上ダウンロードできる状態だった。コードは大量の空白のうしろに隠されていた。",
+    "why_it_matters": "完成品ではなく「作る工程」が狙われており、外部からの変更でCIが自動で動く設定は大きなリスクになる。コーディングエージェントによる自動化が広がるほど、承認の仕組みが大事になる。",
+    "url": "https://www.stepsecurity.io/blog/polinrider-malware-open-source-pull-requests",
+    "title": "PolinRider Malware Force-Pushed Into AsyncAPI, CircuitVerse and Open Food Facts Pull Requests"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-26.mp3",
+  "mp3_bytes": 7729964,
+  "duration_s": 966
+ },
+ {
   "date": "2026-11-25",
   "title": "AI Morning Digest 2026年11月25日 — GPT-6がたんぱく質を設計、6ギガで動くオープンAI、Claude Code更新",
   "try_today": "今日ひとつ、自分の仕事の中から「専用ソフトが必要だ」と思い込んでいる作業をひとつ選び、手元のAIにそのまま頼めないか試してみる。",
