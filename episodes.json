@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-27",
+  "title": "書類を読む小さなAI、AMDでの実走成績表、GoogleがAIエージェントに決めた入口",
+  "try_today": "社内で使っているAIツールのうち、GmailやGoogleドライブにつながっているものを3つ書き出し、それぞれがメールの送信などどこまでの作業をしているかをメモする（2027年2月1日からのGoogle Workspaceの新ルールに備えるため）。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "d3aa48daa62d",
+    "headline": "NVIDIA、文書読み取りモデルNemotron 3.5 Parseを鍛え直すためのデータと手順を公開",
+    "summary": "NVIDIAは、ページ画像から文字・表・図・読む順番を取り出すオープンウェイトモデルNemotron 3.5 Parse（約0.6B、OpenMDWライセンスで商用利用可）向けに、グラフ・表・多言語文字の合成データセット3種と、SFTとGRPOによる強化学習の手順をHugging Faceのブログで公開した。H200 1枚で旧モデルのParse 2.0の数倍の速さが出るDFlash2による高速化も示し、歯科の書類に合わせた例では、一度で読み取れる確率がほぼ0%から約96%に上がると見積もった。",
+    "why_it_matters": "RAGの精度は最初の文書の読み取りで決まる部分が大きい。小さなモデルを自社の書類に合わせて社内で鍛え直せれば、機密文書を外に出さずに読み取りの精度を上げられる。",
+    "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+    "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference"
+   },
+   {
+    "slot": "main",
+    "item_id": "02a088434703",
+    "headline": "llama.cppのAMD Radeon向けベンチマーク・ダッシュボードが公開",
+    "summary": "ggml-orgは、llama.cppをAMDのRadeon GPU 2機種で動かしたときの入力の読み込み速度（PP512）と文章の書き出し速度（TG128）を毎週自動で測り、公開するダッシュボードをHugging Faceで始めた。Qwen、Gemma、gpt-ossなどのオープンウェイトモデルを対象に、Flash Attentionあり・なしの両方を測り、長い会話での速度の変化も見られる。手順と元データも公開されている。",
+    "why_it_matters": "オープンウェイトモデルを社内で動かすとき、どの機械でどれだけ速いかを公開データで比べられるようになり、NVIDIA以外のGPUを選ぶ判断材料が増える。",
+    "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+    "title": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon"
+   },
+   {
+    "slot": "main",
+    "item_id": "4c5b30e40ea1",
+    "headline": "Google、AIエージェントはWorkspaceにMCPサーバー経由で入るよう求める　公開版Gmailでは送信できず",
+    "summary": "Googleは11月24日、Gmail・Drive・カレンダーなどWorkspace用のMCPサーバー8つを正式に提供し、AIツール向けの規約追加で、AIエージェントには従来のREST APIではなくMCPサーバーかCLIを使うよう求めた。技術的な適用は2027年2月1日から。11月26日のTech Stackupsの分析記事は、一般に公開されたGmailのMCPサーバーではメールの送信・返信・下書きの編集ができず、パートナー企業だけが使える扱いになっている点を指摘している。",
+    "why_it_matters": "プロンプトインジェクション対策や監査はしやすくなる一方、AIエージェントにできることをプラットフォーム側が決めるようになる。Workspaceにつながる社内のAIツールは、早めに影響を確認しておく必要がある。",
+    "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+    "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "ab328cdaa522",
+    "headline": "AIの見張り役の評価は、テスト用の攻撃の作り方しだいで大きく変わる",
+    "summary": "Yarin Galさんらの論文は、OpenAIが以前実際に使っていたモニター（AIエージェントの危険な行動を見つける分類器）を題材に、テスト用の攻撃ポリシーの作り方や最適化の度合いを変えて見逃し率を測った。同じ手法でも見逃し率は0.5%から20.8%まで変わり、練習用のモニターで鍛えた攻撃は本番役のGPT-5.4のモニターもすり抜けた。",
+    "why_it_matters": "検知率の高さをうたうAI安全対策の数字は、どんな攻撃で試したかを確かめないと信頼できない。エージェント導入時の評価の見方として役に立つ。",
+    "url": "https://arxiv.org/abs/2611.34934v1",
+    "title": "Attack Policy Selection can Mislead Monitor Evaluators"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-27.mp3",
+  "mp3_bytes": 8977196,
+  "duration_s": 1122
+ },
+ {
   "date": "2026-11-26",
   "title": "AIが数学の証明を生み出し始めた朝／GPU一枚で動くオープンウェイト／Workspaceが正式にMCP対応",
   "try_today": "いつも使っているAIに、一つの質問への答えを三案出させてから、「一番弱い案はどれで、なぜか」と批判させ、答えを作る役とチェックする役を分けたときに結果がどう変わるか比べてみる。",
