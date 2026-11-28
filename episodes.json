@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-28",
+  "title": "AI Morning Digest 11月28日：日本発の新方式モデルSwaFlow、手元で動く圧縮AI、エージェントの手順書に潜むリスク",
+  "try_today": "仕事で使っているAIツール（コーディングエージェントやチャットAI）の追加機能・スキル・プラグインの一覧を開き、一つ選んで説明や設定を読んでください。外部にデータを送っていないか、外部からプログラムを取ってきて実行していないかを確かめます。分からなければ情報システム部門に聞いてください。",
+  "stories": [
+   {
+    "slot": "main",
+    "item_id": "58c9e7c8765d",
+    "headline": "tokyotech-llmが「フロー型」言語モデルSwaFlowを一式公開",
+    "summary": "Swallowで知られるtokyotech-llm（東京科学大学・産総研など）が、言葉を一つずつ順に書くのではなく、文章全体をノイズから整えていくフロー型の言語モデルSwaFlowを公開した。150Mから3Bまでのシリーズで、同じデータで学習した自己回帰型の双子モデル（AR）やInstructバージョンも付いている。学習データはDolma 3 Mixの約4兆トークンで、ライセンスはApache 2.0。",
+    "why_it_matters": "性能はまだ従来型に及ばないとチーム自身が書いているが、今主流の自己回帰型に代わる方式を、比較用の材料まで含めて丸ごと公開した点に意味がある。日本の国の事業として、基礎研究のモデルを公開する流れも続いている。",
+    "url": "https://huggingface.co/tokyotech-llm/SwaFlow-3B",
+    "title": "tokyotech-llm/SwaFlow-3B"
+   },
+   {
+    "slot": "main",
+    "item_id": "74c0c0ba388d",
+    "headline": "ISTA-DASLab、Inkling-2-Miniを約9GBまで圧縮したGGUFを公開",
+    "summary": "Thinking Machinesの26Bモデル「Inkling-2-Mini」を、ISTA-DASLabが独自の量子化手法GSQとRCOで圧縮し、GGUF形式で配布している。サイズは約9〜11GBで、推奨のIQ3_Sは元のモデルの平均成績の約99%を保ったと公開側は報告している。llama.cppやOllamaで動き、ライセンスはApache 2.0（元モデルの利用ポリシーも適用）。",
+    "why_it_matters": "高性能なオープンウェイトモデルを、データを社外に出さずに手元のパソコンで動かせる場面が広がる。ただ、成績は公開側が自分で測ったもので、自社の業務に使えるかは自分たちで確かめる必要がある。",
+    "url": "https://huggingface.co/ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF",
+    "title": "ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF"
+   },
+   {
+    "slot": "main",
+    "item_id": "e3fd524c3c50",
+    "headline": "Convexのエージェント用スキルに、無断送信と安全チェック回避の指摘",
+    "summary": "Convexが公開しているAIエージェント向けスキルについて、GitHubのIssueで三つの問題が指摘された。利用者のアプリのアイデアを知らせずに外部サーバーへ送ること、固定されていない外部スクリプトを実行させること、安全チェックに止められないよう命令を分ける書き方があること、の三つだ。Issueは10月に立てられ、この期間にHacker Newsで話題になった。ページ上では会社側の返答は確認できない。",
+    "why_it_matters": "エージェントは手順書の内容をそのまま実行するので、スキルやプラグインもサプライチェーンのリスクになる。有名な会社が公式に出しているものでも、入れる前に中身を確かめる必要がある。",
+    "url": "https://github.com/convex/convex-backend-skill/issues/64",
+    "title": "Convex skills send the user's app idea to a remote server without telling them"
+   },
+   {
+    "slot": "serendipity",
+    "item_id": "9090f2c5d419",
+    "headline": "コーディングエージェントの「書きすぎ」を一つずつ検証した研究",
+    "summary": "18モデルのGitHub Copilot CLIの作業記録7,660件について、修正を一つずつ取り消し、テストを再実行して本当に必要だったかを調べた研究。SWE-bench Verifiedでは、増えた行の多くはテストや説明書きの追加で、本体コードの必要度は人間の開発者と同じくらいだった。それでもコードの約11%は不要で、その多くはプログラムの動きを変えるものだった。",
+    "why_it_matters": "AIの修正をレビューするときは、行数の多さより、頼んでいない動きの変化が混ざっていないかを見るべきだと分かる。エージェントの評価も「直せたか」だけでは足りない。",
+    "url": "https://arxiv.org/abs/2611.34875v1",
+    "title": "How Much Do Coding Agents Over-Edit, and Why? An Empirical Study of Unneeded Edits in Repository-Level Agent Patches"
+   }
+  ],
+  "mp3_name": "episodes/2026-11-28.mp3",
+  "mp3_bytes": 7515884,
+  "duration_s": 939
+ },
+ {
   "date": "2026-11-27",
   "title": "書類を読む小さなAI、AMDでの実走成績表、GoogleがAIエージェントに決めた入口",
   "try_today": "社内で使っているAIツールのうち、GmailやGoogleドライブにつながっているものを3つ書き出し、それぞれがメールの送信などどこまでの作業をしているかをメモする（2027年2月1日からのGoogle Workspaceの新ルールに備えるため）。",
